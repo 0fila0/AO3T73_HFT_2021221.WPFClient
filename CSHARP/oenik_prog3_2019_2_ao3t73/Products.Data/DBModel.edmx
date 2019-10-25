@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProductsServiceBasedDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aruhaz">
+          <Key>
+            <PropertyRef Name="Aruhaz_neve" />
+          </Key>
+          <Property Name="Aruhaz_neve" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Honlap" Type="varchar" MaxLength="30" />
+          <Property Name="E_mail" Type="varchar" MaxLength="30" />
+          <Property Name="Telefon" Type="numeric" Precision="13" Scale="0" />
+          <Property Name="Kozpont" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Adoszam" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gyarto">
+          <Key>
+            <PropertyRef Name="Gyarto_neve" />
+          </Key>
+          <Property Name="Gyarto_neve" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Honlap" Type="varchar" MaxLength="30" />
+          <Property Name="E_mail" Type="varchar" MaxLength="30" />
+          <Property Name="Telefon" Type="numeric" Precision="13" Scale="0" />
+          <Property Name="Kozpont" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Adoszam" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ID_Kapcsolo">
+          <Key>
+            <PropertyRef Name="Kapcsolo_ID" />
+          </Key>
+          <Property Name="Kapcsolo_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Termek_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Aruhaz_neve" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Termek">
+          <Key>
+            <PropertyRef Name="Termek_ID" />
+          </Key>
+          <Property Name="Termek_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Tipus" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Megnevezes" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Kiszereles" Type="varchar" MaxLength="30" />
+          <Property Name="Ar" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="Leiras" Type="varchar" MaxLength="300" />
+          <Property Name="Gyarto_neve" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="aruhaz_fk">
+          <End Role="Aruhaz" Type="Self.Aruhaz" Multiplicity="1" />
+          <End Role="ID_Kapcsolo" Type="Self.ID_Kapcsolo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aruhaz">
+              <PropertyRef Name="Aruhaz_neve" />
+            </Principal>
+            <Dependent Role="ID_Kapcsolo">
+              <PropertyRef Name="Aruhaz_neve" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gyarto_fk">
+          <End Role="Gyarto" Type="Self.Gyarto" Multiplicity="0..1" />
+          <End Role="Termek" Type="Self.Termek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gyarto">
+              <PropertyRef Name="Gyarto_neve" />
+            </Principal>
+            <Dependent Role="Termek">
+              <PropertyRef Name="Gyarto_neve" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="termek_fk">
+          <End Role="Termek" Type="Self.Termek" Multiplicity="1" />
+          <End Role="ID_Kapcsolo" Type="Self.ID_Kapcsolo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Termek">
+              <PropertyRef Name="Termek_ID" />
+            </Principal>
+            <Dependent Role="ID_Kapcsolo">
+              <PropertyRef Name="Termek_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProductsServiceBasedDBModelStoreContainer">
+          <EntitySet Name="Aruhaz" EntityType="Self.Aruhaz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gyarto" EntityType="Self.Gyarto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ID_Kapcsolo" EntityType="Self.ID_Kapcsolo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Termek" EntityType="Self.Termek" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="aruhaz_fk" Association="Self.aruhaz_fk">
+            <End Role="Aruhaz" EntitySet="Aruhaz" />
+            <End Role="ID_Kapcsolo" EntitySet="ID_Kapcsolo" />
+          </AssociationSet>
+          <AssociationSet Name="gyarto_fk" Association="Self.gyarto_fk">
+            <End Role="Gyarto" EntitySet="Gyarto" />
+            <End Role="Termek" EntitySet="Termek" />
+          </AssociationSet>
+          <AssociationSet Name="termek_fk" Association="Self.termek_fk">
+            <End Role="Termek" EntitySet="Termek" />
+            <End Role="ID_Kapcsolo" EntitySet="ID_Kapcsolo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProductsServiceBasedDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aruhaz">
+          <Key>
+            <PropertyRef Name="Aruhaz_neve" />
+          </Key>
+          <Property Name="Aruhaz_neve" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Honlap" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="E_mail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="Decimal" Precision="13" Scale="0" />
+          <Property Name="Kozpont" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Adoszam" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <NavigationProperty Name="ID_Kapcsolo" Relationship="Self.aruhaz_fk" FromRole="Aruhaz" ToRole="ID_Kapcsolo" />
+        </EntityType>
+        <EntityType Name="Gyarto">
+          <Key>
+            <PropertyRef Name="Gyarto_neve" />
+          </Key>
+          <Property Name="Gyarto_neve" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Honlap" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="E_mail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="Decimal" Precision="13" Scale="0" />
+          <Property Name="Kozpont" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Adoszam" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <NavigationProperty Name="Termek" Relationship="Self.gyarto_fk" FromRole="Gyarto" ToRole="Termek" />
+        </EntityType>
+        <EntityType Name="ID_Kapcsolo">
+          <Key>
+            <PropertyRef Name="Kapcsolo_ID" />
+          </Key>
+          <Property Name="Kapcsolo_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Termek_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Aruhaz_neve" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Aruhaz" Relationship="Self.aruhaz_fk" FromRole="ID_Kapcsolo" ToRole="Aruhaz" />
+          <NavigationProperty Name="Termek" Relationship="Self.termek_fk" FromRole="ID_Kapcsolo" ToRole="Termek" />
+        </EntityType>
+        <EntityType Name="Termek">
+          <Key>
+            <PropertyRef Name="Termek_ID" />
+          </Key>
+          <Property Name="Termek_ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Tipus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Megnevezes" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Kiszereles" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Ar" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="Leiras" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Gyarto_neve" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Gyarto" Relationship="Self.gyarto_fk" FromRole="Termek" ToRole="Gyarto" />
+          <NavigationProperty Name="ID_Kapcsolo" Relationship="Self.termek_fk" FromRole="Termek" ToRole="ID_Kapcsolo" />
+        </EntityType>
+        <Association Name="aruhaz_fk">
+          <End Role="Aruhaz" Type="Self.Aruhaz" Multiplicity="1" />
+          <End Role="ID_Kapcsolo" Type="Self.ID_Kapcsolo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Aruhaz">
+              <PropertyRef Name="Aruhaz_neve" />
+            </Principal>
+            <Dependent Role="ID_Kapcsolo">
+              <PropertyRef Name="Aruhaz_neve" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="gyarto_fk">
+          <End Role="Gyarto" Type="Self.Gyarto" Multiplicity="0..1" />
+          <End Role="Termek" Type="Self.Termek" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gyarto">
+              <PropertyRef Name="Gyarto_neve" />
+            </Principal>
+            <Dependent Role="Termek">
+              <PropertyRef Name="Gyarto_neve" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="termek_fk">
+          <End Role="Termek" Type="Self.Termek" Multiplicity="1" />
+          <End Role="ID_Kapcsolo" Type="Self.ID_Kapcsolo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Termek">
+              <PropertyRef Name="Termek_ID" />
+            </Principal>
+            <Dependent Role="ID_Kapcsolo">
+              <PropertyRef Name="Termek_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProductsServiceBasedDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aruhaz" EntityType="Self.Aruhaz" />
+          <EntitySet Name="Gyarto" EntityType="Self.Gyarto" />
+          <EntitySet Name="ID_Kapcsolo" EntityType="Self.ID_Kapcsolo" />
+          <EntitySet Name="Termek" EntityType="Self.Termek" />
+          <AssociationSet Name="aruhaz_fk" Association="Self.aruhaz_fk">
+            <End Role="Aruhaz" EntitySet="Aruhaz" />
+            <End Role="ID_Kapcsolo" EntitySet="ID_Kapcsolo" />
+          </AssociationSet>
+          <AssociationSet Name="gyarto_fk" Association="Self.gyarto_fk">
+            <End Role="Gyarto" EntitySet="Gyarto" />
+            <End Role="Termek" EntitySet="Termek" />
+          </AssociationSet>
+          <AssociationSet Name="termek_fk" Association="Self.termek_fk">
+            <End Role="Termek" EntitySet="Termek" />
+            <End Role="ID_Kapcsolo" EntitySet="ID_Kapcsolo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProductsServiceBasedDBModelStoreContainer" CdmEntityContainer="ProductsServiceBasedDBEntities">
+          <EntitySetMapping Name="Aruhaz">
+            <EntityTypeMapping TypeName="ProductsServiceBasedDBModel.Aruhaz">
+              <MappingFragment StoreEntitySet="Aruhaz">
+                <ScalarProperty Name="Aruhaz_neve" ColumnName="Aruhaz_neve" />
+                <ScalarProperty Name="Honlap" ColumnName="Honlap" />
+                <ScalarProperty Name="E_mail" ColumnName="E_mail" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Kozpont" ColumnName="Kozpont" />
+                <ScalarProperty Name="Adoszam" ColumnName="Adoszam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gyarto">
+            <EntityTypeMapping TypeName="ProductsServiceBasedDBModel.Gyarto">
+              <MappingFragment StoreEntitySet="Gyarto">
+                <ScalarProperty Name="Gyarto_neve" ColumnName="Gyarto_neve" />
+                <ScalarProperty Name="Honlap" ColumnName="Honlap" />
+                <ScalarProperty Name="E_mail" ColumnName="E_mail" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Kozpont" ColumnName="Kozpont" />
+                <ScalarProperty Name="Adoszam" ColumnName="Adoszam" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ID_Kapcsolo">
+            <EntityTypeMapping TypeName="ProductsServiceBasedDBModel.ID_Kapcsolo">
+              <MappingFragment StoreEntitySet="ID_Kapcsolo">
+                <ScalarProperty Name="Kapcsolo_ID" ColumnName="Kapcsolo_ID" />
+                <ScalarProperty Name="Termek_ID" ColumnName="Termek_ID" />
+                <ScalarProperty Name="Aruhaz_neve" ColumnName="Aruhaz_neve" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Termek">
+            <EntityTypeMapping TypeName="ProductsServiceBasedDBModel.Termek">
+              <MappingFragment StoreEntitySet="Termek">
+                <ScalarProperty Name="Termek_ID" ColumnName="Termek_ID" />
+                <ScalarProperty Name="Tipus" ColumnName="Tipus" />
+                <ScalarProperty Name="Megnevezes" ColumnName="Megnevezes" />
+                <ScalarProperty Name="Kiszereles" ColumnName="Kiszereles" />
+                <ScalarProperty Name="Ar" ColumnName="Ar" />
+                <ScalarProperty Name="Leiras" ColumnName="Leiras" />
+                <ScalarProperty Name="Gyarto_neve" ColumnName="Gyarto_neve" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
