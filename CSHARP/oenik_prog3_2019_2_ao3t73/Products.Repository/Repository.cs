@@ -52,7 +52,8 @@ namespace Products.Repository
         /// <param name="param"> Product that user intend to add. </param>
         public void AddProduct(Termek param)
         {
-            throw new NotImplementedException();
+            this.dataBase.Termek.Add(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
