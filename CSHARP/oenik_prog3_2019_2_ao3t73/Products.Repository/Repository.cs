@@ -42,7 +42,8 @@ namespace Products.Repository
         /// <param name="param"> Manufacturer that user intend to add. </param>
         public void AddManufacturer(Gyarto param)
         {
-            throw new NotImplementedException();
+            this.dataBase.Gyarto.Add(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
