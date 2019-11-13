@@ -62,7 +62,8 @@ namespace Products.Repository
         /// <param name="param"> Shop that user intend to add. </param>
         public void AddShop(Aruhaz param)
         {
-            throw new NotImplementedException();
+            this.dataBase.Aruhaz.Add(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
