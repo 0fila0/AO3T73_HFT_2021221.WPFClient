@@ -32,7 +32,8 @@ namespace Products.Repository
         /// <param name="param"> Link that user intend to add. </param>
         public void AddLink(ID_Kapcsolo param)
         {
-            throw new NotImplementedException();
+            this.dataBase.ID_Kapcsolo.Add(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
