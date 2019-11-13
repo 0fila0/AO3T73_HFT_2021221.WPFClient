@@ -16,6 +16,16 @@ namespace Products.Repository
     /// </summary>
     public class Repository : IRepository
     {
+        private ProductsServiceBasedDBEntities dataBase;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Repository"/> class.
+        /// </summary>
+        public Repository()
+        {
+            this.dataBase = new ProductsServiceBasedDBEntities();
+        }
+
         /// <summary>
         /// This method adds a new link entity to the database.
         /// </summary>
