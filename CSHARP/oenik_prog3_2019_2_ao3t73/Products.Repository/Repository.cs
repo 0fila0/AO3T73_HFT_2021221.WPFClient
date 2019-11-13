@@ -72,7 +72,8 @@ namespace Products.Repository
         /// <param name="param"> Link that user intend to delete. </param>
         public void DeleteLink(ID_Kapcsolo param)
         {
-            throw new NotImplementedException();
+            this.dataBase.ID_Kapcsolo.Remove(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
