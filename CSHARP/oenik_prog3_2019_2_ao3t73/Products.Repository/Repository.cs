@@ -102,7 +102,8 @@ namespace Products.Repository
         /// <param name="param"> Shop that user intend to delete. </param>
         public void DeleteShop(Aruhaz param)
         {
-            throw new NotImplementedException();
+            this.dataBase.Aruhaz.Remove(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
