@@ -1,4 +1,8 @@
-﻿namespace Products.Data
+﻿// <copyright file="Data.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Products.Data
 {
     using System;
     using System.Collections.Generic;
