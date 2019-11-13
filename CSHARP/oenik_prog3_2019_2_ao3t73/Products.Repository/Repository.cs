@@ -82,7 +82,8 @@ namespace Products.Repository
         /// <param name="param"> Manufacturer that user intend to delete. </param>
         public void DeleteManufacturer(Gyarto param)
         {
-            throw new NotImplementedException();
+            this.dataBase.Gyarto.Remove(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
