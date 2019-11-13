@@ -12,7 +12,7 @@ namespace Products.Program
 
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string controller = string.Empty;
             while (controller.ToLower() != "q")
