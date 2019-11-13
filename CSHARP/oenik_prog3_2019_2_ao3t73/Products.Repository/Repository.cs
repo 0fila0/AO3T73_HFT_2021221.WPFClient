@@ -92,7 +92,8 @@ namespace Products.Repository
         /// <param name="param"> Product that user intend to delete. </param>
         public void DeleteProduct(Termek param)
         {
-            throw new NotImplementedException();
+            this.dataBase.Termek.Remove(param);
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
