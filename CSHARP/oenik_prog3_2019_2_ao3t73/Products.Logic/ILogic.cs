@@ -9,6 +9,7 @@ namespace Products.Logic
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Products.Data;
 
     /// <summary>
     /// This interface describes what methods should be implemented in Logic class.
