@@ -57,5 +57,19 @@
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Products.Data\Products.Data.csproj">
+      <Project>{a1c6c9b7-cb57-4c71-bf86-f59b2aafe8a6}</Project>
+      <Name>Products.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Logic.Tests\Products.Logic.Tests.csproj">
+      <Project>{58973c31-294b-48ab-a9f7-0d1dbd6b2e50}</Project>
+      <Name>Products.Logic.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Products.Logic\Products.Logic.csproj">
+      <Project>{61bced23-803e-4c25-b0b1-df00863b90fb}</Project>
+      <Name>Products.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
