@@ -89,6 +89,7 @@ namespace Products.Logic
         /// <returns>A shop entity which is the cheapest.</returns>
         public Aruhaz CheapestShop()
         {
+            throw new NotImplementedException();
         }
 
         /// <summary>
