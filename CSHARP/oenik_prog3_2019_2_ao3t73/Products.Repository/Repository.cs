@@ -167,7 +167,18 @@ namespace Products.Repository
         /// <param name="param"> Manufacturer that user intend to modify. </param>
         public void UpdateManufacturer(Gyarto param)
         {
-            throw new NotImplementedException();
+            var old = this.dataBase.Gyarto.SingleOrDefault(x => x.Gyarto_neve == param.Gyarto_neve);
+            if (old != null)
+            {
+                foreach (PropertyInfo newProp in param.GetType().GetProperties())
+                {
+                    if (newProp.GetValue(param) != null && newProp.GetValue(param) != newProp.GetValue(old))
+                    {
+                        newProp.SetValue(old, newProp.GetValue(param));
+                        this.dataBase.SaveChanges();
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -176,7 +187,18 @@ namespace Products.Repository
         /// <param name="param"> Product that user intend to modify. </param>
         public void UpdateProduct(Termek param)
         {
-            throw new NotImplementedException();
+            var old = this.dataBase.Termek.SingleOrDefault(x => x.Termek_ID == param.Termek_ID);
+            if (old != null)
+            {
+                foreach (PropertyInfo newProp in param.GetType().GetProperties())
+                {
+                    if (newProp.GetValue(param) != null && newProp.GetValue(param) != newProp.GetValue(old))
+                    {
+                        newProp.SetValue(old, newProp.GetValue(param));
+                        this.dataBase.SaveChanges();
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -185,7 +207,18 @@ namespace Products.Repository
         /// <param name="param"> Shop that user intend to modify. </param>
         public void UpdateShop(Aruhaz param)
         {
-            throw new NotImplementedException();
+            var old = this.dataBase.Aruhaz.SingleOrDefault(x => x.Aruhaz_neve == param.Aruhaz_neve);
+            if (old != null)
+            {
+                foreach (PropertyInfo newProp in param.GetType().GetProperties())
+                {
+                    if (newProp.GetValue(param) != null && newProp.GetValue(param) != newProp.GetValue(old))
+                    {
+                        newProp.SetValue(old, newProp.GetValue(param));
+                        this.dataBase.SaveChanges();
+                    }
+                }
+            }
         }
     }
 }
