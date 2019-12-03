@@ -23,6 +23,8 @@ namespace Products.Program
         /// </summary>
         public static void Main()
         {
+            Logical logic = new Logical(new Repository());
+
             string controller = string.Empty;
             while (controller.ToLower() != "q")
             {
@@ -59,11 +61,11 @@ namespace Products.Program
                 else if (controller == "0")
                 {
                     Console.Clear();
-                    Console.WriteLine("\t\t*** Lekérdezések azonosító alapján ***");
+                    Console.WriteLine("\t\t*** Listázás ***");
                     Console.WriteLine("\n");
-                    Console.WriteLine("1: Termék lekérdezése");
-                    Console.WriteLine("2: Üzlet lekérdezése");
-                    Console.WriteLine("3: Gyártó lekérdezése");
+                    Console.WriteLine("1: Termékek listázása");
+                    Console.WriteLine("2: Üzletek listázása");
+                    Console.WriteLine("3: Gyártók listázása");
                     Console.WriteLine("\nEgyéb gombra visszatér a főmenübe.");
                     Console.WriteLine();
 
@@ -151,6 +153,24 @@ namespace Products.Program
                     }
                 }
             }
+        }
+
+        private static void Write_ModifyProductID(int updateProductID)
+        {
+            Console.WriteLine("A módosítandó termék azonosítója: " + updateProductID);
+            Console.WriteLine();
+        }
+
+        private static void Write_ModifyShopName(string updateShopName)
+        {
+            Console.WriteLine("A módosítandó üzlet neve: " + updateShopName);
+            Console.WriteLine();
+        }
+
+        private static void Write_ModifyManufacturerName(string updateManufacturerName)
+        {
+            Console.WriteLine("A módosítandó gyártó neve: " + updateManufacturerName);
+            Console.WriteLine();
         }
     }
 }
