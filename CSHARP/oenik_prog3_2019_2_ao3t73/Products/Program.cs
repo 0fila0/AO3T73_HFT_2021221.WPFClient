@@ -9,6 +9,9 @@ namespace Products.Program
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using Products.Data;
+    using Products.Logic;
+    using Products.Repository;
 
     public class Program
     {
