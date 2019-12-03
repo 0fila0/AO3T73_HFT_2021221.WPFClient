@@ -122,7 +122,13 @@ namespace Products.Repository
         /// <returns> A list with all manufacturer entities. </returns>
         public List<Gyarto> GetAllManufacturers()
         {
-            throw new NotImplementedException();
+            List<Gyarto> listOfManufacturers = new List<Gyarto>();
+            foreach (var item in this.dataBase.Gyarto)
+            {
+                listOfManufacturers.Add(item);
+            }
+
+            return listOfManufacturers;
         }
 
         /// <summary>
@@ -131,7 +137,13 @@ namespace Products.Repository
         /// <returns> A list with all product entities. </returns>
         public List<Termek> GetAllProducts()
         {
-            throw new NotImplementedException();
+            List<Termek> listOfProducts = new List<Termek>();
+            foreach (var item in this.dataBase.Termek)
+            {
+                listOfProducts.Add(item);
+            }
+
+            return listOfProducts;
         }
 
         /// <summary>
@@ -140,16 +152,13 @@ namespace Products.Repository
         /// <returns> A list with all shop entities. </returns>
         public List<Aruhaz> GetAllShops()
         {
-            throw new NotImplementedException();
-        }
+            List<Aruhaz> listOfShops = new List<Aruhaz>();
+            foreach (var item in this.dataBase.Aruhaz)
+            {
+                listOfShops.Add(item);
+            }
 
-        /// <summary>
-        /// This method changes an existing link entity's property/properties.
-        /// </summary>
-        /// <param name="param"> Link that user intend to modify. </param>
-        public void UpdateLink(ID_Kapcsolo param)
-        {
-            throw new NotImplementedException();
+            return listOfShops;
         }
 
         /// <summary>
