@@ -83,12 +83,6 @@ namespace Products.Repository
         void UpdateManufacturer(Gyarto param);
 
         /// <summary>
-        /// This method changes an existing link entity's property/properties.
-        /// </summary>
-        /// <param name="param"> Link that user intend to modify. </param>
-        void UpdateLink(ID_Kapcsolo param);
-
-        /// <summary>
         /// This method deletes a shop entity from database.
         /// </summary>
         /// <param name="param"> Shop that user intend to delete. </param>
