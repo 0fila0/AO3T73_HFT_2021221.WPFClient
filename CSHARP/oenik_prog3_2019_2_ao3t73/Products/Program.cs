@@ -134,9 +134,16 @@ namespace Products.Program
                             break;
 
                         case "2":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Add meg a termék azonosítóját, amit ki szeretnél törölni!");
+                            string deleteProductID = Console.ReadLine();
+                            Termek deleteProduct = new Termek()
+                            {
+                                Termek_ID = int.Parse(deleteProductID),
+                            };
+                            logic.DeleteProduct(deleteProduct);
                             Console.ReadLine();
                             break;
+
                         case "3":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
@@ -160,9 +167,16 @@ namespace Products.Program
                             break;
 
                         case "5":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Add meg az üzlet nevét, amit ki szeretnél törölni!");
+                            string deleteShopID = Console.ReadLine();
+                            Aruhaz deleteShop = new Aruhaz()
+                            {
+                                Aruhaz_neve = deleteShopID,
+                            };
+                            logic.DeleteShop(deleteShop);
                             Console.ReadLine();
                             break;
+
                         case "6":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
@@ -186,9 +200,16 @@ namespace Products.Program
                             break;
 
                         case "8":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Add meg a gyártó nevét, amit ki szeretnél törölni!");
+                            string deleteManufacturerID = Console.ReadLine();
+                            Gyarto deleteManufacturer = new Gyarto()
+                            {
+                                Gyarto_neve = deleteManufacturerID,
+                            };
+                            logic.DeleteManufacturer(deleteManufacturer);
                             Console.ReadLine();
                             break;
+
                         case "9":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
