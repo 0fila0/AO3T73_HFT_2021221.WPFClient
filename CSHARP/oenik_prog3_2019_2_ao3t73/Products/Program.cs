@@ -117,9 +117,22 @@ namespace Products.Program
                     switch (controller.ToLower())
                     {
                         case "1":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Add meg a termék paramétereit '#' karakterrel elválasztva!");
+                            Console.WriteLine("\ntípus#megnevezés#kiszerelés#ár#leírás\n");
+                            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+                            string newProductParameters = Console.ReadLine();
+                            Termek newProduct = new Termek()
+                            {
+                                Megnevezes = newProductParameters.Split('#')[0],
+                                Tipus = newProductParameters.Split('#')[1],
+                                Kiszereles = newProductParameters.Split('#')[2],
+                                Ar = int.Parse(newProductParameters.Split('#')[3]),
+                                Leiras = newProductParameters.Split('#')[4],
+                            };
+                            logic.AddProduct(newProduct);
                             Console.ReadLine();
                             break;
+
                         case "2":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
@@ -129,9 +142,23 @@ namespace Products.Program
                             Console.ReadLine();
                             break;
                         case "4":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Add meg az üzlet paramétereit '#' karakterrel elválasztva!");
+                            Console.WriteLine("\nnév#honlap#email#telefon#központ#adószám\n");
+                            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+                            string newShopParameters = Console.ReadLine();
+                            Aruhaz newShop = new Aruhaz()
+                            {
+                                Aruhaz_neve = newShopParameters.Split('#')[0],
+                                Honlap = newShopParameters.Split('#')[1],
+                                E_mail = newShopParameters.Split('#')[2],
+                                Telefon = int.Parse(newShopParameters.Split('#')[3]),
+                                Kozpont = newShopParameters.Split('#')[4],
+                                Adoszam = int.Parse(newShopParameters.Split('#')[5]),
+                            };
+                            logic.AddShop(newShop);
                             Console.ReadLine();
                             break;
+
                         case "5":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
@@ -141,9 +168,23 @@ namespace Products.Program
                             Console.ReadLine();
                             break;
                         case "7":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Add meg a gyártó paramétereit '#' karakterrel elválasztva!");
+                            Console.WriteLine("\nnév#honlap#email#telefon#központ#adószám\n");
+                            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+                            string newManufacturerParameters = Console.ReadLine();
+                            Gyarto newManufacturer = new Gyarto()
+                            {
+                                Gyarto_neve = newManufacturerParameters.Split('#')[0],
+                                Honlap = newManufacturerParameters.Split('#')[1],
+                                E_mail = newManufacturerParameters.Split('#')[2],
+                                Telefon = int.Parse(newManufacturerParameters.Split('#')[3]),
+                                Kozpont = newManufacturerParameters.Split('#')[4],
+                                Adoszam = int.Parse(newManufacturerParameters.Split('#')[5]),
+                            };
+                            logic.AddManufacturer(newManufacturer);
                             Console.ReadLine();
                             break;
+
                         case "8":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
