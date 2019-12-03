@@ -13,9 +13,15 @@ namespace Products.Program
     using Products.Logic;
     using Products.Repository;
 
+    /// <summary>
+    /// This is the StartUp project.
+    /// </summary>
     public class Program
     {
-        public static void Main(string[] args)
+        /// <summary>
+        /// Main method communicates with the user, this is the User Interface.
+        /// </summary>
+        public static void Main()
         {
             string controller = string.Empty;
             while (controller.ToLower() != "q")
