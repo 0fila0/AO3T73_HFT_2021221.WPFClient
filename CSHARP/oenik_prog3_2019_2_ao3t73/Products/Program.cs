@@ -145,9 +145,82 @@ namespace Products.Program
                             break;
 
                         case "3":
-                            Console.WriteLine("Ez még nincs kész.");
-                            Console.ReadLine();
+                            Console.WriteLine("Add meg a módosítandó termék azonosítóját!");
+                            int updateProductID = int.Parse(Console.ReadLine());
+
+                            Console.Clear();
+                            Write_ModifyProductID(updateProductID);  // Prints on the screen the product's ID which the user wants to modify.
+
+                            Console.WriteLine("Add meg a termék azon tulajdonságát, amit módosítani szeretnél!\n");
+                            Console.WriteLine("0: Vissza a főmenübe\n\n1: Típus\n2: Megnevezés\n3: Kiszerelés\n4: Ár\n5: Leírás\n");
+                            controller = Console.ReadLine();
+
+                            Console.Clear();
+                            Write_ModifyProductID(updateProductID);  // Prints on the screen the product's ID which the user wants to modify.
+                            switch (controller)
+                            {
+                                case "0":
+                                    break;
+                                case "1":
+                                    Console.WriteLine("Add meg a termék új típusát!");
+                                    string updateProductType = Console.ReadLine();
+                                    Termek updateProduct_T = new Termek
+                                    {
+                                        Termek_ID = updateProductID,
+                                        Tipus = updateProductType,
+                                    };
+                                    logic.UpdateProduct(updateProduct_T);
+                                    Console.ReadLine();
+                                    break;
+                                case "2":
+                                    Console.WriteLine("Add meg a termék új nevét!");
+                                    string updateProductName = Console.ReadLine();
+                                    Termek updateProduct_N = new Termek
+                                    {
+                                        Termek_ID = updateProductID,
+                                        Megnevezes = updateProductName,
+                                    };
+                                    logic.UpdateProduct(updateProduct_N);
+                                    Console.ReadLine();
+                                    break;
+                                case "3":
+                                    Console.WriteLine("Add meg a termék új kiszerelését!");
+                                    string updateProductPack = Console.ReadLine();
+                                    Termek updateProduct_P = new Termek
+                                    {
+                                        Termek_ID = updateProductID,
+                                        Kiszereles = updateProductPack,
+                                    };
+                                    logic.UpdateProduct(updateProduct_P);
+                                    Console.ReadLine();
+                                    break;
+                                case "4":
+                                    Console.WriteLine("Add meg a termék új árát!");
+                                    string updateProductCost = Console.ReadLine();
+                                    Termek updateProduct_C = new Termek
+                                    {
+                                        Termek_ID = updateProductID,
+                                        Ar = int.Parse(updateProductCost),
+                                    };
+                                    logic.UpdateProduct(updateProduct_C);
+                                    Console.ReadLine();
+                                    break;
+                                case "5":
+                                    Console.WriteLine("Add meg a termék új leírását!");
+                                    string updateProductDescription = Console.ReadLine();
+                                    Termek updateProduct_D = new Termek
+                                    {
+                                        Termek_ID = updateProductID,
+                                        Leiras = updateProductDescription,
+                                    };
+                                    logic.UpdateProduct(updateProduct_D);
+                                    Console.ReadLine();
+                                    break;
+                            }
+
+                            controller = string.Empty;
                             break;
+
                         case "4":
                             Console.WriteLine("Add meg az üzlet paramétereit '#' karakterrel elválasztva!");
                             Console.WriteLine("\nnév#honlap#email#telefon#központ#adószám\n");
@@ -178,9 +251,82 @@ namespace Products.Program
                             break;
 
                         case "6":
-                            Console.WriteLine("Ez még nincs kész.");
-                            Console.ReadLine();
+                            Console.WriteLine("Add meg a módosítandó üzlet nevét!");
+                            string updateShopName = Console.ReadLine();
+
+                            Console.Clear();
+                            Write_ModifyShopName(updateShopName);  // Prints on the screen the shop's name which the user wants to modify.
+
+                            Console.WriteLine("Add meg az üzlet azon tulajdonságát, amit módosítani szeretnél!\n");
+                            Console.WriteLine("0: Vissza a főmenübe\n\n1: Honlap\n2: Email\n3: Telefon\n4: Központ\n5: Adószám\n");
+                            controller = Console.ReadLine();
+
+                            Console.Clear();
+                            Write_ModifyShopName(updateShopName);  // Prints on the screen the shop's name which the user wants to modify.
+                            switch (controller)
+                            {
+                                case "0":
+                                    break;
+                                case "1":
+                                    Console.WriteLine("Add meg az üzlet új honlapját!");
+                                    string updateShopWeb = Console.ReadLine();
+                                    Aruhaz updateShop_W = new Aruhaz
+                                    {
+                                        Aruhaz_neve = updateShopName,
+                                        Honlap = updateShopWeb,
+                                    };
+                                    logic.UpdateShop(updateShop_W);
+                                    Console.ReadLine();
+                                    break;
+                                case "2":
+                                    Console.WriteLine("Add meg az üzlet új email címét!");
+                                    string updateShopEmail = Console.ReadLine();
+                                    Aruhaz updateShop_E = new Aruhaz
+                                    {
+                                        Aruhaz_neve = updateShopName,
+                                        E_mail = updateShopEmail,
+                                    };
+                                    logic.UpdateShop(updateShop_E);
+                                    Console.ReadLine();
+                                    break;
+                                case "3":
+                                    Console.WriteLine("Add meg az üzlet új telefonszámát!");
+                                    int updateShopPhone = int.Parse(Console.ReadLine());
+                                    Aruhaz updateShop_P = new Aruhaz
+                                    {
+                                        Aruhaz_neve = updateShopName,
+                                        Telefon = updateShopPhone,
+                                    };
+                                    logic.UpdateShop(updateShop_P);
+                                    Console.ReadLine();
+                                    break;
+                                case "4":
+                                    Console.WriteLine("Add meg az üzlet új központját!");
+                                    string updateShopCenter = Console.ReadLine();
+                                    Aruhaz updateShop_C = new Aruhaz
+                                    {
+                                        Aruhaz_neve = updateShopName,
+                                        Kozpont = updateShopCenter,
+                                    };
+                                    logic.UpdateShop(updateShop_C);
+                                    Console.ReadLine();
+                                    break;
+                                case "5":
+                                    Console.WriteLine("Add meg az üzlet új adószámát!");
+                                    int updateShopTax = int.Parse(Console.ReadLine());
+                                    Aruhaz updateShop_T = new Aruhaz
+                                    {
+                                        Aruhaz_neve = updateShopName,
+                                        Adoszam = updateShopTax,
+                                    };
+                                    logic.UpdateShop(updateShop_T);
+                                    Console.ReadLine();
+                                    break;
+                            }
+
+                            controller = string.Empty;
                             break;
+
                         case "7":
                             Console.WriteLine("Add meg a gyártó paramétereit '#' karakterrel elválasztva!");
                             Console.WriteLine("\nnév#honlap#email#telefon#központ#adószám\n");
@@ -211,21 +357,97 @@ namespace Products.Program
                             break;
 
                         case "9":
-                            Console.WriteLine("Ez még nincs kész.");
-                            Console.ReadLine();
+                            Console.WriteLine("Add meg a módosítandó gyártó nevét!");
+                            string updateManufacturerName = Console.ReadLine();
+
+                            Console.Clear();
+                            Write_ModifyManufacturerName(updateManufacturerName);  // Prints on the screen the manufacturer's name which the user wants to modify.
+
+                            Console.WriteLine("Add meg a gyártó azon tulajdonságát, amit módosítani szeretnél!\n");
+                            Console.WriteLine("0: Vissza a főmenübe\n\n1: Honlap\n2: Email\n3: Telefon\n4: Központ\n5: Adószám\n");
+                            controller = Console.ReadLine();
+
+                            Console.Clear();
+                            Write_ModifyManufacturerName(updateManufacturerName);  // Prints on the screen the manufacturer's name which the user wants to modify.
+                            switch (controller)
+                            {
+                                case "0":
+                                    break;
+                                case "1":
+                                    Console.WriteLine("Add meg a gyártó új honlapját!");
+                                    string updateManufacturerWeb = Console.ReadLine();
+                                    Gyarto updateManufacturer_W = new Gyarto
+                                    {
+                                        Gyarto_neve = updateManufacturerName,
+                                        Honlap = updateManufacturerWeb,
+                                    };
+                                    logic.UpdateManufacturer(updateManufacturer_W);
+                                    Console.ReadLine();
+                                    break;
+                                case "2":
+                                    Console.WriteLine("Add meg a gyártó új email címét!");
+                                    string updateManufacturerEmail = Console.ReadLine();
+                                    Gyarto updateManufacturer_E = new Gyarto
+                                    {
+                                        Gyarto_neve = updateManufacturerName,
+                                        E_mail = updateManufacturerEmail,
+                                    };
+                                    logic.UpdateManufacturer(updateManufacturer_E);
+                                    Console.ReadLine();
+                                    break;
+                                case "3":
+                                    Console.WriteLine("Add meg a gyártó új telefonszámát!");
+                                    int updateManufacturerPhone = int.Parse(Console.ReadLine());
+                                    Gyarto updateManufacturer_P = new Gyarto
+                                    {
+                                        Gyarto_neve = updateManufacturerName,
+                                        Telefon = updateManufacturerPhone,
+                                    };
+                                    logic.UpdateManufacturer(updateManufacturer_P);
+                                    Console.ReadLine();
+                                    break;
+                                case "4":
+                                    Console.WriteLine("Add meg a gyártó új központját!");
+                                    string updateManufacturerCenter = Console.ReadLine();
+                                    Gyarto updateManufacturer_C = new Gyarto
+                                    {
+                                        Gyarto_neve = updateManufacturerName,
+                                        Kozpont = updateManufacturerCenter,
+                                    };
+                                    logic.UpdateManufacturer(updateManufacturer_C);
+                                    Console.ReadLine();
+                                    break;
+                                case "5":
+                                    Console.WriteLine("Add meg a gyártó új adószámát!");
+                                    int updateManufacturerTax = int.Parse(Console.ReadLine());
+                                    Gyarto updateManufacturer_T = new Gyarto
+                                    {
+                                        Gyarto_neve = updateManufacturerName,
+                                        Adoszam = updateManufacturerTax,
+                                    };
+                                    logic.UpdateManufacturer(updateManufacturer_T);
+                                    Console.ReadLine();
+                                    break;
+                            }
+
+                            controller = string.Empty;
                             break;
+
                         case "a":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
                             break;
+
                         case "s":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
                             break;
+
                         case "d":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
                             break;
+
                         case "f":
                             Console.WriteLine("Ez még nincs kész.");
                             Console.ReadLine();
