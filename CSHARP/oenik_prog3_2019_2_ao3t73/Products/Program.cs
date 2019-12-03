@@ -76,17 +76,35 @@ namespace Products.Program
                     switch (controller)
                     {
                         case "1":
-                            Console.WriteLine("Ez még nincs kész.");
+                            List<Termek> listP = new List<Termek>();    // listP = listProduct
+                            listP = logic.GetAllProducts();
+                            foreach (var item in listP)
+                            {
+                                Console.WriteLine(item.Megnevezes);
+                            }
+
                             Console.ReadLine();
                             break;
 
                         case "2":
-                            Console.WriteLine("Ez még nincs kész.");
+                            List<Aruhaz> listS = new List<Aruhaz>();    // listS = listShop
+                            listS = logic.GetAllShops();
+                            foreach (var item in listS)
+                            {
+                                Console.WriteLine(item.Aruhaz_neve);
+                            }
+
                             Console.ReadLine();
                             break;
 
                         case "3":
-                            Console.WriteLine("Ez még nincs kész.");
+                            List<Gyarto> listM = new List<Gyarto>();    // listM = listManufacturer
+                            listM = logic.GetAllManufacturers();
+                            foreach (var item in listM)
+                            {
+                                Console.WriteLine(item.Gyarto_neve);
+                            }
+
                             Console.ReadLine();
                             break;
                     }
