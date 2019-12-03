@@ -111,33 +111,5 @@ namespace Products.Repository
         /// </summary>
         /// <param name="param"> Link that user intend to delete. </param>
         void DeleteLink(ID_Kapcsolo param);
-
-        /// <summary>
-        /// This method displays that shop's details, if it exists, which has been entered by user.
-        /// </summary>
-        /// <param name="key_param"> Shop that user's looking for. </param>
-        /// <returns> The shop that user looked for. </returns>
-        Aruhaz FindShop(string key_param);
-
-        /// <summary>
-        /// This method displays that product's details, if it exists, which has been entered by user.
-        /// </summary>
-        /// <param name="key_param"> Product that user's looking for. </param>
-        /// <returns> The product that user looked for. </returns>
-        Termek FindProduct(string key_param);
-
-        /// <summary>
-        /// This method displays that manufacturer's details, if it exists, which has been entered by user.
-        /// </summary>
-        /// <param name="key_param"> Manufacturer that user's looking for. </param>
-        /// <returns> The manufacturer that user looked for. </returns>
-        Gyarto FindManufaceturer(string key_param);
-
-        /// <summary>
-        /// This method displays that link's details, if it exists, which has been entered by user.
-        /// </summary>
-        /// <param name="key_param"> Link that user's looking for. </param>
-        /// <returns> The link that user looked for. </returns>
-        ID_Kapcsolo FindLink(string key_param);
     }
 }
