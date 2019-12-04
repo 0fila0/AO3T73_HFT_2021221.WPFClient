@@ -83,6 +83,15 @@ namespace Products.Repository
         /// <param name="param"> Manufacturer that user intend to delete. </param>
         public void DeleteManufacturer(Gyarto param)
         {
+            foreach (var item in this.dataBase.Termek)
+            {
+                if (item.Gyarto_neve == param.Gyarto_neve)
+                {
+                    item.Gyarto_neve = string.Empty;
+                    item.Gyarto = null;
+                }
+            }
+
             this.dataBase.Gyarto.Remove(param);
             this.dataBase.SaveChanges();
         }
@@ -94,6 +103,10 @@ namespace Products.Repository
         public void DeleteProduct(Termek param)
         {
             this.dataBase.Termek.Remove(param);
+            var removeLink = from remove in this.dataBase.ID_Kapcsolo
+                             where remove.Termek_ID == param.Termek_ID
+                             select remove;
+            this.dataBase.ID_Kapcsolo.RemoveRange(removeLink);
             this.dataBase.SaveChanges();
         }
 
@@ -104,6 +117,10 @@ namespace Products.Repository
         public void DeleteShop(Aruhaz param)
         {
             this.dataBase.Aruhaz.Remove(param);
+            var removeLink = from remove in this.dataBase.ID_Kapcsolo
+                             where remove.Aruhaz_neve == param.Aruhaz_neve
+                             select remove;
+            this.dataBase.ID_Kapcsolo.RemoveRange(removeLink);
             this.dataBase.SaveChanges();
         }
 
