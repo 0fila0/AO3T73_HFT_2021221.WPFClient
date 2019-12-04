@@ -495,7 +495,14 @@ namespace Products.Program
                 {
                     if (prop.GetCustomAttribute<DontWriteToTheStandardOutput>() == null)
                     {
-                        Console.WriteLine(prop.Name + ": " + prop.GetValue(item));
+                        if (prop.GetValue(item) == null)
+                        {
+                            Console.WriteLine(prop.Name + ": ---");
+                        }
+                        else
+                        {
+                            Console.WriteLine(prop.Name + ": " + prop.GetValue(item));
+                        }
                     }
                 }
 
