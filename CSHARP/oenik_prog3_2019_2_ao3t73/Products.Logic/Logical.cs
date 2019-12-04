@@ -216,8 +216,11 @@ namespace Products.Logic
         /// <param name="param"> Manufacturer that user intend to modify. </param>
         public void UpdateManufacturer(Gyarto param)
         {
+            List<Gyarto> listOfManufacturers = this.GetAllManufacturers();
+            Gyarto manufacturerFound = listOfManufacturers.Find(x => x.Gyarto_neve == param.Gyarto_neve);
+
             // If parameter is null then nothing happens.
-            if (param != null)
+            if (manufacturerFound != null)
             {
                 this.repo.UpdateManufacturer(param);
             }
@@ -229,7 +232,14 @@ namespace Products.Logic
         /// <param name="param"> Product that user intend to modify. </param>
         public void UpdateProduct(Termek param)
         {
-            throw new NotImplementedException();
+            List<Termek> listOfProducts = this.GetAllProducts();
+            Termek productFound = listOfProducts.Find(x => x.Termek_ID == param.Termek_ID);
+
+            // If parameter is null then nothing happens.
+            if (productFound != null)
+            {
+                this.repo.UpdateProduct(param);
+            }
         }
 
         /// <summary>
@@ -238,7 +248,14 @@ namespace Products.Logic
         /// <param name="param"> Shop that user intend to modify. </param>
         public void UpdateShop(Aruhaz param)
         {
-            throw new NotImplementedException();
+            List<Aruhaz> listOfShops = this.GetAllShops();
+            Aruhaz shopFound = listOfShops.Find(x => x.Aruhaz_neve == param.Aruhaz_neve);
+
+            // If parameter is null then nothing happens.
+            if (shopFound != null)
+            {
+                this.repo.UpdateShop(param);
+            }
         }
 
         /// <summary>
