@@ -474,5 +474,34 @@ namespace Products.Program
             Console.WriteLine("A módosítandó gyártó neve: " + updateManufacturerName);
             Console.WriteLine();
         }
+
+        private static void Write_EntityDatas(IEnumerable<object> list)
+        {
+            foreach (var item in list)
+            {
+                PropertyInfo[] props = item.GetType().GetProperties();
+                foreach (PropertyInfo prop in props)
+                {
+                    if (prop.GetCustomAttribute<DontWriteToTheStandardOutput>() == null)
+                    {
+                        Console.WriteLine(prop.Name + ": " + prop.GetValue(item));
+                    }
+                }
+
+                Console.WriteLine("\n************************\n");
+            }
+
+            Console.WriteLine("\nNyomj entert a folytatáshoz!");
+            Console.ReadLine();
+        }
+
+        private static void Write_NewEntity(string entity, string properties)
+        {
+            Console.WriteLine("Add meg a " + entity + " paramétereit '#' karakterrel elválasztva!");
+            Console.WriteLine();
+            Console.WriteLine(properties);
+            Console.WriteLine();
+            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+        }
     }
 }
