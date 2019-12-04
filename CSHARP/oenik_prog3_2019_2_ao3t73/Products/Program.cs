@@ -7,6 +7,7 @@ namespace Products.Program
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Reflection;
     using System.Text;
     using System.Threading.Tasks;
     using Products.Data;
@@ -114,8 +115,10 @@ namespace Products.Program
                                 Kiszereles = newProductParameters.Split('#')[2],
                                 Ar = int.Parse(newProductParameters.Split('#')[3]),
                                 Leiras = newProductParameters.Split('#')[4],
+                                Gyarto_neve = newProductParameters.Split('#')[5],
                             };
                             logic.AddProduct(newProduct);
+                            Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
 
@@ -127,6 +130,7 @@ namespace Products.Program
                                 Termek_ID = int.Parse(deleteProductID),
                             };
                             logic.DeleteProduct(deleteProduct);
+                            Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
 
@@ -156,6 +160,7 @@ namespace Products.Program
                                         Tipus = updateProductType,
                                     };
                                     logic.UpdateProduct(updateProduct_T);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "2":
@@ -167,6 +172,7 @@ namespace Products.Program
                                         Megnevezes = updateProductName,
                                     };
                                     logic.UpdateProduct(updateProduct_N);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "3":
@@ -178,6 +184,7 @@ namespace Products.Program
                                         Kiszereles = updateProductPack,
                                     };
                                     logic.UpdateProduct(updateProduct_P);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "4":
@@ -189,6 +196,7 @@ namespace Products.Program
                                         Ar = int.Parse(updateProductCost),
                                     };
                                     logic.UpdateProduct(updateProduct_C);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "5":
@@ -200,6 +208,7 @@ namespace Products.Program
                                         Leiras = updateProductDescription,
                                     };
                                     logic.UpdateProduct(updateProduct_D);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                             }
@@ -223,6 +232,7 @@ namespace Products.Program
                                 Adoszam = int.Parse(newShopParameters.Split('#')[5]),
                             };
                             logic.AddShop(newShop);
+                            Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
 
@@ -234,6 +244,7 @@ namespace Products.Program
                                 Aruhaz_neve = deleteShopID,
                             };
                             logic.DeleteShop(deleteShop);
+                            Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
 
@@ -263,6 +274,7 @@ namespace Products.Program
                                         Honlap = updateShopWeb,
                                     };
                                     logic.UpdateShop(updateShop_W);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "2":
@@ -274,6 +286,7 @@ namespace Products.Program
                                         E_mail = updateShopEmail,
                                     };
                                     logic.UpdateShop(updateShop_E);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "3":
@@ -285,6 +298,7 @@ namespace Products.Program
                                         Telefon = updateShopPhone,
                                     };
                                     logic.UpdateShop(updateShop_P);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "4":
@@ -296,6 +310,7 @@ namespace Products.Program
                                         Kozpont = updateShopCenter,
                                     };
                                     logic.UpdateShop(updateShop_C);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "5":
@@ -307,6 +322,7 @@ namespace Products.Program
                                         Adoszam = updateShopTax,
                                     };
                                     logic.UpdateShop(updateShop_T);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                             }
@@ -330,6 +346,7 @@ namespace Products.Program
                                 Adoszam = int.Parse(newManufacturerParameters.Split('#')[5]),
                             };
                             logic.AddManufacturer(newManufacturer);
+                            Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
 
@@ -341,6 +358,7 @@ namespace Products.Program
                                 Gyarto_neve = deleteManufacturerID,
                             };
                             logic.DeleteManufacturer(deleteManufacturer);
+                            Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
 
@@ -370,6 +388,7 @@ namespace Products.Program
                                         Honlap = updateManufacturerWeb,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_W);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "2":
@@ -381,6 +400,7 @@ namespace Products.Program
                                         E_mail = updateManufacturerEmail,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_E);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "3":
@@ -392,6 +412,7 @@ namespace Products.Program
                                         Telefon = updateManufacturerPhone,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_P);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "4":
@@ -403,6 +424,7 @@ namespace Products.Program
                                         Kozpont = updateManufacturerCenter,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_C);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                                 case "5":
@@ -414,6 +436,7 @@ namespace Products.Program
                                         Adoszam = updateManufacturerTax,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_T);
+                                    Console.WriteLine("\nA folytatáshoz nyomj entert!");
                                     Console.ReadLine();
                                     break;
                             }
