@@ -70,7 +70,6 @@
     <Compile Include="Aruhaz.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
     <Compile Include="DBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,6 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DontWriteToTheStandardOutput.cs" />
     <Compile Include="Gyarto.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -96,6 +96,7 @@
     <Compile Include="Termek.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ThisIsAnID.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DBModel.edmx">
