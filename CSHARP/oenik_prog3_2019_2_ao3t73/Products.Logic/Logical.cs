@@ -61,12 +61,9 @@ namespace Products.Logic
         public void AddProduct(Termek param)
         {
             List<Termek> listOfProducts = this.repo.GetAllProducts();
-            Termek item = listOfProducts.Find(x => x.Termek_ID == param.Termek_ID);
-
-            if (item == null)
-            {
-                this.repo.AddProduct(param);
-            }
+            int newID = (int)this.ProductIDFinder(listOfProducts);
+            param.Termek_ID = newID;
+            this.repo.AddProduct(param);
         }
 
         /// <summary>
@@ -113,7 +110,7 @@ namespace Products.Logic
 
             if (item != null)
             {
-                this.repo.DeleteManufacturer(param);
+                this.repo.DeleteManufacturer(item);
             }
         }
 
@@ -128,7 +125,7 @@ namespace Products.Logic
 
             if (item != null)
             {
-                this.repo.DeleteProduct(param);
+                this.repo.DeleteProduct(item);
             }
         }
 
@@ -143,7 +140,7 @@ namespace Products.Logic
 
             if (item != null)
             {
-                this.repo.DeleteShop(param);
+                this.repo.DeleteShop(item);
             }
         }
 
