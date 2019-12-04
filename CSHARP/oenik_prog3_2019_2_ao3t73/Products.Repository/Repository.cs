@@ -87,8 +87,7 @@ namespace Products.Repository
             {
                 if (item.Gyarto_neve == param.Gyarto_neve)
                 {
-                    item.Gyarto_neve = string.Empty;
-                    item.Gyarto = null;
+                    item.Gyarto_neve = null;    // ON DELETE SET NULL  ON UPDATE CASCADE
                 }
             }
 
@@ -184,18 +183,13 @@ namespace Products.Repository
         /// <param name="param"> Manufacturer that user intend to modify. </param>
         public void UpdateManufacturer(Gyarto param)
         {
-            var old = this.dataBase.Gyarto.SingleOrDefault(x => x.Gyarto_neve == param.Gyarto_neve);
-            if (old != null)
-            {
-                foreach (PropertyInfo newProp in param.GetType().GetProperties())
-                {
-                    if (newProp.GetValue(param) != null && newProp.GetValue(param) != newProp.GetValue(old))
-                    {
-                        newProp.SetValue(old, newProp.GetValue(param));
-                        this.dataBase.SaveChanges();
-                    }
-                }
-            }
+            Gyarto updateThisManufacturer = this.dataBase.Gyarto.Single(x => x.Gyarto_neve == param.Gyarto_neve);
+            updateThisManufacturer.E_mail = param.E_mail;
+            updateThisManufacturer.Adoszam = param.Adoszam;
+            updateThisManufacturer.Honlap = param.Honlap;
+            updateThisManufacturer.Kozpont = param.Kozpont;
+            updateThisManufacturer.Telefon = param.Telefon;
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
@@ -204,18 +198,13 @@ namespace Products.Repository
         /// <param name="param"> Product that user intend to modify. </param>
         public void UpdateProduct(Termek param)
         {
-            var old = this.dataBase.Termek.SingleOrDefault(x => x.Termek_ID == param.Termek_ID);
-            if (old != null)
-            {
-                foreach (PropertyInfo newProp in param.GetType().GetProperties())
-                {
-                    if (newProp.GetValue(param) != null && newProp.GetValue(param) != newProp.GetValue(old))
-                    {
-                        newProp.SetValue(old, newProp.GetValue(param));
-                        this.dataBase.SaveChanges();
-                    }
-                }
-            }
+            Termek updateThisProduct = this.dataBase.Termek.Single(x => x.Termek_ID == param.Termek_ID);
+            updateThisProduct.Ar = param.Ar;
+            updateThisProduct.Kiszereles = param.Kiszereles;
+            updateThisProduct.Megnevezes = param.Megnevezes;
+            updateThisProduct.Tipus = param.Tipus;
+            updateThisProduct.Leiras = param.Leiras;
+            this.dataBase.SaveChanges();
         }
 
         /// <summary>
@@ -224,18 +213,13 @@ namespace Products.Repository
         /// <param name="param"> Shop that user intend to modify. </param>
         public void UpdateShop(Aruhaz param)
         {
-            var old = this.dataBase.Aruhaz.SingleOrDefault(x => x.Aruhaz_neve == param.Aruhaz_neve);
-            if (old != null)
-            {
-                foreach (PropertyInfo newProp in param.GetType().GetProperties())
-                {
-                    if (newProp.GetValue(param) != null && newProp.GetValue(param) != newProp.GetValue(old))
-                    {
-                        newProp.SetValue(old, newProp.GetValue(param));
-                        this.dataBase.SaveChanges();
-                    }
-                }
-            }
+            Aruhaz updateThisShop = this.dataBase.Aruhaz.Single(x => x.Aruhaz_neve == param.Aruhaz_neve);
+            updateThisShop.E_mail = param.E_mail;
+            updateThisShop.Adoszam = param.Adoszam;
+            updateThisShop.Honlap = param.Honlap;
+            updateThisShop.Kozpont = param.Kozpont;
+            updateThisShop.Telefon = param.Telefon;
+            this.dataBase.SaveChanges();
         }
     }
 }
