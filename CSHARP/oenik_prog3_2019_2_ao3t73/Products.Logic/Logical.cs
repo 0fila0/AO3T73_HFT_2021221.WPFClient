@@ -18,6 +18,7 @@ namespace Products.Logic
     /// </summary>
     public class Logical : ILogic
     {
+        private static object lockObject = new object();
         private IRepository repo;
 
         /// <summary>
@@ -241,6 +242,38 @@ namespace Products.Logic
         public void UpdateShop(Aruhaz param)
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// This method finds the first ID which is not assigned.
+        /// </summary>
+        /// <returns> ID's number. </returns>
+        /// <param name="list"> List contains all of products. </param>
+        public decimal ProductIDFinder(List<Termek> list)
+        {
+            decimal newProductID = 1;
+            foreach (var item in list)
+            {
+                PropertyInfo[] props = item.GetType().GetProperties();
+                foreach (PropertyInfo prop in props)
+                {
+                    lock (lockObject)
+                    {
+                        if (prop.GetCustomAttribute<ThisIsAnID>() != null)
+                        {
+                            decimal lastIDInList = (decimal)prop.GetValue(item);
+                            if (newProductID < lastIDInList)
+                            {
+                                return newProductID;
+                            }
+
+                            newProductID++;
+                        }
+                    }
+                }
+            }
+
+            return newProductID;
         }
     }
 }
