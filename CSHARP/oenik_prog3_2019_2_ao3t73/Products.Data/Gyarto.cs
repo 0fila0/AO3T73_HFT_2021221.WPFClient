@@ -19,14 +19,15 @@ namespace Products.Data
         {
             this.Termek = new HashSet<Termek>();
         }
-    
+        [ThisIsAnID]
         public string Gyarto_neve { get; set; }
         public string Honlap { get; set; }
         public string E_mail { get; set; }
         public Nullable<decimal> Telefon { get; set; }
         public string Kozpont { get; set; }
         public decimal Adoszam { get; set; }
-    
+
+        [DontWriteToTheStandardOutput]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Termek> Termek { get; set; }
     }

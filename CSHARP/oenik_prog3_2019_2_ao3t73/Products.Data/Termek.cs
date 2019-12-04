@@ -19,8 +19,10 @@ namespace Products.Data
         {
             this.ID_Kapcsolo = new HashSet<ID_Kapcsolo>();
         }
-    
+
+        [ThisIsAnID]
         public decimal Termek_ID { get; set; }
+
         public string Tipus { get; set; }
         public string Megnevezes { get; set; }
         public string Kiszereles { get; set; }
@@ -28,7 +30,10 @@ namespace Products.Data
         public string Leiras { get; set; }
         public string Gyarto_neve { get; set; }
     
+        [DontWriteToTheStandardOutput]
         public virtual Gyarto Gyarto { get; set; }
+
+        [DontWriteToTheStandardOutput]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ID_Kapcsolo> ID_Kapcsolo { get; set; }
     }

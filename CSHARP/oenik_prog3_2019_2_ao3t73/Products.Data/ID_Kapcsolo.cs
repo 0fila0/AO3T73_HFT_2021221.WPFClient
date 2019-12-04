@@ -14,6 +14,7 @@ namespace Products.Data
     
     public partial class ID_Kapcsolo
     {
+        [ThisIsAnID]
         public decimal Kapcsolo_ID { get; set; }
         public decimal Termek_ID { get; set; }
         public string Aruhaz_neve { get; set; }

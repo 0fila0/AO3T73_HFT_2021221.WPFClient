@@ -19,14 +19,16 @@ namespace Products.Data
         {
             this.ID_Kapcsolo = new HashSet<ID_Kapcsolo>();
         }
-    
+
+        [ThisIsAnID]
         public string Aruhaz_neve { get; set; }
         public string Honlap { get; set; }
         public string E_mail { get; set; }
         public Nullable<decimal> Telefon { get; set; }
         public string Kozpont { get; set; }
         public decimal Adoszam { get; set; }
-    
+
+        [DontWriteToTheStandardOutput]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ID_Kapcsolo> ID_Kapcsolo { get; set; }
     }
