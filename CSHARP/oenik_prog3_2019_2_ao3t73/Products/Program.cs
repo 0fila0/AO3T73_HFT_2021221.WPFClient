@@ -137,6 +137,9 @@ namespace Products.Program
                         case "3":
                             Console.WriteLine("Add meg a módosítandó termék azonosítóját!");
                             int updateProductID = int.Parse(Console.ReadLine());
+                            List<Termek> listOfProducts = logic.GetAllProducts();
+                            Termek thisPropertyShouldNotBeModified_P = new Termek();
+                            thisPropertyShouldNotBeModified_P = listOfProducts.Find(x => x.Termek_ID == updateProductID);
 
                             Console.Clear();
                             Write_ModifyProductID(updateProductID);  // Prints on the screen the product's ID which the user wants to modify.
@@ -158,6 +161,13 @@ namespace Products.Program
                                     {
                                         Termek_ID = updateProductID,
                                         Tipus = updateProductType,
+                                        Megnevezes = thisPropertyShouldNotBeModified_P.Megnevezes,
+                                        Kiszereles = thisPropertyShouldNotBeModified_P.Kiszereles,
+                                        Ar = thisPropertyShouldNotBeModified_P.Ar,
+                                        Leiras = thisPropertyShouldNotBeModified_P.Leiras,
+                                        Gyarto = thisPropertyShouldNotBeModified_P.Gyarto,
+                                        Gyarto_neve = thisPropertyShouldNotBeModified_P.Gyarto_neve,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_P.ID_Kapcsolo,
                                     };
                                     logic.UpdateProduct(updateProduct_T);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -170,6 +180,13 @@ namespace Products.Program
                                     {
                                         Termek_ID = updateProductID,
                                         Megnevezes = updateProductName,
+                                        Tipus = thisPropertyShouldNotBeModified_P.Tipus,
+                                        Kiszereles = thisPropertyShouldNotBeModified_P.Kiszereles,
+                                        Ar = thisPropertyShouldNotBeModified_P.Ar,
+                                        Leiras = thisPropertyShouldNotBeModified_P.Leiras,
+                                        Gyarto = thisPropertyShouldNotBeModified_P.Gyarto,
+                                        Gyarto_neve = thisPropertyShouldNotBeModified_P.Gyarto_neve,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_P.ID_Kapcsolo,
                                     };
                                     logic.UpdateProduct(updateProduct_N);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -182,6 +199,13 @@ namespace Products.Program
                                     {
                                         Termek_ID = updateProductID,
                                         Kiszereles = updateProductPack,
+                                        Megnevezes = thisPropertyShouldNotBeModified_P.Megnevezes,
+                                        Tipus = thisPropertyShouldNotBeModified_P.Tipus,
+                                        Ar = thisPropertyShouldNotBeModified_P.Ar,
+                                        Leiras = thisPropertyShouldNotBeModified_P.Leiras,
+                                        Gyarto = thisPropertyShouldNotBeModified_P.Gyarto,
+                                        Gyarto_neve = thisPropertyShouldNotBeModified_P.Gyarto_neve,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_P.ID_Kapcsolo,
                                     };
                                     logic.UpdateProduct(updateProduct_P);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -194,6 +218,13 @@ namespace Products.Program
                                     {
                                         Termek_ID = updateProductID,
                                         Ar = int.Parse(updateProductCost),
+                                        Megnevezes = thisPropertyShouldNotBeModified_P.Megnevezes,
+                                        Kiszereles = thisPropertyShouldNotBeModified_P.Kiszereles,
+                                        Tipus = thisPropertyShouldNotBeModified_P.Tipus,
+                                        Leiras = thisPropertyShouldNotBeModified_P.Leiras,
+                                        Gyarto = thisPropertyShouldNotBeModified_P.Gyarto,
+                                        Gyarto_neve = thisPropertyShouldNotBeModified_P.Gyarto_neve,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_P.ID_Kapcsolo,
                                     };
                                     logic.UpdateProduct(updateProduct_C);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -206,6 +237,13 @@ namespace Products.Program
                                     {
                                         Termek_ID = updateProductID,
                                         Leiras = updateProductDescription,
+                                        Megnevezes = thisPropertyShouldNotBeModified_P.Megnevezes,
+                                        Kiszereles = thisPropertyShouldNotBeModified_P.Kiszereles,
+                                        Ar = thisPropertyShouldNotBeModified_P.Ar,
+                                        Tipus = thisPropertyShouldNotBeModified_P.Tipus,
+                                        Gyarto = thisPropertyShouldNotBeModified_P.Gyarto,
+                                        Gyarto_neve = thisPropertyShouldNotBeModified_P.Gyarto_neve,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_P.ID_Kapcsolo,
                                     };
                                     logic.UpdateProduct(updateProduct_D);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -251,6 +289,9 @@ namespace Products.Program
                         case "6":
                             Console.WriteLine("Add meg a módosítandó üzlet nevét!");
                             string updateShopName = Console.ReadLine();
+                            List<Aruhaz> listOfShops = logic.GetAllShops();
+                            Aruhaz thisPropertyShouldNotBeModified_S = new Aruhaz();
+                            thisPropertyShouldNotBeModified_S = listOfShops.Find(x => x.Aruhaz_neve == updateShopName);
 
                             Console.Clear();
                             Write_ModifyShopName(updateShopName);  // Prints on the screen the shop's name which the user wants to modify.
@@ -272,6 +313,11 @@ namespace Products.Program
                                     {
                                         Aruhaz_neve = updateShopName,
                                         Honlap = updateShopWeb,
+                                        E_mail = thisPropertyShouldNotBeModified_S.E_mail,
+                                        Telefon = thisPropertyShouldNotBeModified_S.Telefon,
+                                        Kozpont = thisPropertyShouldNotBeModified_S.Kozpont,
+                                        Adoszam = thisPropertyShouldNotBeModified_S.Adoszam,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_S.ID_Kapcsolo,
                                     };
                                     logic.UpdateShop(updateShop_W);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -284,6 +330,11 @@ namespace Products.Program
                                     {
                                         Aruhaz_neve = updateShopName,
                                         E_mail = updateShopEmail,
+                                        Honlap = thisPropertyShouldNotBeModified_S.Honlap,
+                                        Telefon = thisPropertyShouldNotBeModified_S.Telefon,
+                                        Kozpont = thisPropertyShouldNotBeModified_S.Kozpont,
+                                        Adoszam = thisPropertyShouldNotBeModified_S.Adoszam,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_S.ID_Kapcsolo,
                                     };
                                     logic.UpdateShop(updateShop_E);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -296,6 +347,11 @@ namespace Products.Program
                                     {
                                         Aruhaz_neve = updateShopName,
                                         Telefon = updateShopPhone,
+                                        Honlap = thisPropertyShouldNotBeModified_S.Honlap,
+                                        E_mail = thisPropertyShouldNotBeModified_S.E_mail,
+                                        Kozpont = thisPropertyShouldNotBeModified_S.Kozpont,
+                                        Adoszam = thisPropertyShouldNotBeModified_S.Adoszam,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_S.ID_Kapcsolo,
                                     };
                                     logic.UpdateShop(updateShop_P);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -308,6 +364,11 @@ namespace Products.Program
                                     {
                                         Aruhaz_neve = updateShopName,
                                         Kozpont = updateShopCenter,
+                                        Honlap = thisPropertyShouldNotBeModified_S.Honlap,
+                                        E_mail = thisPropertyShouldNotBeModified_S.E_mail,
+                                        Telefon = thisPropertyShouldNotBeModified_S.Telefon,
+                                        Adoszam = thisPropertyShouldNotBeModified_S.Adoszam,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_S.ID_Kapcsolo,
                                     };
                                     logic.UpdateShop(updateShop_C);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -320,6 +381,11 @@ namespace Products.Program
                                     {
                                         Aruhaz_neve = updateShopName,
                                         Adoszam = updateShopTax,
+                                        Honlap = thisPropertyShouldNotBeModified_S.Honlap,
+                                        E_mail = thisPropertyShouldNotBeModified_S.E_mail,
+                                        Kozpont = thisPropertyShouldNotBeModified_S.Kozpont,
+                                        Telefon = thisPropertyShouldNotBeModified_S.Telefon,
+                                        ID_Kapcsolo = thisPropertyShouldNotBeModified_S.ID_Kapcsolo,
                                     };
                                     logic.UpdateShop(updateShop_T);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -365,6 +431,9 @@ namespace Products.Program
                         case "9":
                             Console.WriteLine("Add meg a módosítandó gyártó nevét!");
                             string updateManufacturerName = Console.ReadLine();
+                            List<Gyarto> listOfManufacturers = logic.GetAllManufacturers();
+                            Gyarto thisPropertyShouldNotBeModified_M = new Gyarto();
+                            thisPropertyShouldNotBeModified_M = listOfManufacturers.Find(x => x.Gyarto_neve == updateManufacturerName);
 
                             Console.Clear();
                             Write_ModifyManufacturerName(updateManufacturerName);  // Prints on the screen the manufacturer's name which the user wants to modify.
@@ -386,6 +455,10 @@ namespace Products.Program
                                     {
                                         Gyarto_neve = updateManufacturerName,
                                         Honlap = updateManufacturerWeb,
+                                        E_mail = thisPropertyShouldNotBeModified_M.E_mail,
+                                        Telefon = thisPropertyShouldNotBeModified_M.Telefon,
+                                        Kozpont = thisPropertyShouldNotBeModified_M.Kozpont,
+                                        Adoszam = thisPropertyShouldNotBeModified_M.Adoszam,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_W);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -398,6 +471,10 @@ namespace Products.Program
                                     {
                                         Gyarto_neve = updateManufacturerName,
                                         E_mail = updateManufacturerEmail,
+                                        Honlap = thisPropertyShouldNotBeModified_M.Honlap,
+                                        Telefon = thisPropertyShouldNotBeModified_M.Telefon,
+                                        Kozpont = thisPropertyShouldNotBeModified_M.Kozpont,
+                                        Adoszam = thisPropertyShouldNotBeModified_M.Adoszam,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_E);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -410,6 +487,10 @@ namespace Products.Program
                                     {
                                         Gyarto_neve = updateManufacturerName,
                                         Telefon = updateManufacturerPhone,
+                                        Honlap = thisPropertyShouldNotBeModified_M.Honlap,
+                                        E_mail = thisPropertyShouldNotBeModified_M.E_mail,
+                                        Kozpont = thisPropertyShouldNotBeModified_M.Kozpont,
+                                        Adoszam = thisPropertyShouldNotBeModified_M.Adoszam,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_P);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -422,6 +503,10 @@ namespace Products.Program
                                     {
                                         Gyarto_neve = updateManufacturerName,
                                         Kozpont = updateManufacturerCenter,
+                                        Honlap = thisPropertyShouldNotBeModified_M.Honlap,
+                                        E_mail = thisPropertyShouldNotBeModified_M.E_mail,
+                                        Telefon = thisPropertyShouldNotBeModified_M.Telefon,
+                                        Adoszam = thisPropertyShouldNotBeModified_M.Adoszam,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_C);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
@@ -434,6 +519,10 @@ namespace Products.Program
                                     {
                                         Gyarto_neve = updateManufacturerName,
                                         Adoszam = updateManufacturerTax,
+                                        Honlap = thisPropertyShouldNotBeModified_M.Honlap,
+                                        E_mail = thisPropertyShouldNotBeModified_M.E_mail,
+                                        Kozpont = thisPropertyShouldNotBeModified_M.Kozpont,
+                                        Telefon = thisPropertyShouldNotBeModified_M.Telefon,
                                     };
                                     logic.UpdateManufacturer(updateManufacturer_T);
                                     Console.WriteLine("\nA folytatáshoz nyomj entert!");
