@@ -78,34 +78,19 @@ namespace Products.Program
                         case "1":
                             List<Termek> listP = new List<Termek>();    // listP = listProduct
                             listP = logic.GetAllProducts();
-                            foreach (var item in listP)
-                            {
-                                Console.WriteLine(item.Megnevezes);
-                            }
-
-                            Console.ReadLine();
+                            Write_EntityDatas(listP);
                             break;
 
                         case "2":
                             List<Aruhaz> listS = new List<Aruhaz>();    // listS = listShop
                             listS = logic.GetAllShops();
-                            foreach (var item in listS)
-                            {
-                                Console.WriteLine(item.Aruhaz_neve);
-                            }
-
-                            Console.ReadLine();
+                            Write_EntityDatas(listS);
                             break;
 
                         case "3":
                             List<Gyarto> listM = new List<Gyarto>();    // listM = listManufacturer
                             listM = logic.GetAllManufacturers();
-                            foreach (var item in listM)
-                            {
-                                Console.WriteLine(item.Gyarto_neve);
-                            }
-
-                            Console.ReadLine();
+                            Write_EntityDatas(listM);
                             break;
                     }
 
@@ -117,9 +102,10 @@ namespace Products.Program
                     switch (controller.ToLower())
                     {
                         case "1":
-                            Console.WriteLine("Add meg a termék paramétereit '#' karakterrel elválasztva!");
-                            Console.WriteLine("\ntípus#megnevezés#kiszerelés#ár#leírás\n");
-                            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+                            string entityP = "termék";
+                            string propertiesP = "típus#megnevezés#kiszerelés#ár#leírás#gyártó neve";
+                            Write_NewEntity(entityP, propertiesP);
+
                             string newProductParameters = Console.ReadLine();
                             Termek newProduct = new Termek()
                             {
@@ -222,9 +208,10 @@ namespace Products.Program
                             break;
 
                         case "4":
-                            Console.WriteLine("Add meg az üzlet paramétereit '#' karakterrel elválasztva!");
-                            Console.WriteLine("\nnév#honlap#email#telefon#központ#adószám\n");
-                            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+                            string entityS = "üzlet";
+                            string propertiesS = "név#honlap#email#telefon#központ#adószám";
+                            Write_NewEntity(entityS, propertiesS);
+
                             string newShopParameters = Console.ReadLine();
                             Aruhaz newShop = new Aruhaz()
                             {
@@ -328,9 +315,10 @@ namespace Products.Program
                             break;
 
                         case "7":
-                            Console.WriteLine("Add meg a gyártó paramétereit '#' karakterrel elválasztva!");
-                            Console.WriteLine("\nnév#honlap#email#telefon#központ#adószám\n");
-                            Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+                            string entityM = "gyártó";
+                            string propertiesM = "név#honlap#email#telefon#központ#adószám";
+                            Write_NewEntity(entityM, propertiesM);
+
                             string newManufacturerParameters = Console.ReadLine();
                             Gyarto newManufacturer = new Gyarto()
                             {
