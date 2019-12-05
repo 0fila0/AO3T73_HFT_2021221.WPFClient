@@ -17,7 +17,7 @@ namespace Products.Repository
     /// </summary>
     public class Repository : IRepository
     {
-        private ProductsServiceBasedDBEntities dataBase;
+        private readonly ProductsServiceBasedDBEntities dataBase;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Repository"/> class.

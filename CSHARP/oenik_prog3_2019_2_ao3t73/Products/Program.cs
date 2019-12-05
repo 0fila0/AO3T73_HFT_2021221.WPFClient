@@ -19,7 +19,7 @@ namespace Products.Program
     /// </summary>
     public class Program
     {
-        private static object lockObject = new object();
+        private static readonly object LockObject = new object();
 
         /// <summary>
         /// Main method communicates with the user, this is the User Interface.
@@ -699,7 +699,7 @@ namespace Products.Program
                 PropertyInfo[] props = item.GetType().GetProperties();
                 foreach (PropertyInfo prop in props)
                 {
-                    lock (lockObject)
+                    lock (LockObject)
                     {
                         if (prop.GetCustomAttribute<ThisIsAnID>() != null)
                         {

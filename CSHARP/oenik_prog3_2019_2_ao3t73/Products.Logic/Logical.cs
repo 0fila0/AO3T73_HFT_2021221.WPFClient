@@ -18,7 +18,7 @@ namespace Products.Logic
     /// </summary>
     public class Logical : ILogic
     {
-        private IRepository repo;
+        private readonly IRepository repo;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Logical"/> class.

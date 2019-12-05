@@ -172,8 +172,10 @@ namespace Products.Logic.Tests
         public void AddProductMethodTest()
         {
             int numberOfElementsBeforeAdd = this.logic.GetAllProducts().Count;
-            Termek mockProduct = new Termek();
-            mockProduct.Termek_ID = 10;
+            Termek mockProduct = new Termek
+            {
+                Termek_ID = 10,
+            };
             this.logic.AddProduct(mockProduct);
             int numberOfElementsAfterAdd = this.logic.GetAllProducts().Count;
             Assert.That(numberOfElementsAfterAdd == numberOfElementsBeforeAdd);
@@ -186,8 +188,10 @@ namespace Products.Logic.Tests
         public void DeleteManufacturerMethodTest()
         {
             int numberOfElementsBeforeDelete = this.logic.GetAllManufacturers().Count;
-            Gyarto mockManufacturer = new Gyarto();
-            mockManufacturer.Gyarto_neve = "delete";
+            Gyarto mockManufacturer = new Gyarto
+            {
+                Gyarto_neve = "delete",
+            };
             this.logic.AddManufacturer(mockManufacturer);
             this.logic.DeleteManufacturer(mockManufacturer);
             Assert.That(this.logic.GetAllManufacturers().Count == numberOfElementsBeforeDelete);
@@ -200,8 +204,10 @@ namespace Products.Logic.Tests
         public void DeleteShopMethodTest()
         {
             int numberOfElementsBeforeDelete = this.logic.GetAllShops().Count;
-            Aruhaz mockShop = new Aruhaz();
-            mockShop.Aruhaz_neve = "delete";
+            Aruhaz mockShop = new Aruhaz
+            {
+                Aruhaz_neve = "delete",
+            };
             this.logic.AddShop(mockShop);
             this.logic.DeleteShop(mockShop);
             Assert.That(this.logic.GetAllShops().Count == numberOfElementsBeforeDelete);
@@ -214,8 +220,10 @@ namespace Products.Logic.Tests
         public void DeleteProductMethodTest()
         {
             int numberOfElementsBeforeDelete = this.logic.GetAllProducts().Count;
-            Termek mockProduct = new Termek();
-            mockProduct.Termek_ID = 13;
+            Termek mockProduct = new Termek
+            {
+                Termek_ID = 13,
+            };
             this.logic.AddProduct(mockProduct);
             this.logic.DeleteProduct(mockProduct);
             Assert.That(this.logic.GetAllProducts().Count == numberOfElementsBeforeDelete);
