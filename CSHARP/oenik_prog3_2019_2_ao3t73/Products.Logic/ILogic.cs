@@ -117,13 +117,13 @@ namespace Products.Logic
         /// This method finds the cheapest shop.
         /// </summary>
         /// <returns>A shop entity which is the cheapest.</returns>
-        Aruhaz CheapestShop();
+        string CheapestShop();
 
         /// <summary>
         /// This method finds that shop where the product with the highest price can be found.
         /// </summary>
         /// <returns>A shop entity where the product with the highest price can be found.</returns>
-        Aruhaz PlaceOfMostExpensiveProduct();
+        IEnumerable<string> PlaceOfMostExpensiveProduct();
 
         /// <summary>
         /// This method lists the lowest price of products.
@@ -135,6 +135,6 @@ namespace Products.Logic
         /// This method lists all of products which can be found in Osan.
         /// </summary>
         /// <returns>A list consist of products.</returns>
-        List<Termek> OsanProducts();
+        IQueryable<object> OsanProducts();
     }
 }
