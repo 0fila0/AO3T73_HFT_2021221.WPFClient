@@ -129,7 +129,13 @@ namespace Products.Repository
         /// <returns> A list with all link entities. </returns>
         public List<ID_Kapcsolo> GetAllLinks()
         {
-            throw new NotImplementedException();
+            List<ID_Kapcsolo> listOfLinks = new List<ID_Kapcsolo>();
+            foreach (var item in this.dataBase.ID_Kapcsolo)
+            {
+                listOfLinks.Add(item);
+            }
+
+            return listOfLinks;
         }
 
         /// <summary>
