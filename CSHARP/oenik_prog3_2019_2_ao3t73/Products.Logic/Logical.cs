@@ -18,7 +18,6 @@ namespace Products.Logic
     /// </summary>
     public class Logical : ILogic
     {
-
         private IRepository repo;
 
         /// <summary>
@@ -28,6 +27,46 @@ namespace Products.Logic
         public Logical(IRepository repo)
         {
             this.repo = repo;
+        }
+
+        /// <summary>
+        /// This method returns all link entities.
+        /// </summary>
+        /// <returns> A list with all link entities. </returns>
+        public List<ID_Kapcsolo> GetAllLinks()
+        {
+            List<ID_Kapcsolo> listOfLinks = this.repo.GetAllLinks();
+            return listOfLinks;
+        }
+
+        /// <summary>
+        /// This method returns all manufacturer entities.
+        /// </summary>
+        /// <returns> A list with all manufacturer entities. </returns>
+        public List<Gyarto> GetAllManufacturers()
+        {
+            List<Gyarto> listOfManufacturers = this.repo.GetAllManufacturers();
+            return listOfManufacturers;
+        }
+
+        /// <summary>
+        /// This method returns all product entities.
+        /// </summary>
+        /// <returns> A list with all product entities. </returns>
+        public List<Termek> GetAllProducts()
+        {
+            List<Termek> listOfProducts = this.repo.GetAllProducts();
+            return listOfProducts;
+        }
+
+        /// <summary>
+        /// This method returns all shop entities.
+        /// </summary>
+        /// <returns> A list with all shop entities. </returns>
+        public List<Aruhaz> GetAllShops()
+        {
+            List<Aruhaz> listOfShops = this.repo.GetAllShops();
+            return listOfShops;
         }
 
         /// <summary>
@@ -64,15 +103,6 @@ namespace Products.Logic
         public void AddShop(Aruhaz param)
         {
             this.repo.AddShop(param);
-        }
-
-        /// <summary>
-        /// This method finds the cheapest shop.
-        /// </summary>
-        /// <returns>A shop entity which is the cheapest.</returns>
-        public Aruhaz CheapestShop()
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -130,72 +160,6 @@ namespace Products.Logic
         }
 
         /// <summary>
-        /// This method returns all link entities.
-        /// </summary>
-        /// <returns> A list with all link entities. </returns>
-        public List<ID_Kapcsolo> GetAllLinks()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// This method returns all manufacturer entities.
-        /// </summary>
-        /// <returns> A list with all manufacturer entities. </returns>
-        public List<Gyarto> GetAllManufacturers()
-        {
-            List<Gyarto> listOfManufacturers = this.repo.GetAllManufacturers();
-            return listOfManufacturers;
-        }
-
-        /// <summary>
-        /// This method returns all product entities.
-        /// </summary>
-        /// <returns> A list with all product entities. </returns>
-        public List<Termek> GetAllProducts()
-        {
-            List<Termek> listOfProducts = this.repo.GetAllProducts();
-            return listOfProducts;
-        }
-
-        /// <summary>
-        /// This method returns all shop entities.
-        /// </summary>
-        /// <returns> A list with all shop entities. </returns>
-        public List<Aruhaz> GetAllShops()
-        {
-            List<Aruhaz> listOfShops = this.repo.GetAllShops();
-            return listOfShops;
-        }
-
-        /// <summary>
-        /// This method lists all of products which can be found in Osan.
-        /// </summary>
-        /// <returns>A list consist of products.</returns>
-        public List<Termek> OsanProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// This method finds that shop where the product with the highest price can be found.
-        /// </summary>
-        /// <returns>A shop entity where the product with the highest price can be found.</returns>
-        public Aruhaz PlaceOfMostExpensiveProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// This method lists the lowest price of products.
-        /// </summary>
-        /// <returns>A list consist of products.</returns>
-        public List<Termek> TheLowestPrices()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// This method changes an existing manufacturer entity's property/properties.
         /// </summary>
         /// <param name="param"> Manufacturer that user intend to modify. </param>
@@ -241,6 +205,73 @@ namespace Products.Logic
             {
                 this.repo.UpdateShop(param);
             }
+        }
+
+        /// <summary>
+        /// This method lists all of products which can be found in Osan.
+        /// </summary>
+        /// <returns>A list consist of products.</returns>
+        public IQueryable<object> OsanProducts()
+        {
+            var allProductsIDInOsan = from x in this.repo.GetAllLinks()
+                               where x.Aruhaz_neve.Contains("Osan")
+                               select x.Termek_ID;
+
+            var allOsanProducts = from x in this.repo.GetAllProducts()
+                                  join y in allProductsIDInOsan on x.Termek_ID equals y
+                                  select x;
+
+            return allOsanProducts.AsQueryable<object>();
+        }
+
+        /// <summary>
+        /// This method finds that shop where the product with the highest price can be found.
+        /// </summary>
+        /// <returns>A shop entity where the product with the highest price can be found.</returns>
+        public IEnumerable<string> PlaceOfMostExpensiveProduct()
+        {
+            var products = from x in this.repo.GetAllProducts()
+                           select x;
+
+            var mostExpensiveProductID = products.OrderByDescending(price => price.Ar).FirstOrDefault();
+
+            var thatShop = from x in this.repo.GetAllLinks()
+                           where x.Termek_ID.Equals(mostExpensiveProductID.Termek_ID)
+                           select x.Aruhaz_neve;
+
+            return thatShop;
+        }
+
+        /// <summary>
+        /// This method finds the cheapest shop.
+        /// </summary>
+        /// <returns>A shop entity which is the cheapest.</returns>
+        public string CheapestShop()
+        {
+            var averagePricesOfShops = from x in this.repo.GetAllProducts()
+                           join y in this.repo.GetAllLinks()
+                           on x.Termek_ID equals y.Termek_ID
+                           join z in this.repo.GetAllShops()
+                           on y.Aruhaz_neve equals z.Aruhaz_neve
+                           group x by z.Aruhaz_neve into g
+                           select new
+                           {
+                               name = g.Key,
+                               averagePrice = g.Average(price => price.Ar),
+                           };
+
+            var thatCheapestShop = averagePricesOfShops.OrderBy(x => x.averagePrice).First();
+
+            return thatCheapestShop.name;
+        }
+
+        /// <summary>
+        /// This method lists the lowest price of products.
+        /// </summary>
+        /// <returns>A list consist of products.</returns>
+        public List<Termek> TheLowestPrices()
+        {
+            throw new NotImplementedException();
         }
     }
 }
