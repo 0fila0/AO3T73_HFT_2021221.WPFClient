@@ -18,7 +18,7 @@ namespace Products.Logic
     /// </summary>
     public class Logical : ILogic
     {
-        private static object lockObject = new object();
+
         private IRepository repo;
 
         /// <summary>
@@ -45,13 +45,7 @@ namespace Products.Logic
         /// <param name="param"> Manufacturer that user intend to add. </param>
         public void AddManufacturer(Gyarto param)
         {
-            List<Gyarto> listOfManufacturers = this.repo.GetAllManufacturers();
-            Gyarto item = listOfManufacturers.Find(x => x.Gyarto_neve.Contains(param.Gyarto_neve));
-
-            if (item == null)
-            {
-                this.repo.AddManufacturer(param);
-            }
+            this.repo.AddManufacturer(param);
         }
 
         /// <summary>
@@ -60,9 +54,6 @@ namespace Products.Logic
         /// <param name="param"> Product that user intend to add. </param>
         public void AddProduct(Termek param)
         {
-            List<Termek> listOfProducts = this.repo.GetAllProducts();
-            int newID = (int)this.ProductIDFinder(listOfProducts);
-            param.Termek_ID = newID;
             this.repo.AddProduct(param);
         }
 
@@ -72,13 +63,7 @@ namespace Products.Logic
         /// <param name="param"> Shop that user intend to add. </param>
         public void AddShop(Aruhaz param)
         {
-            List<Aruhaz> listOfShops = this.repo.GetAllShops();
-            Aruhaz item = listOfShops.Find(x => x.Aruhaz_neve.Contains(param.Aruhaz_neve));
-
-            if (item == null)
-            {
-                this.repo.AddShop(param);
-            }
+            this.repo.AddShop(param);
         }
 
         /// <summary>
@@ -256,38 +241,6 @@ namespace Products.Logic
             {
                 this.repo.UpdateShop(param);
             }
-        }
-
-        /// <summary>
-        /// This method finds the first ID which is not assigned.
-        /// </summary>
-        /// <returns> ID's number. </returns>
-        /// <param name="list"> List contains all of products. </param>
-        public decimal ProductIDFinder(List<Termek> list)
-        {
-            decimal newProductID = 1;
-            foreach (var item in list)
-            {
-                PropertyInfo[] props = item.GetType().GetProperties();
-                foreach (PropertyInfo prop in props)
-                {
-                    lock (lockObject)
-                    {
-                        if (prop.GetCustomAttribute<ThisIsAnID>() != null)
-                        {
-                            decimal lastIDInList = (decimal)prop.GetValue(item);
-                            if (newProductID < lastIDInList)
-                            {
-                                return newProductID;
-                            }
-
-                            newProductID++;
-                        }
-                    }
-                }
-            }
-
-            return newProductID;
         }
     }
 }
