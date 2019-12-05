@@ -19,6 +19,8 @@ namespace Products.Program
     /// </summary>
     public class Program
     {
+        private static object lockObject = new object();
+
         /// <summary>
         /// Main method communicates with the user, this is the User Interface.
         /// </summary>
@@ -117,6 +119,9 @@ namespace Products.Program
                                 Leiras = newProductParameters.Split('#')[4],
                                 Gyarto_neve = newProductParameters.Split('#')[5],
                             };
+                            List<Termek> listOfProducts = logic.GetAllProducts();
+                            int newID = (int)ProductIDFinder(listOfProducts);
+                            newProduct.Termek_ID = newID;
                             logic.AddProduct(newProduct);
                             Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
@@ -137,7 +142,7 @@ namespace Products.Program
                         case "3":
                             Console.WriteLine("Add meg a módosítandó termék azonosítóját!");
                             int updateProductID = int.Parse(Console.ReadLine());
-                            List<Termek> listOfProducts = logic.GetAllProducts();
+                            listOfProducts = logic.GetAllProducts();
                             Termek thisPropertyShouldNotBeModified_P = new Termek();
                             thisPropertyShouldNotBeModified_P = listOfProducts.Find(x => x.Termek_ID == updateProductID);
 
@@ -269,7 +274,18 @@ namespace Products.Program
                                 Kozpont = newShopParameters.Split('#')[4],
                                 Adoszam = int.Parse(newShopParameters.Split('#')[5]),
                             };
-                            logic.AddShop(newShop);
+                            List<Aruhaz> listOfShops = logic.GetAllShops();
+                            Aruhaz item = listOfShops.Find(x => x.Aruhaz_neve.Contains(newShop.Aruhaz_neve));
+
+                            if (item == null)
+                            {
+                                logic.AddShop(newShop);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Már van ilyen üzlet!");
+                            }
+
                             Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
@@ -289,7 +305,7 @@ namespace Products.Program
                         case "6":
                             Console.WriteLine("Add meg a módosítandó üzlet nevét!");
                             string updateShopName = Console.ReadLine();
-                            List<Aruhaz> listOfShops = logic.GetAllShops();
+                            listOfShops = logic.GetAllShops();
                             Aruhaz thisPropertyShouldNotBeModified_S = new Aruhaz();
                             thisPropertyShouldNotBeModified_S = listOfShops.Find(x => x.Aruhaz_neve == updateShopName);
 
@@ -411,7 +427,18 @@ namespace Products.Program
                                 Kozpont = newManufacturerParameters.Split('#')[4],
                                 Adoszam = int.Parse(newManufacturerParameters.Split('#')[5]),
                             };
-                            logic.AddManufacturer(newManufacturer);
+                            List<Gyarto> listOfManufacturers = logic.GetAllManufacturers();
+                            Gyarto item_M = listOfManufacturers.Find(x => x.Gyarto_neve.Contains(newManufacturer.Gyarto_neve));
+
+                            if (item_M == null)
+                            {
+                                logic.AddManufacturer(newManufacturer);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Már van ilyen gyártó!");
+                            }
+
                             Console.WriteLine("\nA folytatáshoz nyomj entert!");
                             Console.ReadLine();
                             break;
@@ -431,7 +458,7 @@ namespace Products.Program
                         case "9":
                             Console.WriteLine("Add meg a módosítandó gyártó nevét!");
                             string updateManufacturerName = Console.ReadLine();
-                            List<Gyarto> listOfManufacturers = logic.GetAllManufacturers();
+                            listOfManufacturers = logic.GetAllManufacturers();
                             Gyarto thisPropertyShouldNotBeModified_M = new Gyarto();
                             thisPropertyShouldNotBeModified_M = listOfManufacturers.Find(x => x.Gyarto_neve == updateManufacturerName);
 
@@ -609,6 +636,38 @@ namespace Products.Program
             Console.WriteLine(properties);
             Console.WriteLine();
             Console.WriteLine("Minden adatot kötelező megadni!\n\n");
+        }
+
+        /// <summary>
+        /// This method finds the first ID which is not assigned.
+        /// </summary>
+        /// <returns> ID's number. </returns>
+        /// <param name="list"> List contains all of products. </param>
+        private static decimal ProductIDFinder(List<Termek> list)
+        {
+            decimal newProductID = 1;
+            foreach (var item in list)
+            {
+                PropertyInfo[] props = item.GetType().GetProperties();
+                foreach (PropertyInfo prop in props)
+                {
+                    lock (lockObject)
+                    {
+                        if (prop.GetCustomAttribute<ThisIsAnID>() != null)
+                        {
+                            decimal lastIDInList = (decimal)prop.GetValue(item);
+                            if (newProductID < lastIDInList)
+                            {
+                                return newProductID;
+                            }
+
+                            newProductID++;
+                        }
+                    }
+                }
+            }
+
+            return newProductID;
         }
     }
 }
