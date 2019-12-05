@@ -10,6 +10,7 @@ namespace Products.Program
     using System.Reflection;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Xml.Linq;
     using Products.Data;
     using Products.Logic;
     using Products.Repository;
@@ -552,7 +553,36 @@ namespace Products.Program
                             break;
 
                         case "d":
-                            Console.WriteLine("Fejlesztés alatt...\n");
+                            Console.WriteLine("A program kiírja az adott üzletláncban kapható termékhez tartozó árakat.\n\n");
+                            Console.WriteLine("Enter gomb lenyomása után megadhatod az adatokat!");
+                            Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("Milyen terméket szeretnél vásárolni?\n");
+                            string productName = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("A keresett termék: " + productName);
+                            Console.WriteLine("\n\nHol szeretnél vásárolni?\n");
+                            string shopName = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("A keresett termék: " + productName);
+                            Console.WriteLine("A keresett bolt: " + shopName);
+                            Console.WriteLine("\nKérlek, várj...");
+                            Console.WriteLine("\n\n");
+
+                            XDocument xDoc = XDocument.Load("http://localhost:8080/Products.JavaWeb/Products?product=" + productName + "&shop=" + shopName);
+                            var q1 = xDoc.Descendants("product").First().Value;
+                            var q2 = xDoc.Descendants("shop").First().Value;
+
+                            Console.Clear();
+                            Console.WriteLine("A keresés befejeződött!\n");
+                            Console.WriteLine("A {0} termék a {1} üzletben jelenleg elérhető.\nAz adatbázisban lévő árak a következők: ", q1, q2);
+                            Console.WriteLine();
+                            foreach (var prices in xDoc.Descendants("price"))
+                            {
+                                Console.WriteLine(prices.Value + " Ft");
+                            }
+
+                            Console.WriteLine();
                             Console.WriteLine("A menübe való visszatéréshez nyomj entert!");
                             Console.ReadLine();
                             break;
@@ -737,7 +767,7 @@ namespace Products.Program
             Console.WriteLine("9: Gyártó módosítása");
             Console.WriteLine("A: Legolcsóbb áruház");
             Console.WriteLine("S: Legdrágább termék helye");
-            Console.WriteLine("D: Ugyanazon termékek elérhetősége a legkisebb áron");
+            Console.WriteLine("D: Online árgép");
             Console.WriteLine("F: Osan áruház termékei");
             Console.WriteLine("Q: Kilépés a programból");
             Console.WriteLine();

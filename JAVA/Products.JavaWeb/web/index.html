@@ -6,11 +6,19 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Online árkereső</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>Szükséges adatok</h1>
+        
+        <form action="Belepes">
+            <table>
+                <tr><td>Milyen terméket szeretnél vásárolni?</td><td><input type="text" name="product" value="" /></td></tr>
+                <tr><td>Hol szeretnél vásárolni?</td><td><input type="text" name="shop" value=""/></td></tr>
+            </table>
+            <input type="submit" value="Keresés"/>
+        </form>
     </body>
 </html>
