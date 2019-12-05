@@ -33,6 +33,7 @@ namespace Products.Logic.Tests
             List<Aruhaz> mockedShopsList = new List<Aruhaz>();
             List<Gyarto> mockedManufacturersList = new List<Gyarto>();
             List<Termek> mockedProductsList = new List<Termek>();
+            List<ID_Kapcsolo> mockedIDLinksList = new List<ID_Kapcsolo>();
 
             mockedShopsList.Add(new Aruhaz()
             {
@@ -51,15 +52,6 @@ namespace Products.Logic.Tests
                 Adoszam = 987654321,
                 E_mail = "B@shop.com",
                 Kozpont = "BLB",
-            });
-            mockedShopsList.Add(new Aruhaz()
-            {
-                Aruhaz_neve = "C",
-                Honlap = "c-shop.com",
-                Telefon = 06702222222,
-                Adoszam = 011223344,
-                E_mail = "C@shop.com",
-                Kozpont = "CLC",
             });
             mockedManufacturersList.Add(new Gyarto()
             {
@@ -99,10 +91,23 @@ namespace Products.Logic.Tests
                 Tipus = "Hangszer",
                 Gyarto_neve = "M_1",
             });
+            mockedIDLinksList.Add(new ID_Kapcsolo()
+            {
+                Kapcsolo_ID = 1,
+                Termek_ID = 1,
+                Aruhaz_neve = "A",
+            });
+            mockedIDLinksList.Add(new ID_Kapcsolo()
+            {
+                Kapcsolo_ID = 2,
+                Termek_ID = 2,
+                Aruhaz_neve = "B",
+            });
 
             mock.Setup(m => m.GetAllManufacturers()).Returns(mockedManufacturersList);
             mock.Setup(m => m.GetAllProducts()).Returns(mockedProductsList);
             mock.Setup(m => m.GetAllShops()).Returns(mockedShopsList);
+            mock.Setup(m => m.GetAllLinks()).Returns(mockedIDLinksList);
 
             IRepository mockedRepository = mock.Object;
 
@@ -275,6 +280,70 @@ namespace Products.Logic.Tests
 
             this.logic.UpdateManufacturer(x);
             Assert.That(this.logic.GetAllManufacturers().Contains(x) == false);
+        }
+
+        /// <summary>
+        /// Test OsanProducts method.
+        /// </summary>
+        [Test]
+        public void OsanProductsTest()
+        {
+            IQueryable<object> productsOsanIsNot = this.logic.OsanProducts();
+            Assert.That(productsOsanIsNot.Count() == 0);
+
+            List<Aruhaz> mockedShopsList = new List<Aruhaz>();
+            List<Termek> mockedProductsList = new List<Termek>();
+            List<ID_Kapcsolo> mockedIDLinksList = new List<ID_Kapcsolo>();
+
+            mockedProductsList.Add(new Termek()
+            {
+                Termek_ID = 2,
+                Ar = 1000,
+                Kiszereles = "kg",
+                Leiras = "Nem dedikált",
+                Megnevezes = "Léggitár",
+                Tipus = "Hangszer",
+                Gyarto_neve = "M_1",
+            });
+            mockedIDLinksList.Add(new ID_Kapcsolo()
+            {
+                Kapcsolo_ID = 1,
+                Termek_ID = 2,
+                Aruhaz_neve = "Osan",
+            });
+            mockedShopsList.Add(new Aruhaz()
+            {
+                Aruhaz_neve = "Osan",
+                Honlap = "a-shop.com",
+                Telefon = 06200000000,
+                Adoszam = 123456789,
+                E_mail = "A@shop.com",
+                Kozpont = "ALA",
+            });
+
+            IQueryable<object> productsOsanIs = this.logic.OsanProducts();
+            Assert.That(productsOsanIs != null);
+        }
+
+        /// <summary>
+        /// Test CheapestShop method.
+        /// </summary>
+        [Test]
+        public void CheapestShopTest()
+        {
+            string cheapestShop = this.logic.CheapestShop();
+            Assert.That(cheapestShop == "A");
+        }
+
+        /// <summary>
+        /// Test OsanProducts method.
+        /// </summary>
+        [Test]
+        public void PlaceOfMostExpensiveProductsTest()
+        {
+            IEnumerable<string> thatShopEnu = this.logic.PlaceOfMostExpensiveProduct();
+            string thatShop = thatShopEnu.First();
+            Assert.That(thatShop == "B");
         }
     }
 }
