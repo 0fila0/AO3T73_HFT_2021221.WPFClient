@@ -36,21 +36,52 @@ public class Products extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String productName = request.getParameter("product");
             String shopName = request.getParameter("shop");
-            if (productName == null){
-                productName = "Mit keresel? :)";
+            if(productName == ""){
+                productName = null;
             }
-            if (shopName == null){
-                shopName = "Hol keresel? :)";
+            if(shopName == ""){
+                shopName = null;
             }
-            out.println("<productweb>");
-            out.println("<product>"+productName+"</product>");
-            out.println("<shop>"+shopName+"</shop>");
-            out.println("<prices>");
-            for (int i = 0; i < 5; i++) {
-                out.println("<price>" + (R.nextInt(2000)+1) + "</price>");
+            
+            if (productName == null && shopName != null){
+                out.println("<productweb>");
+                out.println("<product>"+"Mit keresel?"+"</product>");
+                out.println("<shop>"+shopName+"</shop>");
+                out.println("<prices>");
+                out.println("<price>" + "Hiba: hiányos adatok!" + "</price>");
+                out.println("</prices>");
+                out.println("</productweb>");
             }
-            out.println("</prices>");
-            out.println("</productweb>");
+            else if (shopName == null && productName != null){
+                out.println("<productweb>");
+                out.println("<product>"+productName+"</product>");
+                out.println("<shop>"+"Hol szeretnél vásárolni?"+"</shop>");
+                out.println("<prices>");
+                out.println("<price>" + "Hiba: hiányos adatok!" + "</price>");
+                out.println("</prices>");
+                out.println("</productweb>");
+            }
+            else if (shopName == null && productName == null){
+                out.println("<productweb>");
+                out.println("<product>"+"Mit keresel?"+"</product>");
+                out.println("<shop>"+"Hol szeretnél vásárolni?"+"</shop>");
+                out.println("<prices>");
+                out.println("<price>" + "Hiba: hiányos adatok!" + "</price>");
+                out.println("</prices>");
+                out.println("</productweb>");
+            }
+            else{
+                out.println("<productweb>");
+                out.println("<product>"+productName+"</product>");
+                out.println("<shop>"+shopName+"</shop>");
+                out.println("<prices>");
+                for (int i = 0; i < 5; i++) {
+                    out.println("<price>" + (R.nextInt(2000)+1) + "</price>");
+                }
+                out.println("</prices>");
+                out.println("</productweb>");
+            }
+
         }
     }
 

@@ -572,14 +572,25 @@ namespace Products.Program
                             XDocument xDoc = XDocument.Load("http://localhost:8080/Products.JavaWeb/Products?product=" + productName + "&shop=" + shopName);
                             var q1 = xDoc.Descendants("product").First().Value;
                             var q2 = xDoc.Descendants("shop").First().Value;
+                            var error = xDoc.Descendants("price").First().Value;
 
                             Console.Clear();
                             Console.WriteLine("A keresés befejeződött!\n");
-                            Console.WriteLine("A {0} termék a {1} üzletben jelenleg elérhető.\nAz adatbázisban lévő árak a következők: ", q1, q2);
-                            Console.WriteLine();
-                            foreach (var prices in xDoc.Descendants("price"))
+                            if (error.Contains("Hiba: hiányos adatok!"))
                             {
-                                Console.WriteLine(prices.Value + " Ft");
+                                Console.WriteLine("Termék: " + q1);
+                                Console.WriteLine("Üzletlánc: " + q2);
+                                Console.WriteLine();
+                                Console.WriteLine(error);
+                            }
+                            else
+                            {
+                                Console.WriteLine("A {0} termék a {1} üzletben jelenleg elérhető.\nAz adatbázisban lévő árak a következők: ", q1, q2);
+                                Console.WriteLine();
+                                foreach (var prices in xDoc.Descendants("price"))
+                                {
+                                    Console.WriteLine(prices.Value + " Ft");
+                                }
                             }
 
                             Console.WriteLine();
