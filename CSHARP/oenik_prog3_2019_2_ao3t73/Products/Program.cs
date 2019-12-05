@@ -540,23 +540,28 @@ namespace Products.Program
                             break;
 
                         case "a":
-                            Console.WriteLine("Ez még nincs kész.");
-                            Console.ReadLine();
+                            Console.WriteLine("Átlagosan a legolcsóbb üzlet:\n\n");
+                            string cheapestShop = logic.CheapestShop();
+                            Write_EntityDatasCheapestShop(cheapestShop);
                             break;
 
                         case "s":
-                            Console.WriteLine("Ez még nincs kész.");
-                            Console.ReadLine();
+                            Console.WriteLine("A legdrágább termék helye:\n\n");
+                            IEnumerable<string> thatShop = logic.PlaceOfMostExpensiveProduct();
+                            Write_EntityDatasS(thatShop);
                             break;
 
                         case "d":
-                            Console.WriteLine("Ez még nincs kész.");
+                            Console.WriteLine("Fejlesztés alatt...\n");
+                            Console.WriteLine("A menübe való visszatéréshez nyomj entert!");
                             Console.ReadLine();
                             break;
 
                         case "f":
-                            Console.WriteLine("Ez még nincs kész.");
-                            Console.ReadLine();
+                            Console.WriteLine("Osan üzlet termékei:\n\n");
+                            IQueryable<object> listOsan = logic.OsanProducts();
+                            Write_EntityDatasQ(listOsan);
+                            Console.WriteLine("\n\nA folytatáshoz nyomj entert!");
                             break;
                     }
                 }
