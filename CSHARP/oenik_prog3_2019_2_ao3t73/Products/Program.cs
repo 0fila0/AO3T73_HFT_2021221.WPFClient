@@ -27,33 +27,12 @@ namespace Products.Program
         public static void Main()
         {
             Logical logic = new Logical(new Repository());
-
             string controller = string.Empty;
+
             while (controller.ToLower() != "q")
             {
                 Console.Clear();
-                Console.WriteLine("**********************   Főmenü   ********************\n");
-                Console.WriteLine("A programról röviden:\n\nA program által lehetőségünk van különböző műveleteket, lekérdezéseket végezni egy olyan adatbázisban, mely termékekről tárol bizonyos információkat, többek között azt, hogy melyik áruházban milyen áron kapható az adott árucikk, és hogy az melyik gyártótól származik.");
-                Console.WriteLine("\n******************************************************\n");
-                Console.WriteLine("Parancsok:\n");
-
-                Console.WriteLine("0: Adatok listázása");
-                Console.WriteLine("1: Termék hozzáadása");
-                Console.WriteLine("2: Termék törlése");
-                Console.WriteLine("3: Termék módosítása");
-                Console.WriteLine("4: Üzlet hozzáadása");
-                Console.WriteLine("5: Üzlet törlése");
-                Console.WriteLine("6: Üzlet módosítása");
-                Console.WriteLine("7: Gyártó hozzáadása");
-                Console.WriteLine("8: Gyártó törlése");
-                Console.WriteLine("9: Gyártó módosítása");
-                Console.WriteLine("A: Legolcsóbb áruház");
-                Console.WriteLine("S: Legdrágább termék helye");
-                Console.WriteLine("D: Ugyanazon termékek elérhetősége a legkisebb áron");
-                Console.WriteLine("F: Osan áruház termékei");
-                Console.WriteLine("Q: Kilépés a programból");
-                Console.WriteLine();
-
+                MainMenu();                                     // MainMenu(): This method display to user all options that user can use.
                 controller = Console.ReadLine();
 
                 if (controller.ToLower() == "q")
@@ -629,6 +608,70 @@ namespace Products.Program
             Console.ReadLine();
         }
 
+        private static void Write_EntityDatasS(IEnumerable<string> list)
+        {
+            foreach (var item in list)
+            {
+                if (item == null)
+                {
+                    Console.WriteLine("---");
+                }
+                else
+                {
+                    Console.WriteLine("Áruház neve: " + item);
+                }
+
+                Console.WriteLine("\n************************\n");
+            }
+
+            Console.WriteLine("\nNyomj entert a folytatáshoz!");
+            Console.ReadLine();
+        }
+
+        private static void Write_EntityDatasCheapestShop(string cheapestShop)
+        {
+            if (cheapestShop == null || cheapestShop == string.Empty)
+            {
+                Console.WriteLine("---");
+            }
+            else
+            {
+                Console.WriteLine("Áruház neve: " + cheapestShop);
+            }
+
+            Console.WriteLine("\n************************\n");
+
+            Console.WriteLine("\nNyomj entert a folytatáshoz!");
+            Console.ReadLine();
+        }
+
+        private static void Write_EntityDatasQ(IQueryable<object> list)
+        {
+            foreach (var item in list)
+            {
+                PropertyInfo[] props = item.GetType().GetProperties();
+                foreach (PropertyInfo prop in props)
+                {
+                    if (prop.GetCustomAttribute<DontWriteToTheStandardOutput>() == null)
+                    {
+                        if (prop.GetValue(item) == null)
+                        {
+                            Console.WriteLine(prop.Name + ": ---");
+                        }
+                        else
+                        {
+                            Console.WriteLine(prop.Name + ": " + prop.GetValue(item));
+                        }
+                    }
+                }
+
+                Console.WriteLine("\n************************\n");
+            }
+
+            Console.WriteLine("\nNyomj entert a folytatáshoz!");
+            Console.ReadLine();
+        }
+
         private static void Write_NewEntity(string entity, string properties)
         {
             Console.WriteLine("Add meg a " + entity + " paramétereit '#' karakterrel elválasztva!");
@@ -668,6 +711,31 @@ namespace Products.Program
             }
 
             return newProductID;
+        }
+
+        private static void MainMenu()
+        {
+            Console.WriteLine("**********************   Főmenü   ********************\n");
+            Console.WriteLine("A programról röviden:\n\nA program által lehetőségünk van különböző műveleteket, lekérdezéseket végezni egy olyan adatbázisban, mely termékekről tárol bizonyos információkat, többek között azt, hogy melyik áruházban milyen áron kapható az adott árucikk, és hogy az melyik gyártótól származik.");
+            Console.WriteLine("\n******************************************************\n");
+            Console.WriteLine("Parancsok:\n");
+
+            Console.WriteLine("0: Adatok listázása");
+            Console.WriteLine("1: Termék hozzáadása");
+            Console.WriteLine("2: Termék törlése");
+            Console.WriteLine("3: Termék módosítása");
+            Console.WriteLine("4: Üzlet hozzáadása");
+            Console.WriteLine("5: Üzlet törlése");
+            Console.WriteLine("6: Üzlet módosítása");
+            Console.WriteLine("7: Gyártó hozzáadása");
+            Console.WriteLine("8: Gyártó törlése");
+            Console.WriteLine("9: Gyártó módosítása");
+            Console.WriteLine("A: Legolcsóbb áruház");
+            Console.WriteLine("S: Legdrágább termék helye");
+            Console.WriteLine("D: Ugyanazon termékek elérhetősége a legkisebb áron");
+            Console.WriteLine("F: Osan áruház termékei");
+            Console.WriteLine("Q: Kilépés a programból");
+            Console.WriteLine();
         }
     }
 }
