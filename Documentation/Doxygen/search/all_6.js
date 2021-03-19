@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['iaruhazlogic_43',['IAruhazLogic',['../interface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic.html',1,'Products::GUI::BL']]],
+  ['idkapcsolo_44',['IDKapcsolo',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a5eaccb97b3e323742a1ca8d82171086c',1,'Products.Data.Models.ProductsContext.IDKapcsolo()'],['../class_products_1_1_data_1_1_models_1_1_termek.html#a35d9941c004ef5b294b73d3084af7729',1,'Products.Data.Models.Termek.IDKapcsolo()'],['../class_products_1_1_data_1_1_models_1_1_i_d_kapcsolo.html',1,'Products.Data.Models.IDKapcsolo']]],
+  ['idkapcsolos_45',['IdKapcsolos',['../class_products_1_1_data_1_1_models_1_1_aruhaz.html#aa80f232453d0be9244a28f9916a88f2a',1,'Products::Data::Models::Aruhaz']]],
+  ['ieditorservice_46',['IEditorService',['../interface_products_1_1_g_u_i_1_1_b_l_1_1_i_editor_service.html',1,'Products::GUI::BL']]],
+  ['ilogic_47',['ILogic',['../interface_products_1_1_logic_1_1_i_logic.html',1,'Products::Logic']]],
+  ['initializecomponent_48',['InitializeComponent',['../class_products_1_1_g_u_i_1_1_app.html#aa7c40c0b52082716f24d334a37ec4e0e',1,'Products.GUI.App.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_app.html#aa7c40c0b52082716f24d334a37ec4e0e',1,'Products.GUI.App.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_main_window.html#a9c88cb881a5d37414dd2744d68842e81',1,'Products.GUI.MainWindow.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_main_window.html#a9c88cb881a5d37414dd2744d68842e81',1,'Products.GUI.MainWindow.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html#ac37ac41086870183d2fe8083962058a1',1,'Products.GUI.UI.EditorWindow.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html#ac37ac41086870183d2fe8083962058a1',1,'Products.GUI.UI.EditorWindow.InitializeComponent()']]],
+  ['instance_49',['Instance',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a287628a1df82f516631f94dbc1db044c',1,'Products.Data.Models.ProductsContext.Instance()'],['../class_products_1_1_g_u_i_1_1_my_i_o_c.html#a0ca0ece52c3631b48a1072edfce23a8e',1,'Products.GUI.MyIOC.Instance()']]],
+  ['irepository_50',['IRepository',['../interface_products_1_1_repository_1_1_i_repository.html',1,'Products::Repository']]]
+];

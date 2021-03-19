@@ -1,0 +1,26 @@
+var class_products_1_1_logic_1_1_logical =
+[
+    [ "Logical", "class_products_1_1_logic_1_1_logical.html#a69d77ccbefe2714b5946997f387d094f", null ],
+    [ "AddLink", "class_products_1_1_logic_1_1_logical.html#a98875ae272962d191d5c75de1f1435ee", null ],
+    [ "AddManufacturer", "class_products_1_1_logic_1_1_logical.html#ac89f823f9a2a410e35b502675f4e2e66", null ],
+    [ "AddProduct", "class_products_1_1_logic_1_1_logical.html#a27c75611e8a4c550cb2df41c84553c99", null ],
+    [ "AddShop", "class_products_1_1_logic_1_1_logical.html#a000211b8217228ec28954badb657cb42", null ],
+    [ "AddShop", "class_products_1_1_logic_1_1_logical.html#afab91ac2ee1d66ccb7d2be8b771a7884", null ],
+    [ "CheapestShop", "class_products_1_1_logic_1_1_logical.html#a373eec6046c52f6b17db048194fcef1a", null ],
+    [ "DeleteLink", "class_products_1_1_logic_1_1_logical.html#acaa260b667d55b3935ab27a743ab2b50", null ],
+    [ "DeleteManufacturer", "class_products_1_1_logic_1_1_logical.html#afdd166262b40e793fc35165c9af0af98", null ],
+    [ "DeleteProduct", "class_products_1_1_logic_1_1_logical.html#a2ee6b6a6a80a02d3e51e7a8f839fc081", null ],
+    [ "DeleteShop", "class_products_1_1_logic_1_1_logical.html#a77b44cb4ae2df10d3a883d7b22834dc2", null ],
+    [ "DeleteShop", "class_products_1_1_logic_1_1_logical.html#a870bb8bca7f84a7e57ec653bc320d91f", null ],
+    [ "GetAllLinks", "class_products_1_1_logic_1_1_logical.html#a3a8466f8a2277f78f09974da6240554c", null ],
+    [ "GetAllManufacturers", "class_products_1_1_logic_1_1_logical.html#ae80c573a77a267ed44b6ae2ae20ccef6", null ],
+    [ "GetAllProducts", "class_products_1_1_logic_1_1_logical.html#a505187e18f91a9f53fed94ff0bb502fc", null ],
+    [ "GetAllShops", "class_products_1_1_logic_1_1_logical.html#a3a944f044e990e417d5cda68e56c730f", null ],
+    [ "OsanProducts", "class_products_1_1_logic_1_1_logical.html#a9e08a22d0c7c379812423d81853b68b1", null ],
+    [ "PlaceOfMostExpensiveProduct", "class_products_1_1_logic_1_1_logical.html#a56856ef70a7c4af89fa5432ec6672213", null ],
+    [ "TheLowestPrices", "class_products_1_1_logic_1_1_logical.html#a9aa1c14216f09423b6a31a0f5b87b0c9", null ],
+    [ "UpdateManufacturer", "class_products_1_1_logic_1_1_logical.html#a49954942ccee7ad3794a77594822b03e", null ],
+    [ "UpdateProduct", "class_products_1_1_logic_1_1_logical.html#a79f68d0a79e60be92080addf0c9d820f", null ],
+    [ "UpdateShop", "class_products_1_1_logic_1_1_logical.html#a0ad80f517f1a053c1becd5b21bd494d5", null ],
+    [ "UpdateShop", "class_products_1_1_logic_1_1_logical.html#a315de1ae0531474fdf4670c205cb5d19", null ]
+];

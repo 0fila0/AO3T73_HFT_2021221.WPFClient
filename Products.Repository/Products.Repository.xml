@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:Products.Repository.IRepository">
+            <summary>
+            This interface describes what methods should be implemented in Repository class.
+            </summary>
+        </member>
+        <member name="M:Products.Repository.IRepository.GetAllManufacturers">
+            <summary>
+            This method returns all manufacturer entities.
+            </summary>
+            <returns> A list with all manufacturer entities. </returns>
+        </member>
+        <member name="M:Products.Repository.IRepository.GetAllShops">
+            <summary>
+            This method returns all shop entities.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+        </member>
+        <member name="M:Products.Repository.IRepository.GetAllProducts">
+            <summary>
+            This method returns all product entities.
+            </summary>
+            <returns> A list with all product entities. </returns>
+        </member>
+        <member name="M:Products.Repository.IRepository.GetAllLinks">
+            <summary>
+            This method returns all link entities.
+            </summary>
+            <returns> A list with all link entities. </returns>
+        </member>
+        <member name="M:Products.Repository.IRepository.AddShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method adds a new shop entity to the database.
+            </summary>
+            <param name="param"> Shop that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.AddProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method adds a new product entity to the database.
+            </summary>
+            <param name="param"> Product that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.AddManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method adds a new manufacturer entity to the database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.AddLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method adds a new link entity to the database.
+            </summary>
+            <param name="param"> Link that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.UpdateShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="param"> Shop that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            Update the database.
+            </summary>
+            <param name="regiNev"> Shop's older name. </param>
+            <param name="ujNev"> Shop's new name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.UpdateProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method changes an existing product entity's property/properties.
+            </summary>
+            <param name="param"> Product that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.UpdateManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method changes an existing manufacturer entity's property/properties.
+            </summary>
+            <param name="param"> Manufacturer that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.DeleteShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="param"> Shop that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.DeleteProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method deletes a product entity from database.
+            </summary>
+            <param name="param"> Product that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.DeleteManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method deletes a manufacturer entity from database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.DeleteLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method deletes a link entity from database.
+            </summary>
+            <param name="param"> Link that user intend to delete. </param>
+        </member>
+        <member name="T:Products.Repository.ProductsRepository">
+            <summary>
+            This is an individual repository for database operations.
+            </summary>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.#ctor(Products.Data.Models.ProductsContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Repository.ProductsRepository"/> class.
+            </summary>
+            <param name="productsContext"> Ancestor repository. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.AddLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method adds a new link entity to the database.
+            </summary>
+            <param name="param"> Link that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.AddManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method adds a new manufacturer entity to the database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.AddProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method adds a new product entity to the database.
+            </summary>
+            <param name="param"> Product that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.AddShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method adds a new shop entity to the database.
+            </summary>
+            <param name="param"> Shop that user intend to add. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.DeleteLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method deletes a link entity from database.
+            </summary>
+            <param name="param"> Link that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.DeleteManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method deletes a manufacturer entity from database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.DeleteProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method deletes a product entity from database.
+            </summary>
+            <param name="param"> Product that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.DeleteShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="param"> Shop that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.GetAllLinks">
+            <summary>
+            This method returns all link entities.
+            </summary>
+            <returns> A list with all link entities. </returns>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.GetAllManufacturers">
+            <summary>
+            This method returns all manufacturer entities.
+            </summary>
+            <returns> A list with all manufacturer entities. </returns>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.GetAllProducts">
+            <summary>
+            This method returns all product entities.
+            </summary>
+            <returns> A list with all product entities. </returns>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.GetAllShops">
+            <summary>
+            This method returns all shop entities.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.UpdateManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method changes an existing manufacturer entity's property/properties.
+            </summary>
+            <param name="param"> Manufacturer that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.UpdateProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method changes an existing product entity's property/properties.
+            </summary>
+            <param name="param"> Product that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.UpdateShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="param"> Shop that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

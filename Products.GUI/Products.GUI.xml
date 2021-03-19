@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.GUI</name>
+    </assembly>
+    <members>
+        <member name="T:Products.GUI.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Products.GUI.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.App"/> class.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Products.GUI.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Products.GUI.BL.AruhazLogic">
+            <summary>
+            /// GUI's Logic.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.BL.AruhazLogic.#ctor(Products.GUI.BL.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,Products.Logic.ILogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.BL.AruhazLogic"/> class.
+            </summary>
+            <param name="editorService"> IEditorservice parameter. </param>
+            <param name="messengerService"> IMessenger parameter. </param>
+            <param name="logic"> ILogic parameter for Logical. </param>
+        </member>
+        <member name="M:Products.GUI.BL.AruhazLogic.AddAruhaz(System.Collections.Generic.IList{Products.GUI.Data.Aruhaz})">
+            <summary>
+            Add a shop to database and to GUI.
+            </summary>
+            <param name="list"> List's of shops. </param>
+        </member>
+        <member name="M:Products.GUI.BL.AruhazLogic.DelAruhaz(System.Collections.Generic.IList{Products.GUI.Data.Aruhaz},Products.GUI.Data.Aruhaz)">
+            <summary>
+            Delete a shop from database and GUI.
+            </summary>
+            <param name="list"> List's of shops. </param>
+            <param name="aruhaz"> Should be deleted. </param>
+        </member>
+        <member name="M:Products.GUI.BL.AruhazLogic.GetAllAruhaz(System.Collections.Generic.IList{Products.GUI.Data.Aruhaz})">
+            <summary>
+            Get all shops from database.
+            </summary>
+            <param name="list"> List's of shops. </param>
+        </member>
+        <member name="M:Products.GUI.BL.AruhazLogic.ModAruhaz(Products.GUI.Data.Aruhaz)">
+            <summary>
+            Edit a shop.
+            </summary>
+            <param name="aruhazToModify"> Should be edited. </param>
+        </member>
+        <member name="T:Products.GUI.BL.IAruhazLogic">
+            <summary>
+            GUI's logic interface.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.BL.IAruhazLogic.AddAruhaz(System.Collections.Generic.IList{Products.GUI.Data.Aruhaz})">
+            <summary>
+            Add a shop to database.
+            </summary>
+            <param name="list"> List's of shops. </param>
+        </member>
+        <member name="M:Products.GUI.BL.IAruhazLogic.ModAruhaz(Products.GUI.Data.Aruhaz)">
+            <summary>
+            Edit a shop.
+            </summary>
+            <param name="aruhazToModify"> Should be edited. </param>
+        </member>
+        <member name="M:Products.GUI.BL.IAruhazLogic.DelAruhaz(System.Collections.Generic.IList{Products.GUI.Data.Aruhaz},Products.GUI.Data.Aruhaz)">
+            <summary>
+            Delete a shop from database.
+            </summary>
+            <param name="list"> List's of shops. </param>
+            <param name="aruhaz"> Should be deleted. </param>
+        </member>
+        <member name="M:Products.GUI.BL.IAruhazLogic.GetAllAruhaz(System.Collections.Generic.IList{Products.GUI.Data.Aruhaz})">
+            <summary>
+            Gets all shops from database.
+            </summary>
+            <param name="list"> List's of shops. </param>
+        </member>
+        <member name="T:Products.GUI.BL.IEditorService">
+            <summary>
+            IEditorService interface.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.BL.IEditorService.EditAruhaz(Products.GUI.Data.Aruhaz)">
+            <summary>
+            It returns true if the shop have been edited.
+            </summary>
+            <param name="aruh"> Should be edited. </param>
+            <returns> True: shop have been edited. </returns>
+        </member>
+        <member name="T:Products.GUI.Data.Aruhaz">
+            <summary>
+            GUI's data entity.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.Data.Aruhaz.AruhazNeve">
+            <summary>
+            Gets or sets shop's name.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.Data.Aruhaz.Honlap">
+            <summary>
+            Gets or sets website.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.Data.Aruhaz.Email">
+            <summary>
+            Gets or sets email address.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.Data.Aruhaz.Telefon">
+            <summary>
+            Gets or sets phone number.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.Data.Aruhaz.Kozpont">
+            <summary>
+            Gets or sets center.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.Data.Aruhaz.Adoszam">
+            <summary>
+            Gets or sets tax number.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.Data.Aruhaz.CopyFrom(Products.GUI.Data.Aruhaz)">
+            <summary>
+            Cloning a shop in order to modify.
+            </summary>
+            <param name="other"> Shop that will be cloned. </param>
+        </member>
+        <member name="T:Products.GUI.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Products.GUI.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Products.GUI.MyIOC">
+            <summary>
+            This is an individual MyIOC for bugfix purposes.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.MyIOC.Instance">
+            <summary>
+            Gets instance.
+            </summary>
+        </member>
+        <member name="T:Products.GUI.UI.EditorServiceViaWindow">
+            <summary>
+            EditorService class.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.UI.EditorServiceViaWindow.EditAruhaz(Products.GUI.Data.Aruhaz)">
+            <summary>
+            Make a new Editor window with the shop's data.
+            </summary>
+            <param name="aruh"> Should be edited. </param>
+            <returns> True: shop's data has been edited. </returns>
+        </member>
+        <member name="T:Products.GUI.UI.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:Products.GUI.UI.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.UI.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.UI.EditorWindow.#ctor(Products.GUI.Data.Aruhaz)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.UI.EditorWindow"/> class.
+            </summary>
+            <param name="oldAruhaz"> Creates an editor window with this old shop's data. </param>
+        </member>
+        <member name="P:Products.GUI.UI.EditorWindow.Aruhaz">
+            <summary>
+            Gets viewmodel's shop.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.UI.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Products.GUI.VM.EditorViewModel">
+            <summary>
+            asd.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.VM.EditorViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.VM.EditorViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.EditorViewModel.Aruhaz">
+            <summary>
+            Gets or sets Shop entity.
+            </summary>
+        </member>
+        <member name="T:Products.GUI.VM.MainViewModel">
+            <summary>
+            MainViewModel class.
+            </summary>
+        </member>
+        <member name="M:Products.GUI.VM.MainViewModel.#ctor(Products.GUI.BL.IAruhazLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.VM.MainViewModel"/> class.
+            </summary>
+            <param name="logic"> An ILogic parameter. </param>
+        </member>
+        <member name="M:Products.GUI.VM.MainViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.GUI.VM.MainViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.MainViewModel.Aruhazak">
+            <summary>
+            Gets a collection to shops.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.MainViewModel.AruhazSelected">
+            <summary>
+            Gets or sets selected shop item.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.MainViewModel.AddCmd">
+            <summary>
+            Gets add command.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.MainViewModel.ModCmd">
+            <summary>
+            Gets edit command.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.MainViewModel.DelCmd">
+            <summary>
+            Gets delete command.
+            </summary>
+        </member>
+        <member name="P:Products.GUI.VM.MainViewModel.ShowCmd">
+            <summary>
+            Gets getAll command.
+            </summary>
+        </member>
+    </members>
+</doc>

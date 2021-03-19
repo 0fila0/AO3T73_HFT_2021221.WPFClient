@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Products.Data.Models.Aruhaz">
+            <summary>
+            Auto generated entity class for Aruhaz.
+            </summary>
+        </member>
+        <member name="M:Products.Data.Models.Aruhaz.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Data.Models.Aruhaz"/> class.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.AruhazNeve">
+            <summary>
+            Gets or sets AruhazNeve.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.Honlap">
+            <summary>
+            Gets or sets Honlap.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.EMail">
+            <summary>
+            Gets or sets EMail.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.Telefon">
+            <summary>
+            Gets or sets Telefon.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.Kozpont">
+            <summary>
+            Gets or sets Kozpont.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.Adoszam">
+            <summary>
+            Gets or sets Adoszam.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Aruhaz.IdKapcsolos">
+            <summary>
+            Gets IdKapcsolos.
+            </summary>
+        </member>
+        <member name="T:Products.Data.Models.Gyarto">
+            <summary>
+            Manufacturer entity class.
+            </summary>
+        </member>
+        <member name="M:Products.Data.Models.Gyarto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Data.Models.Gyarto"/> class.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.GyartoNeve">
+            <summary>
+            Gets or sets manufacturer's name.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.Honlap">
+            <summary>
+            Gets or sets manufacturer's website.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.EMail">
+            <summary>
+            Gets or sets manufacturer's email address.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.Telefon">
+            <summary>
+            Gets or sets manufacturer's phone number.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.Kozpont">
+            <summary>
+            Gets or sets manufacturer's center.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.Adoszam">
+            <summary>
+            Gets or sets manufacturer's tax number.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Gyarto.Termek">
+            <summary>
+            Gets manufacturer's products.
+            </summary>
+        </member>
+        <member name="T:Products.Data.Models.IDKapcsolo">
+            <summary>
+            ID connection entity class.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.IDKapcsolo.KapcsoloId">
+            <summary>
+            Gets or sets connection.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.IDKapcsolo.TermekID">
+            <summary>
+            Gets or sets connection's product's ID.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.IDKapcsolo.AruhazNeve">
+            <summary>
+            Gets or sets connection's shop's name.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.IDKapcsolo.AruhazNeveNavigation">
+            <summary>
+            Gets or sets connection's shop's name for navigation.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.IDKapcsolo.Termek">
+            <summary>
+            Gets or sets connection's product.
+            </summary>
+        </member>
+        <member name="T:Products.Data.Models.ProductsContext">
+            <summary>
+            This is a custom database context.
+            </summary>
+        </member>
+        <member name="M:Products.Data.Models.ProductsContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Data.Models.ProductsContext"/> class.
+            </summary>
+        </member>
+        <member name="M:Products.Data.Models.ProductsContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Products.Data.Models.ProductsContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Data.Models.ProductsContext"/> class.
+            </summary>
+            <param name="options"> DBContext option. </param>
+        </member>
+        <member name="P:Products.Data.Models.ProductsContext.Instance">
+            <summary>
+            Gets instance.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.ProductsContext.Aruhaz">
+            <summary>
+            Gets or sets Aruhaz data.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.ProductsContext.Gyarto">
+            <summary>
+            Gets or sets Gyarto data.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.ProductsContext.IDKapcsolo">
+            <summary>
+            Gets or sets IDKapcsolo data.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.ProductsContext.Termek">
+            <summary>
+            Gets or sets Termek data.
+            </summary>
+        </member>
+        <member name="M:Products.Data.Models.ProductsContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configures the DBContext.
+            </summary>
+            <param name="optionsBuilder"> DbContextOptionsBuilder parameter. </param>
+        </member>
+        <member name="M:Products.Data.Models.ProductsContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Create enities model.
+            </summary>
+            <param name="modelBuilder"> ModelBuilder parameter. </param>
+        </member>
+        <member name="T:Products.Data.Models.Termek">
+            <summary>
+            Product entity class.
+            </summary>
+        </member>
+        <member name="M:Products.Data.Models.Termek.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Data.Models.Termek"/> class.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.TermekID">
+            <summary>
+            Gets or sets product's ID.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.Tipus">
+            <summary>
+            Gets or sets product's type.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.Megnevezes">
+            <summary>
+            Gets or sets product's name.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.Kiszereles">
+            <summary>
+            Gets or sets product's packaging.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.Ar">
+            <summary>
+            Gets or sets product's price.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.Leiras">
+            <summary>
+            Gets or sets product's description.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.GyartoNeve">
+            <summary>
+            Gets or sets product's manufactuter's name.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.GyartoNeveNavigation">
+            <summary>
+            Gets or sets product's manufacturer's name for navigation.
+            </summary>
+        </member>
+        <member name="P:Products.Data.Models.Termek.IDKapcsolo">
+            <summary>
+            Gets product's ID connection.
+            </summary>
+        </member>
+    </members>
+</doc>

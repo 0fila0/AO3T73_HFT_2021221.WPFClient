@@ -1,0 +1,25 @@
+var interface_products_1_1_logic_1_1_i_logic =
+[
+    [ "AddLink", "interface_products_1_1_logic_1_1_i_logic.html#afa2664630104f4d5b482362e148f7d61", null ],
+    [ "AddManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#af3f89d8f20cfcb6414eccc19b45d51b6", null ],
+    [ "AddProduct", "interface_products_1_1_logic_1_1_i_logic.html#a8bbe0f54f3cfceb6fd0b8562e0648a71", null ],
+    [ "AddShop", "interface_products_1_1_logic_1_1_i_logic.html#aa48d82b732684d88a3bce783ab49f385", null ],
+    [ "AddShop", "interface_products_1_1_logic_1_1_i_logic.html#acc67a1232b05dc2ccd8be40ab39504cd", null ],
+    [ "CheapestShop", "interface_products_1_1_logic_1_1_i_logic.html#a432e6a31bd8215aad19f4443b036f130", null ],
+    [ "DeleteLink", "interface_products_1_1_logic_1_1_i_logic.html#a46ae31d3f5dc49f5363ac468f5261afc", null ],
+    [ "DeleteManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#a46d9a5d4062e0ab9588c6e3e49d8531d", null ],
+    [ "DeleteProduct", "interface_products_1_1_logic_1_1_i_logic.html#a2629ed6e9c348c39baff7b60c967815e", null ],
+    [ "DeleteShop", "interface_products_1_1_logic_1_1_i_logic.html#a23623014d09f810666b29c93a3b4d76a", null ],
+    [ "DeleteShop", "interface_products_1_1_logic_1_1_i_logic.html#a15d2cda63c4ce53e0e6d53271a41cb97", null ],
+    [ "GetAllLinks", "interface_products_1_1_logic_1_1_i_logic.html#accfa94cea9c601c17ebaa60d1fee493d", null ],
+    [ "GetAllManufacturers", "interface_products_1_1_logic_1_1_i_logic.html#a89f94d7b82c6363f1d74a63084b62fce", null ],
+    [ "GetAllProducts", "interface_products_1_1_logic_1_1_i_logic.html#a6d697e9edc9bb7e79adedf5d31f07f69", null ],
+    [ "GetAllShops", "interface_products_1_1_logic_1_1_i_logic.html#a0655f83c1f4de089d68faf03e75d2f8f", null ],
+    [ "OsanProducts", "interface_products_1_1_logic_1_1_i_logic.html#a41164f3c08935ce12fbbd7258086fa55", null ],
+    [ "PlaceOfMostExpensiveProduct", "interface_products_1_1_logic_1_1_i_logic.html#ab6b590167e5e038e40fcaf894fb701cf", null ],
+    [ "TheLowestPrices", "interface_products_1_1_logic_1_1_i_logic.html#a423ae47d1d893d0d9dfaee91ee21d46e", null ],
+    [ "UpdateManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#affd58620a52b4f8711d80f42114d32a0", null ],
+    [ "UpdateProduct", "interface_products_1_1_logic_1_1_i_logic.html#a8472647ea40a2a5e66d28fb2b373c271", null ],
+    [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#ac499ee5b27d2297d02fb2c906a85a6c6", null ],
+    [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#a06679580ea94cc58b51136f1a73bb064", null ]
+];

@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Products.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:Products.Logic.ILogic">
+            <summary>
+            This interface describes what methods should be implemented in Logic class.
+            </summary>
+        </member>
+        <member name="M:Products.Logic.ILogic.GetAllManufacturers">
+            <summary>
+            This method returns all manufacturer entities.
+            </summary>
+            <returns> A list with all manufacturer entities. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.GetAllShops">
+            <summary>
+            This method returns all shop entities.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.GetAllProducts">
+            <summary>
+            This method returns all product entities.
+            </summary>
+            <returns> A list with all product entities. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.GetAllLinks">
+            <summary>
+            This method returns all link entities.
+            </summary>
+            <returns> A list with all link entities. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.AddShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method adds a new shop entity to the database.
+            </summary>
+            <param name="param"> Shop that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.AddShop(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            This method adds a new shop entity to the database.
+            </summary>
+            <param name="nev"> Shop's name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.AddProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method adds a new product entity to the database.
+            </summary>
+            <param name="param"> Product that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.AddManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method adds a new manufacturer entity to the database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.AddLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method adds a new link entity to the database.
+            </summary>
+            <param name="param"> Link that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="param"> Shop that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="regiNev"> Shop's old name. </param>
+            <param name="ujNev"> Shop's new name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method changes an existing product entity's property/properties.
+            </summary>
+            <param name="param"> Product that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method changes an existing manufacturer entity's property/properties.
+            </summary>
+            <param name="param"> Manufacturer that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="param"> Shop that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteShop(System.String)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="nev"> Shop's name user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method deletes a product entity from database.
+            </summary>
+            <param name="param"> Product that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method deletes a manufacturer entity from database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method deletes a link entity from database.
+            </summary>
+            <param name="param"> Link that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.CheapestShop">
+            <summary>
+            This method finds the cheapest shop.
+            </summary>
+            <returns>A shop entity which is the cheapest.</returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.PlaceOfMostExpensiveProduct">
+            <summary>
+            This method finds that shop where the product with the highest price can be found.
+            </summary>
+            <returns>A shop entity where the product with the highest price can be found.</returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.TheLowestPrices">
+            <summary>
+            This method lists the lowest price of products.
+            </summary>
+            <returns>A list consist of products.</returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.OsanProducts">
+            <summary>
+            This method lists all of products which can be found in Osan.
+            </summary>
+            <returns>A list consist of products.</returns>
+        </member>
+        <member name="T:Products.Logic.Logical">
+            <summary>
+            This interface describes what methods should be implemented in Logic class.
+            </summary>
+        </member>
+        <member name="M:Products.Logic.Logical.#ctor(Products.Repository.IRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Products.Logic.Logical"/> class.
+            </summary>
+            <param name="repo">Repository parameter.</param>
+        </member>
+        <member name="M:Products.Logic.Logical.GetAllLinks">
+            <summary>
+            This method returns all link entities.
+            </summary>
+            <returns> A list with all link entities. </returns>
+        </member>
+        <member name="M:Products.Logic.Logical.GetAllManufacturers">
+            <summary>
+            This method returns all manufacturer entities.
+            </summary>
+            <returns> A list with all manufacturer entities. </returns>
+        </member>
+        <member name="M:Products.Logic.Logical.GetAllProducts">
+            <summary>
+            This method returns all product entities.
+            </summary>
+            <returns> A list with all product entities. </returns>
+        </member>
+        <member name="M:Products.Logic.Logical.GetAllShops">
+            <summary>
+            This method returns all shop entities.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+        </member>
+        <member name="M:Products.Logic.Logical.AddLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method adds a new link entity to the database.
+            </summary>
+            <param name="param"> Link that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.AddManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method adds a new manufacturer entity to the database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.AddProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method adds a new product entity to the database.
+            </summary>
+            <param name="param"> Product that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.AddShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method adds a new shop entity to the database.
+            </summary>
+            <param name="param"> Shop that user intend to add. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.AddShop(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.DeleteLink(Products.Data.Models.IDKapcsolo)">
+            <summary>
+            This method deletes a link entity from database.
+            </summary>
+            <param name="param"> Link that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.DeleteManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method deletes a manufacturer entity from database.
+            </summary>
+            <param name="param"> Manufacturer that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.DeleteProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method deletes a product entity from database.
+            </summary>
+            <param name="param"> Product that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.DeleteShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="param"> Shop that user intend to delete. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.DeleteShop(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateManufacturer(Products.Data.Models.Gyarto)">
+            <summary>
+            This method changes an existing manufacturer entity's property/properties.
+            </summary>
+            <param name="param"> Manufacturer that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateProduct(Products.Data.Models.Termek)">
+            <summary>
+            This method changes an existing product entity's property/properties.
+            </summary>
+            <param name="param"> Product that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateShop(Products.Data.Models.Aruhaz)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="param"> Shop that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.OsanProducts">
+            <summary>
+            This method lists all of products which can be found in Osan.
+            </summary>
+            <returns>A list consist of products.</returns>
+        </member>
+        <member name="M:Products.Logic.Logical.PlaceOfMostExpensiveProduct">
+            <summary>
+            This method finds that shop where the product with the highest price can be found.
+            </summary>
+            <returns>A shop entity where the product with the highest price can be found.</returns>
+        </member>
+        <member name="M:Products.Logic.Logical.CheapestShop">
+            <summary>
+            This method finds the cheapest shop.
+            </summary>
+            <returns>A shop entity which is the cheapest.</returns>
+        </member>
+        <member name="M:Products.Logic.Logical.TheLowestPrices">
+            <summary>
+            This method lists the lowest price of products.
+            </summary>
+            <returns>A list consist of products.</returns>
+        </member>
+    </members>
+</doc>
