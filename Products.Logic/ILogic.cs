@@ -96,6 +96,19 @@ namespace Products.Logic
         void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
 
         /// <summary>
+        /// This method changes an existing shop entity's property/properties.
+        /// </summary>
+        /// <param name="regiNev"> Shop's old name. </param>
+        /// <param name="ujNev"> Shop's new name. </param>
+        /// <param name="email"> Shop's email address. </param>
+        /// <param name="honlap"> Shop's website. </param>
+        /// <param name="kozpont"> Shop's center. </param>
+        /// <param name="telefon"> Shop's phone number. </param>
+        /// <param name="adoszam"> Shop's tax number. </param>
+        /// <returns> False if update failed. </returns>
+        bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+
+        /// <summary>
         /// This method changes an existing product entity's property/properties.
         /// </summary>
         /// <param name="param"> Product that user intend to modify. </param>
@@ -117,7 +130,8 @@ namespace Products.Logic
         /// This method deletes a shop entity from database.
         /// </summary>
         /// <param name="nev"> Shop's name user intend to delete. </param>
-        public void DeleteShop(string nev);
+        /// <returns> True if deleted happened. </returns>
+        bool DeleteShop(string nev);
 
         /// <summary>
         /// This method deletes a product entity from database.
@@ -167,5 +181,12 @@ namespace Products.Logic
         /// </summary>
         /// <returns>A list consist of products.</returns>
         IQueryable<object> OsanProducts();
+
+        /// <summary>
+        /// This method returns one shop entity.
+        /// </summary>
+        /// <returns> A list with all shop entities. </returns>
+        /// <param name="id"> Shop's id. </param>
+        public Aruhaz GetOneShop(string id);
     }
 }

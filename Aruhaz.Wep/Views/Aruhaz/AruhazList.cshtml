@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AruhazWeb.Models.Aruhaz>
+
+<h2>Shop list</h2>
+
+@if (Model.Count() == 0) 
+{
+	<p>No data in the database!</p>
+}
+else
+{
+	<table border = "1">
+		<tr>
+			<th>@Html.DisplayNameFor(m => m.First().AruhazNeve)</th>
+			<th>@Html.DisplayNameFor(m => m.First().AruhazNeve)</th>
+			<th>Datasheet</th>
+			<th>Delete</th>
+			<th>Modify</th>
+		</tr>
+		@foreach (var aruhaz in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(m => m.First().AruhazNeve)</td>
+				<td>@Html.DisplayFor(m => m.First().AruhazNeve)</td>
+				<td>@Html.ActionLink("[SHOW]", "Details", new { AruhazNeve = aruhaz.AruhazNeve })</td>
+				<td>@Html.ActionLink("[DEL]", "Remove", new { AruhazNeve = aruhaz.AruhazNeve })</td>
+				<td>@Html.ActionLink("[EDIT]", "Edit", new { AruhazNeve = aruhaz.AruhazNeve })</td>
+			</tr>
+		}
+	</table>
+}

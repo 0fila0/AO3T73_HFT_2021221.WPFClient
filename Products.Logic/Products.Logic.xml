@@ -86,6 +86,19 @@
             <param name="telefon"> Shop's phone number. </param>
             <param name="adoszam"> Shop's tax number. </param>
         </member>
+        <member name="M:Products.Logic.ILogic.UpdateShopWeb(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="regiNev"> Shop's old name. </param>
+            <param name="ujNev"> Shop's new name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+            <returns> False if update failed. </returns>
+        </member>
         <member name="M:Products.Logic.ILogic.UpdateProduct(Products.Data.Models.Termek)">
             <summary>
             This method changes an existing product entity's property/properties.
@@ -109,6 +122,7 @@
             This method deletes a shop entity from database.
             </summary>
             <param name="nev"> Shop's name user intend to delete. </param>
+            <returns> True if deleted happened. </returns>
         </member>
         <member name="M:Products.Logic.ILogic.DeleteProduct(Products.Data.Models.Termek)">
             <summary>
@@ -152,6 +166,13 @@
             </summary>
             <returns>A list consist of products.</returns>
         </member>
+        <member name="M:Products.Logic.ILogic.GetOneShop(System.String)">
+            <summary>
+            This method returns one shop entity.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+            <param name="id"> Shop's id. </param>
+        </member>
         <member name="T:Products.Logic.Logical">
             <summary>
             This interface describes what methods should be implemented in Logic class.
@@ -186,6 +207,9 @@
             This method returns all shop entities.
             </summary>
             <returns> A list with all shop entities. </returns>
+        </member>
+        <member name="M:Products.Logic.Logical.GetOneShop(System.String)">
+            <inheritdoc/>
         </member>
         <member name="M:Products.Logic.Logical.AddLink(Products.Data.Models.IDKapcsolo)">
             <summary>
@@ -260,6 +284,9 @@
             <param name="param"> Shop that user intend to modify. </param>
         </member>
         <member name="M:Products.Logic.Logical.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateShopWeb(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
             <inheritdoc/>
         </member>
         <member name="M:Products.Logic.Logical.OsanProducts">

@@ -71,6 +71,13 @@ namespace Products.Logic
             return listOfShops;
         }
 
+        /// <inheritdoc/>
+        public Aruhaz GetOneShop(string id)
+        {
+            Aruhaz oneShop = this.repo.GetAllShops().Where(x => x.AruhazNeve == id).FirstOrDefault();
+            return oneShop;
+        }
+
         /// <summary>
         /// This method adds a new link entity to the database.
         /// </summary>
@@ -177,8 +184,19 @@ namespace Products.Logic
         }
 
         /// <inheritdoc/>
-        public void DeleteShop(string nev)
-            => this.repo.DeleteShop(this.repo.GetAllShops().Where(x => x.AruhazNeve == nev).FirstOrDefault());
+        public bool DeleteShop(string nev)
+        {
+            Aruhaz shop = this.repo.GetAllShops().Where(x => x.AruhazNeve == nev).Select(x => x).FirstOrDefault();
+            if (shop != null)
+            {
+                this.repo.DeleteShop(this.repo.GetAllShops().Where(x => x.AruhazNeve == nev).FirstOrDefault());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// This method changes an existing manufacturer entity's property/properties.
@@ -232,6 +250,21 @@ namespace Products.Logic
         public void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
         {
             this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);
+        }
+
+        /// <inheritdoc/>
+        public bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        {
+            Aruhaz shop = this.repo.GetAllShops().Where(x => x.AruhazNeve == ujNev).Select(x => x).FirstOrDefault();
+            if (shop == null || regiNev != null || ujNev != null)
+            {
+                this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>

@@ -1,0 +1,30 @@
+﻿@model AruhazWeb.Models.Aruhaz
+
+<h2>Shop Edit</h2>
+
+@using (Html.BeginForm("Edit", "Aruhaz"))
+{
+	@Html.ValidationSummary()
+
+	@Html.AntiForgeryToken()
+
+	@Html.HiddenFor(m => m.AruhazNeve)
+	@Html.Hidden("editAction", ViewData["editAction"].ToString())
+
+	<div class="editor-label">@Html.LabelFor(m=>m.Honlap)</div>
+	<div class="editor-field">@Html.EditorFor(m=>m.Honlap)</div>
+
+	<div class="editor-label">@Html.LabelFor(m=>m.Email)</div>
+	<div class="editor-field">@Html.EditorFor(m=>m.Email)</div>
+
+	<div class="editor-label">@Html.LabelFor(m=>m.Telefon)</div>
+	<div class="editor-field">@Html.EditorFor(m=>m.Telefon)</div>
+
+	<div class="editor-label">@Html.LabelFor(m=>m.Kozpont)</div>
+	<div class="editor-field">@Html.EditorFor(m=>m.Kozpont)</div>
+
+	<div class="editor-label">@Html.LabelFor(m=>m.Adoszam)</div>
+	<div class="editor-field">@Html.EditorFor(m=>m.Adoszam)</div>
+
+	<input type="submit" value="SEND" />
+}
