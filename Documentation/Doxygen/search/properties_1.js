@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['delcmd_173',['DelCmd',['../class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a6615da62b3cdb60e7969b66a80845040',1,'Products::GUI::VM::MainViewModel']]]
+  ['configuration_252',['Configuration',['../class_aruhaz_web_1_1_startup.html#ada21cd2b4b09a39fa62b452963bc7357',1,'AruhazWeb::Startup']]]
 ];

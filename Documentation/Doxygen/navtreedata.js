@@ -24,7 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "oenik_prog4hf_2021_2_ao3t73", "index.html", [
+  [ "AruhazWeb Project", "index.html", [
+    [ "The MIT License (MIT)", "md__d___dokumentumok_oenik_prog4hf_2021_1_ao3t73__aruhaz_web_wwwroot_lib_jquery_validation__l_i_c_e_n_s_e.html", null ],
+    [ "README", "md__d___dokumentumok_oenik_prog4hf_2021_1_ao3t73__r_e_a_d_m_e.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -46,8 +48,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_app_8g_8cs_source.html",
-"interface_products_1_1_repository_1_1_i_repository.html#a637f592eb2375f032af2d7aa822b70df"
+"___layout_8cshtml_8g_8cs_source.html",
+"class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['honlap_179',['Honlap',['../class_products_1_1_data_1_1_models_1_1_aruhaz.html#aa7064db417b497bb4cfbec62f0f9eabc',1,'Products.Data.Models.Aruhaz.Honlap()'],['../class_products_1_1_data_1_1_models_1_1_gyarto.html#ac8ea93678e0000bd7a22745cd26f5402',1,'Products.Data.Models.Gyarto.Honlap()'],['../class_products_1_1_g_u_i_1_1_data_1_1_aruhaz.html#aca6dd52635339d67a01c46357a945677',1,'Products.GUI.Data.Aruhaz.Honlap()']]]
+  ['gyarto_257',['Gyarto',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a45113301fb1314d622b0a71557436212',1,'Products::Data::Models::ProductsContext']]],
+  ['gyartoneve_258',['GyartoNeve',['../class_products_1_1_data_1_1_models_1_1_gyarto.html#a2fef6f0e997fb5bf009863c49f563827',1,'Products.Data.Models.Gyarto.GyartoNeve()'],['../class_products_1_1_data_1_1_models_1_1_termek.html#ad6de3ddd4dfb730064122798495494a9',1,'Products.Data.Models.Termek.GyartoNeve()']]],
+  ['gyartonevenavigation_259',['GyartoNeveNavigation',['../class_products_1_1_data_1_1_models_1_1_termek.html#ac381671f1973277b5f20ba204d292293',1,'Products::Data::Models::Termek']]]
 ];

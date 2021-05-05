@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializecomponent_147',['InitializeComponent',['../class_products_1_1_g_u_i_1_1_app.html#aa7c40c0b52082716f24d334a37ec4e0e',1,'Products.GUI.App.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_app.html#aa7c40c0b52082716f24d334a37ec4e0e',1,'Products.GUI.App.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_main_window.html#a9c88cb881a5d37414dd2744d68842e81',1,'Products.GUI.MainWindow.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_main_window.html#a9c88cb881a5d37414dd2744d68842e81',1,'Products.GUI.MainWindow.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html#ac37ac41086870183d2fe8083962058a1',1,'Products.GUI.UI.EditorWindow.InitializeComponent()'],['../class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html#ac37ac41086870183d2fe8083962058a1',1,'Products.GUI.UI.EditorWindow.InitializeComponent()']]]
+  ['homecontroller_220',['HomeController',['../class_aruhaz_web_1_1_controllers_1_1_home_controller.html#a43c3c525a827c373919ba499693baff7',1,'AruhazWeb::Controllers::HomeController']]]
 ];

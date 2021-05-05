@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kapcsoloid_183',['KapcsoloId',['../class_products_1_1_data_1_1_models_1_1_i_d_kapcsolo.html#a1b6e66d47ba68754eff154a8cdfaa1bf',1,'Products::Data::Models::IDKapcsolo']]],
-  ['kiszereles_184',['Kiszereles',['../class_products_1_1_data_1_1_models_1_1_termek.html#a8331dbb6698fbdd873fa83953084e69f',1,'Products::Data::Models::Termek']]],
-  ['kozpont_185',['Kozpont',['../class_products_1_1_data_1_1_models_1_1_aruhaz.html#af11b656b76ac65251b7c0463050bd464',1,'Products.Data.Models.Aruhaz.Kozpont()'],['../class_products_1_1_data_1_1_models_1_1_gyarto.html#a74d67efcda2a3ade32df6a2e852cea01',1,'Products.Data.Models.Gyarto.Kozpont()'],['../class_products_1_1_g_u_i_1_1_data_1_1_aruhaz.html#a4c40f868360c258bf973f24aa3c90c56',1,'Products.GUI.Data.Aruhaz.Kozpont()']]]
+  ['idkapcsolo_261',['IDKapcsolo',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a5eaccb97b3e323742a1ca8d82171086c',1,'Products.Data.Models.ProductsContext.IDKapcsolo()'],['../class_products_1_1_data_1_1_models_1_1_termek.html#a35d9941c004ef5b294b73d3084af7729',1,'Products.Data.Models.Termek.IDKapcsolo()']]],
+  ['idkapcsolos_262',['IdKapcsolos',['../class_products_1_1_data_1_1_models_1_1_aruhaz.html#aa80f232453d0be9244a28f9916a88f2a',1,'Products::Data::Models::Aruhaz']]],
+  ['instance_263',['Instance',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a287628a1df82f516631f94dbc1db044c',1,'Products.Data.Models.ProductsContext.Instance()'],['../class_products_1_1_g_u_i_1_1_my_i_o_c.html#a0ca0ece52c3631b48a1072edfce23a8e',1,'Products.GUI.MyIOC.Instance()']]]
 ];

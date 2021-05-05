@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['showcmd_189',['ShowCmd',['../class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a31fd24a06c4d5f43aafa69a799c5ff39',1,'Products::GUI::VM::MainViewModel']]]
+  ['megnevezes_269',['Megnevezes',['../class_products_1_1_data_1_1_models_1_1_termek.html#a9f44ecd4451458ec8565d86b83b36418',1,'Products::Data::Models::Termek']]],
+  ['modcmd_270',['ModCmd',['../class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a326a5b46ddd0cd2b71c68728bd22d2a1',1,'Products::GUI::VM::MainViewModel']]]
 ];

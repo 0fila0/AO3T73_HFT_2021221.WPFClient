@@ -1,5 +1,32 @@
 var annotated_dup =
 [
+    [ "AruhazWeb", "namespace_aruhaz_web.html", [
+      [ "Controllers", "namespace_aruhaz_web_1_1_controllers.html", [
+        [ "AruhazController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller.html", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller" ],
+        [ "HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", "class_aruhaz_web_1_1_controllers_1_1_home_controller" ]
+      ] ],
+      [ "Models", "namespace_aruhaz_web_1_1_models.html", [
+        [ "Aruhaz", "class_aruhaz_web_1_1_models_1_1_aruhaz.html", "class_aruhaz_web_1_1_models_1_1_aruhaz" ],
+        [ "AruhazListViewModel", "class_aruhaz_web_1_1_models_1_1_aruhaz_list_view_model.html", "class_aruhaz_web_1_1_models_1_1_aruhaz_list_view_model" ],
+        [ "ErrorViewModel", "class_aruhaz_web_1_1_models_1_1_error_view_model.html", "class_aruhaz_web_1_1_models_1_1_error_view_model" ],
+        [ "MapperFactory", "class_aruhaz_web_1_1_models_1_1_mapper_factory.html", "class_aruhaz_web_1_1_models_1_1_mapper_factory" ]
+      ] ],
+      [ "Program", "class_aruhaz_web_1_1_program.html", "class_aruhaz_web_1_1_program" ],
+      [ "Startup", "class_aruhaz_web_1_1_startup.html", "class_aruhaz_web_1_1_startup" ]
+    ] ],
+    [ "AspNetCore", "namespace_asp_net_core.html", [
+      [ "Views__ViewImports", "class_asp_net_core_1_1_views_____view_imports.html", "class_asp_net_core_1_1_views_____view_imports" ],
+      [ "Views__ViewStart", "class_asp_net_core_1_1_views_____view_start.html", "class_asp_net_core_1_1_views_____view_start" ],
+      [ "Views_Aruhaz_AruhazDetails", "class_asp_net_core_1_1_views___aruhaz___aruhaz_details.html", "class_asp_net_core_1_1_views___aruhaz___aruhaz_details" ],
+      [ "Views_Aruhaz_AruhazEdit", "class_asp_net_core_1_1_views___aruhaz___aruhaz_edit.html", "class_asp_net_core_1_1_views___aruhaz___aruhaz_edit" ],
+      [ "Views_Aruhaz_AruhazIndex", "class_asp_net_core_1_1_views___aruhaz___aruhaz_index.html", "class_asp_net_core_1_1_views___aruhaz___aruhaz_index" ],
+      [ "Views_Aruhaz_AruhazList", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list.html", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list" ],
+      [ "Views_Home_Index", "class_asp_net_core_1_1_views___home___index.html", "class_asp_net_core_1_1_views___home___index" ],
+      [ "Views_Home_Privacy", "class_asp_net_core_1_1_views___home___privacy.html", "class_asp_net_core_1_1_views___home___privacy" ],
+      [ "Views_Shared__Layout", "class_asp_net_core_1_1_views___shared_____layout.html", "class_asp_net_core_1_1_views___shared_____layout" ],
+      [ "Views_Shared__ValidationScriptsPartial", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial.html", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial" ],
+      [ "Views_Shared_Error", "class_asp_net_core_1_1_views___shared___error.html", "class_asp_net_core_1_1_views___shared___error" ]
+    ] ],
     [ "Products", "namespace_products.html", [
       [ "Data", "namespace_products_1_1_data.html", [
         [ "Models", "namespace_products_1_1_data_1_1_models.html", [

@@ -10,16 +10,18 @@ var interface_products_1_1_logic_1_1_i_logic =
     [ "DeleteManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#a46d9a5d4062e0ab9588c6e3e49d8531d", null ],
     [ "DeleteProduct", "interface_products_1_1_logic_1_1_i_logic.html#a2629ed6e9c348c39baff7b60c967815e", null ],
     [ "DeleteShop", "interface_products_1_1_logic_1_1_i_logic.html#a23623014d09f810666b29c93a3b4d76a", null ],
-    [ "DeleteShop", "interface_products_1_1_logic_1_1_i_logic.html#a15d2cda63c4ce53e0e6d53271a41cb97", null ],
+    [ "DeleteShop", "interface_products_1_1_logic_1_1_i_logic.html#a265c9a1e219758569cf03035d10eb234", null ],
     [ "GetAllLinks", "interface_products_1_1_logic_1_1_i_logic.html#accfa94cea9c601c17ebaa60d1fee493d", null ],
     [ "GetAllManufacturers", "interface_products_1_1_logic_1_1_i_logic.html#a89f94d7b82c6363f1d74a63084b62fce", null ],
     [ "GetAllProducts", "interface_products_1_1_logic_1_1_i_logic.html#a6d697e9edc9bb7e79adedf5d31f07f69", null ],
     [ "GetAllShops", "interface_products_1_1_logic_1_1_i_logic.html#a0655f83c1f4de089d68faf03e75d2f8f", null ],
+    [ "GetOneShop", "interface_products_1_1_logic_1_1_i_logic.html#a8a29191e36f73800bff40e4146f3c657", null ],
     [ "OsanProducts", "interface_products_1_1_logic_1_1_i_logic.html#a41164f3c08935ce12fbbd7258086fa55", null ],
     [ "PlaceOfMostExpensiveProduct", "interface_products_1_1_logic_1_1_i_logic.html#ab6b590167e5e038e40fcaf894fb701cf", null ],
     [ "TheLowestPrices", "interface_products_1_1_logic_1_1_i_logic.html#a423ae47d1d893d0d9dfaee91ee21d46e", null ],
     [ "UpdateManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#affd58620a52b4f8711d80f42114d32a0", null ],
     [ "UpdateProduct", "interface_products_1_1_logic_1_1_i_logic.html#a8472647ea40a2a5e66d28fb2b373c271", null ],
     [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#ac499ee5b27d2297d02fb2c906a85a6c6", null ],
-    [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#a06679580ea94cc58b51136f1a73bb064", null ]
+    [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#a06679580ea94cc58b51136f1a73bb064", null ],
+    [ "UpdateShopWeb", "interface_products_1_1_logic_1_1_i_logic.html#a17573de0f8b92534214a99e9b0fc25c4", null ]
 ];

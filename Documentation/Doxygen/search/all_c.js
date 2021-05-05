@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['setpropertyvalue_78',['SetPropertyValue',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html#ade0f04c0f7b18dd5b170e071d5534d38',1,'XamlGeneratedNamespace::GeneratedInternalTypeHelper']]],
-  ['showcmd_79',['ShowCmd',['../class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a31fd24a06c4d5f43aafa69a799c5ff39',1,'Products::GUI::VM::MainViewModel']]]
+  ['readme_101',['README',['../md__d___dokumentumok_oenik_prog4hf_2021_1_ao3t73__r_e_a_d_m_e.html',1,'']]],
+  ['reginev_102',['RegiNev',['../class_aruhaz_web_1_1_models_1_1_aruhaz.html#a15266614a4457e81e03aed4d736b5a81',1,'AruhazWeb::Models::Aruhaz']]],
+  ['remove_103',['Remove',['../class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller.html#a960a43dd936d0e7ce10024c08b479385',1,'AruhazWeb::Controllers::AruhazController']]],
+  ['requestid_104',['RequestId',['../class_aruhaz_web_1_1_models_1_1_error_view_model.html#a03205768280a36602f7b5dd62c178498',1,'AruhazWeb::Models::ErrorViewModel']]]
 ];
