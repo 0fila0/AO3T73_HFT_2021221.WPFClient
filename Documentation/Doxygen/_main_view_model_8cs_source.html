@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AruhazWeb Project: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/Products.GUI/VM/MainViewModel.cs Source File</title>
+<title>Prog4_HF3: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/Products.GUI/VM/MainViewModel.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AruhazWeb Project
-   &#160;<span id="projectnumber">v1</span>
+   <div id="projectname">Prog4_HF3
    </div>
   </td>
  </tr>
@@ -108,7 +107,7 @@ $(document).ready(function(){initNavTree('_main_view_model_8cs_source.html','');
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html">   23</a></span>&#160;    <span class="keyword">internal</span> <span class="keyword">class </span><a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html">MainViewModel</a> : ViewModelBase</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">private</span> <a class="code" href="interface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic.html">IAruhazLogic</a> logic;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> aruhazSelected;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">private</span> <a class="code" href="namespace_aruhaz.html">Aruhaz</a> aruhazSelected;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a05ab45bc8c163d3152aea9244e855866">   32</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a05ab45bc8c163d3152aea9244e855866">MainViewModel</a>(<a class="code" href="interface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic.html">IAruhazLogic</a> logic)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
@@ -117,7 +116,7 @@ $(document).ready(function(){initNavTree('_main_view_model_8cs_source.html','');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (this.IsInDesignMode)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> a = <span class="keyword">new</span> <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a>() { Adoszam = 123123123, AruhazNeve = <span class="stringliteral">&quot;áruház&quot;</span>, Email = <span class="stringliteral">&quot;kukacok&quot;</span>, Honlap = <span class="stringliteral">&quot;www.asd.hu&quot;</span>, Kozpont = <span class="stringliteral">&quot;központ&quot;</span>, Telefon = 061703020 };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="namespace_aruhaz.html">Aruhaz</a> a = <span class="keyword">new</span> <a class="code" href="namespace_aruhaz.html">Aruhaz</a>() { Adoszam = 123123123, AruhazNeve = <span class="stringliteral">&quot;áruház&quot;</span>, Email = <span class="stringliteral">&quot;kukacok&quot;</span>, Honlap = <span class="stringliteral">&quot;www.asd.hu&quot;</span>, Kozpont = <span class="stringliteral">&quot;központ&quot;</span>, Telefon = 061703020 };</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                this.<a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#aa2401c346446a224b29d4e749ee5ff02">Aruhazak</a>.Add(a);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -134,7 +133,7 @@ $(document).ready(function(){initNavTree('_main_view_model_8cs_source.html','');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#aa2401c346446a224b29d4e749ee5ff02">   60</a></span>&#160;        <span class="keyword">public</span> ObservableCollection&lt;Aruhaz&gt; <a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#aa2401c346446a224b29d4e749ee5ff02">Aruhazak</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a8f34033f58c87e13f355311aae426739">   65</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> <a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a8f34033f58c87e13f355311aae426739">AruhazSelected</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a8f34033f58c87e13f355311aae426739">   65</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_aruhaz.html">Aruhaz</a> <a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a8f34033f58c87e13f355311aae426739">AruhazSelected</a></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keyword">get</span> { <span class="keywordflow">return</span> this.aruhazSelected; }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keyword">set</span> { this.Set(ref this.aruhazSelected, value); }</div>
@@ -149,7 +148,6 @@ $(document).ready(function(){initNavTree('_main_view_model_8cs_source.html','');
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a31fd24a06c4d5f43aafa69a799c5ff39">   89</a></span>&#160;        <span class="keyword">public</span> ICommand <a class="code" href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a31fd24a06c4d5f43aafa69a799c5ff39">ShowCmd</a> { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="ttc" id="aclass_products_1_1_data_1_1_models_1_1_aruhaz_html"><div class="ttname"><a href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Products.Data.Models.Aruhaz</a></div><div class="ttdoc">Auto generated entity class for Aruhaz.</div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00015">Aruhaz.cs:16</a></div></div>
 <div class="ttc" id="aclass_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model_html"><div class="ttname"><a href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html">Products.GUI.VM.MainViewModel</a></div><div class="ttdoc">MainViewModel class.</div><div class="ttdef"><b>Definition:</b> <a href="_main_view_model_8cs_source.html#l00023">MainViewModel.cs:24</a></div></div>
 <div class="ttc" id="aclass_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model_html_a05ab45bc8c163d3152aea9244e855866"><div class="ttname"><a href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a05ab45bc8c163d3152aea9244e855866">Products.GUI.VM.MainViewModel.MainViewModel</a></div><div class="ttdeci">MainViewModel(IAruhazLogic logic)</div><div class="ttdoc">Initializes a new instance of the MainViewModel class.</div><div class="ttdef"><b>Definition:</b> <a href="_main_view_model_8cs_source.html#l00032">MainViewModel.cs:32</a></div></div>
 <div class="ttc" id="aclass_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model_html_a31fd24a06c4d5f43aafa69a799c5ff39"><div class="ttname"><a href="class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html#a31fd24a06c4d5f43aafa69a799c5ff39">Products.GUI.VM.MainViewModel.ShowCmd</a></div><div class="ttdeci">ICommand ShowCmd</div><div class="ttdoc">Gets getAll command.</div><div class="ttdef"><b>Definition:</b> <a href="_main_view_model_8cs_source.html#l00089">MainViewModel.cs:89</a></div></div>
@@ -164,10 +162,11 @@ $(document).ready(function(){initNavTree('_main_view_model_8cs_source.html','');
 <div class="ttc" id="ainterface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic_html_a9fff51a5bda940f958528c5e05d12da6"><div class="ttname"><a href="interface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic.html#a9fff51a5bda940f958528c5e05d12da6">Products.GUI.BL.IAruhazLogic.DelAruhaz</a></div><div class="ttdeci">void DelAruhaz(IList&lt; Aruhaz &gt; list, Aruhaz aruhaz)</div><div class="ttdoc">Delete a shop from database.</div></div>
 <div class="ttc" id="ainterface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic_html_ab0b3ec61402e3177ea3aa170d422efe6"><div class="ttname"><a href="interface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic.html#ab0b3ec61402e3177ea3aa170d422efe6">Products.GUI.BL.IAruhazLogic.ModAruhaz</a></div><div class="ttdeci">void ModAruhaz(Aruhaz aruhazToModify)</div><div class="ttdoc">Edit a shop.</div></div>
 <div class="ttc" id="ainterface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic_html_adb8a37364d43d5f41670c5bff71ffd66"><div class="ttname"><a href="interface_products_1_1_g_u_i_1_1_b_l_1_1_i_aruhaz_logic.html#adb8a37364d43d5f41670c5bff71ffd66">Products.GUI.BL.IAruhazLogic.GetAllAruhaz</a></div><div class="ttdeci">void GetAllAruhaz(IList&lt; Aruhaz &gt; list)</div><div class="ttdoc">Gets all shops from database.</div></div>
+<div class="ttc" id="anamespace_aruhaz_html"><div class="ttname"><a href="namespace_aruhaz.html">Aruhaz</a></div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_8_wpf_client_2_app_8xaml_8cs_source.html#l00005">App.xaml.cs:6</a></div></div>
 <div class="ttc" id="anamespace_products_1_1_g_u_i_1_1_b_l_html"><div class="ttname"><a href="namespace_products_1_1_g_u_i_1_1_b_l.html">Products.GUI.BL</a></div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_logic_8cs_source.html#l00005">AruhazLogic.cs:6</a></div></div>
 <div class="ttc" id="anamespace_products_1_1_g_u_i_1_1_data_html"><div class="ttname"><a href="namespace_products_1_1_g_u_i_1_1_data.html">Products.GUI.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_products_8_g_u_i_2_data_2_aruhaz_8cs_source.html#l00005">Aruhaz.cs:6</a></div></div>
 <div class="ttc" id="anamespace_products_1_1_g_u_i_1_1_v_m_html"><div class="ttname"><a href="namespace_products_1_1_g_u_i_1_1_v_m.html">Products.GUI.VM</a></div><div class="ttdef"><b>Definition:</b> <a href="_editor_view_model_8cs_source.html#l00005">EditorViewModel.cs:6</a></div></div>
-<div class="ttc" id="anamespace_products_1_1_g_u_i_html"><div class="ttname"><a href="namespace_products_1_1_g_u_i.html">Products.GUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_app_8xaml_8cs_source.html#l00005">App.xaml.cs:6</a></div></div>
+<div class="ttc" id="anamespace_products_1_1_g_u_i_html"><div class="ttname"><a href="namespace_products_1_1_g_u_i.html">Products.GUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_products_8_g_u_i_2_app_8xaml_8cs_source.html#l00005">App.xaml.cs:6</a></div></div>
 <div class="ttc" id="anamespace_products_html"><div class="ttname"><a href="namespace_products.html">Products</a></div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00007">Aruhaz.cs:8</a></div></div>
 <div class="ttc" id="anamespace_system_1_1_collections_1_1_generic_html"><div class="ttname"><a href="namespace_system_1_1_collections_1_1_generic.html">Generic</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

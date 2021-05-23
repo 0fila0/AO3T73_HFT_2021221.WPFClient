@@ -1,9 +1,13 @@
 var hierarchy =
 [
+    [ "AruhazWeb.Controllers.ApiResult", "class_aruhaz_web_1_1_controllers_1_1_api_result.html", null ],
     [ "Application", null, [
-      [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ]
+      [ "Aruhaz.WpfClient.App", "class_aruhaz_1_1_wpf_client_1_1_app.html", null ]
     ] ],
     [ "System.Windows.Application", null, [
+      [ "Aruhaz.WpfClient.App", "class_aruhaz_1_1_wpf_client_1_1_app.html", null ],
+      [ "Aruhaz.WpfClient.App", "class_aruhaz_1_1_wpf_client_1_1_app.html", null ],
+      [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ],
       [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ],
       [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ]
     ] ],
@@ -11,6 +15,7 @@ var hierarchy =
     [ "Products.Data.Models.Aruhaz", "class_products_1_1_data_1_1_models_1_1_aruhaz.html", null ],
     [ "AruhazWeb.Models.AruhazListViewModel", "class_aruhaz_web_1_1_models_1_1_aruhaz_list_view_model.html", null ],
     [ "Controller", null, [
+      [ "AruhazWeb.Controllers.AruhazApiController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_api_controller.html", null ],
       [ "AruhazWeb.Controllers.AruhazController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller.html", null ],
       [ "AruhazWeb.Controllers.HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", null ]
     ] ],
@@ -23,6 +28,10 @@ var hierarchy =
       [ "Products.GUI.BL.AruhazLogic", "class_products_1_1_g_u_i_1_1_b_l_1_1_aruhaz_logic.html", null ]
     ] ],
     [ "System.Windows.Markup.IComponentConnector", null, [
+      [ "Aruhaz.WpfClient.EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", null ],
+      [ "Aruhaz.WpfClient.EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", null ],
+      [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.UI.EditorWindow", "class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html", null ],
@@ -35,17 +44,25 @@ var hierarchy =
     [ "Products.Logic.ILogic", "interface_products_1_1_logic_1_1_i_logic.html", [
       [ "Products.Logic.Logical", "class_products_1_1_logic_1_1_logical.html", null ]
     ] ],
+    [ "Aruhaz.WpfClient.IMainLogic", "interface_aruhaz_1_1_wpf_client_1_1_i_main_logic.html", [
+      [ "Aruhaz.WpfClient.MainLogic", "class_aruhaz_1_1_wpf_client_1_1_main_logic.html", null ]
+    ] ],
     [ "System.Windows.Markup.InternalTypeHelper", null, [
+      [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ],
+      [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ],
+      [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ],
       [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ]
     ] ],
     [ "Products.Repository.IRepository", "interface_products_1_1_repository_1_1_i_repository.html", [
       [ "Products.Repository.ProductsRepository", "class_products_1_1_repository_1_1_products_repository.html", null ]
     ] ],
     [ "IServiceLocator", null, [
+      [ "Aruhaz.WpfClient.MyIOC", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c.html", null ],
       [ "Products.GUI.MyIOC", "class_products_1_1_g_u_i_1_1_my_i_o_c.html", null ]
     ] ],
     [ "AruhazWeb.Models.MapperFactory", "class_aruhaz_web_1_1_models_1_1_mapper_factory.html", null ],
     [ "ObservableObject", null, [
+      [ "Aruhaz.WpfClient.AruhazVM", "class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html", null ],
       [ "Products.GUI.Data.Aruhaz", "class_products_1_1_g_u_i_1_1_data_1_1_aruhaz.html", null ]
     ] ],
     [ "AruhazWeb.Program", "class_aruhaz_web_1_1_program.html", null ],
@@ -65,15 +82,23 @@ var hierarchy =
       [ "AspNetCore.Views_Aruhaz_AruhazList", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list.html", null ]
     ] ],
     [ "SimpleIoc", null, [
+      [ "Aruhaz.WpfClient.MyIOC", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c.html", null ],
       [ "Products.GUI.MyIOC", "class_products_1_1_g_u_i_1_1_my_i_o_c.html", null ]
     ] ],
     [ "AruhazWeb.Startup", "class_aruhaz_web_1_1_startup.html", null ],
     [ "Products.Data.Models.Termek", "class_products_1_1_data_1_1_models_1_1_termek.html", null ],
     [ "ViewModelBase", null, [
+      [ "Aruhaz.WpfClient.MainVM", "class_aruhaz_1_1_wpf_client_1_1_main_v_m.html", null ],
       [ "Products.GUI.VM.EditorViewModel", "class_products_1_1_g_u_i_1_1_v_m_1_1_editor_view_model.html", null ],
       [ "Products.GUI.VM.MainViewModel", "class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html", null ]
     ] ],
     [ "System.Windows.Window", null, [
+      [ "Aruhaz.WpfClient.EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", null ],
+      [ "Aruhaz.WpfClient.EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", null ],
+      [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
+      [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.UI.EditorWindow", "class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html", null ],
@@ -81,6 +106,6 @@ var hierarchy =
       [ "Products.GUI.UI.EditorWindow", "class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html", null ]
     ] ],
     [ "Window", null, [
-      [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ]
+      [ "Aruhaz.WpfClient.EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", null ]
     ] ]
 ];

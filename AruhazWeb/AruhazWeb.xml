@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AruhazWeb</name>
+    </assembly>
+    <members>
+        <member name="T:AruhazWeb.Controllers.ApiResult">
+            <summary>
+            asdasd.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Controllers.ApiResult.OperationResult">
+            <summary>
+            Gets or sets a value indicating whether operation result.
+            </summary>
+        </member>
+        <member name="T:AruhazWeb.Controllers.AruhazApiController">
+            <summary>
+            API controller.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazApiController.#ctor(Products.Logic.ILogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AruhazWeb.Controllers.AruhazApiController"/> class.
+            </summary>
+            <param name="logic">Logic class.</param>
+            <param name="mapper">Automapper class.</param>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazApiController.GetAll">
+            <summary>
+            Get all shops.
+            </summary>
+            <returns> All shops. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazApiController.DelOneAruhaz(System.String)">
+            <summary>
+            Delete one shop.
+            </summary>
+            <param name="id"> This shop will be deleted. </param>
+            <returns> Operation result. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazApiController.AddOneShop(AruhazWeb.Models.Aruhaz)">
+            <summary>
+            Add one shop.
+            </summary>
+            <param name="aruhaz"> Add this shop. </param>
+            <returns> Operation result. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazApiController.ModOneShop(AruhazWeb.Models.Aruhaz)">
+            <summary>
+            Modify a shop.
+            </summary>
+            <param name="aruhaz"> Modify this shop. </param>
+            <returns> Operation result. </returns>
+        </member>
+        <member name="T:AruhazWeb.Controllers.AruhazController">
+            <summary>
+            Shop controller.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazController.#ctor(Products.Logic.ILogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AruhazWeb.Controllers.AruhazController"/> class.
+            </summary>
+            <param name="logic"> Logic. </param>
+            <param name="mapper"> Mapper. </param>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazController.Index">
+            <summary>
+            IActionResult method.
+            </summary>
+            <returns>A view.</returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazController.Details(System.String)">
+            <summary>
+            Show shop's details.
+            </summary>
+            <param name="id"> Shop's name. </param>
+            <returns> View with shop's details. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazController.Remove(System.String)">
+            <summary>
+            Delete one shop.
+            </summary>
+            <param name="id"> Shop's name. </param>
+            <returns> A new view. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazController.Edit(System.String)">
+            <summary>
+            Show to be edited shop.
+            </summary>
+            <param name="id"> Shop's name. </param>
+            <returns> A new view. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.AruhazController.Edit(AruhazWeb.Models.Aruhaz,System.String)">
+            <summary>
+            Add a new shop or edit a shop.
+            </summary>
+            <param name="shop"> Add/Edit this shop. </param>
+            <param name="editAction"> Add or edit. </param>
+            <returns> A new view. </returns>
+        </member>
+        <member name="T:AruhazWeb.Controllers.HomeController">
+            <summary>
+            Home controller.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{AruhazWeb.Controllers.HomeController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:AruhazWeb.Controllers.HomeController"/> class.
+            </summary>
+            <param name="logger"> Logger. </param>
+        </member>
+        <member name="M:AruhazWeb.Controllers.HomeController.Index">
+            <summary>
+            Index method.
+            </summary>
+            <returns> A new view. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.HomeController.Privacy">
+            <summary>
+            Privacy method.
+            </summary>
+            <returns> A new view. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.HomeController.Error">
+            <summary>
+            Error method.
+            </summary>
+            <returns> A new view. </returns>
+        </member>
+        <member name="T:AruhazWeb.Models.Aruhaz">
+            <summary>
+            Aruhaz web model.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.AruhazNeve">
+            <summary>
+            Gets or sets shop's name.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.RegiNev">
+            <summary>
+            Gets or sets shop's old name.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.Honlap">
+            <summary>
+            Gets or sets website.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.Email">
+            <summary>
+            Gets or sets email address.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.Telefon">
+            <summary>
+            Gets or sets phone number.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.Kozpont">
+            <summary>
+            Gets or sets center.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.Adoszam">
+            <summary>
+            Gets or sets tax number.
+            </summary>
+        </member>
+        <member name="T:AruhazWeb.Models.AruhazListViewModel">
+            <summary>
+            Shop list view model.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.AruhazListViewModel.ListOfAruhaz">
+            <summary>
+            Gets or sets list of shops.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.AruhazListViewModel.EditedAruhaz">
+            <summary>
+            Gets or sets shop to be edited.
+            </summary>
+        </member>
+        <member name="T:AruhazWeb.Models.ErrorViewModel">
+            <summary>
+            Error view model.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or sets request id.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether request id.
+            </summary>
+        </member>
+        <member name="T:AruhazWeb.Models.MapperFactory">
+            <summary>
+            Mapper factory.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Models.MapperFactory.CreateMapper">
+            <summary>
+            Create Mapper method.
+            </summary>
+            <returns> A config. </returns>
+        </member>
+        <member name="T:AruhazWeb.Program">
+            <summary>
+            Program class.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Program.Main(System.String[])">
+            <summary>
+            Program main method.
+            </summary>
+            <param name="args"> Parameters. </param>
+        </member>
+        <member name="M:AruhazWeb.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Create a host builder.
+            </summary>
+            <param name="args"> Parameters. </param>
+            <returns> Web host. </returns>
+        </member>
+        <member name="T:AruhazWeb.Startup">
+            <summary>
+            Startup class.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AruhazWeb.Startup"/> class.
+            </summary>
+            <param name="configuration"> Config. </param>
+        </member>
+        <member name="P:AruhazWeb.Startup.Configuration">
+            <summary>
+            Gets iConfig config.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"> Services. </param>
+        </member>
+        <member name="M:AruhazWeb.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"> Application. </param>
+            <param name="env"> Environment. </param>
+        </member>
+    </members>
+</doc>

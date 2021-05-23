@@ -1,7 +1,21 @@
 var annotated_dup =
 [
+    [ "Aruhaz", "namespace_aruhaz.html", [
+      [ "WpfClient", "namespace_aruhaz_1_1_wpf_client.html", [
+        [ "App", "class_aruhaz_1_1_wpf_client_1_1_app.html", "class_aruhaz_1_1_wpf_client_1_1_app" ],
+        [ "AruhazVM", "class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html", "class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m" ],
+        [ "EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", "class_aruhaz_1_1_wpf_client_1_1_editor_window" ],
+        [ "IMainLogic", "interface_aruhaz_1_1_wpf_client_1_1_i_main_logic.html", "interface_aruhaz_1_1_wpf_client_1_1_i_main_logic" ],
+        [ "MainLogic", "class_aruhaz_1_1_wpf_client_1_1_main_logic.html", "class_aruhaz_1_1_wpf_client_1_1_main_logic" ],
+        [ "MainVM", "class_aruhaz_1_1_wpf_client_1_1_main_v_m.html", "class_aruhaz_1_1_wpf_client_1_1_main_v_m" ],
+        [ "MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", "class_aruhaz_1_1_wpf_client_1_1_main_window" ],
+        [ "MyIOC", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c.html", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c" ]
+      ] ]
+    ] ],
     [ "AruhazWeb", "namespace_aruhaz_web.html", [
       [ "Controllers", "namespace_aruhaz_web_1_1_controllers.html", [
+        [ "ApiResult", "class_aruhaz_web_1_1_controllers_1_1_api_result.html", "class_aruhaz_web_1_1_controllers_1_1_api_result" ],
+        [ "AruhazApiController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_api_controller.html", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_api_controller" ],
         [ "AruhazController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller.html", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller" ],
         [ "HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", "class_aruhaz_web_1_1_controllers_1_1_home_controller" ]
       ] ],

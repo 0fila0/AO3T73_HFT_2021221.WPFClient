@@ -8,6 +8,8 @@ namespace AruhazWeb.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
+    using System.Runtime.Serialization;
+    using System.Text.Json.Serialization;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -28,6 +30,7 @@ namespace AruhazWeb.Models
         /// <summary>
         /// Gets or sets shop's old name.
         /// </summary>
+        [JsonIgnore]
         public string RegiNev
         {
             get; set;

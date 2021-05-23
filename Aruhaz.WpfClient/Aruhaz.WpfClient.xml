@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aruhaz.WpfClient</name>
+    </assembly>
+    <members>
+        <member name="T:Aruhaz.WpfClient.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClient.App"/> class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClient.AruhazVM">
+            <summary>
+            View model class.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.AruhazNeve">
+            <summary>
+            Gets or sets shop's name.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.Honlap">
+            <summary>
+            Gets or sets website.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.Email">
+            <summary>
+            Gets or sets email address.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.Telefon">
+            <summary>
+            Gets or sets phone number.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.Kozpont">
+            <summary>
+            Gets or sets center.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.Adoszam">
+            <summary>
+            Gets or sets tax number.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.AruhazVM.CopyFrom(Aruhaz.WpfClient.AruhazVM)">
+            <summary>
+            Cloning a shop in order to modify.
+            </summary>
+            <param name="other"> Shop that will be cloned. </param>
+        </member>
+        <member name="T:Aruhaz.WpfClient.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClient.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.EditorWindow.#ctor(Aruhaz.WpfClient.AruhazVM)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClient.EditorWindow"/> class.
+            </summary>
+            <param name="aruhaz">A shop entity.</param>
+        </member>
+        <member name="M:Aruhaz.WpfClient.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClient.IMainLogic">
+            <summary>
+            Interface for MainLogic (IoC).
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.IMainLogic.ApiGetAruhaz">
+            <summary>
+            Get a shop.
+            </summary>
+            <returns>Get this shop.</returns>
+        </member>
+        <member name="M:Aruhaz.WpfClient.IMainLogic.ApiDelAruhaz(Aruhaz.WpfClient.AruhazVM)">
+            <summary>
+            Delete a shop.
+            </summary>
+            <param name="aruhaz">Delete this shop.</param>
+        </member>
+        <member name="M:Aruhaz.WpfClient.IMainLogic.EditAruhaz(Aruhaz.WpfClient.AruhazVM,System.Func{Aruhaz.WpfClient.AruhazVM,System.Boolean})">
+            <summary>
+            Edit a shop.
+            </summary>
+            <param name="aruhaz"> Edit this shop. </param>
+            <param name="editorFunc"> Edit function. </param>
+        </member>
+        <member name="T:Aruhaz.WpfClient.MainLogic">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainLogic.ApiGetAruhaz">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainLogic.ApiDelAruhaz(Aruhaz.WpfClient.AruhazVM)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainLogic.EditAruhaz(Aruhaz.WpfClient.AruhazVM,System.Func{Aruhaz.WpfClient.AruhazVM,System.Boolean})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainLogic.SendMessage(System.Boolean)">
+            <summary>
+            Send a message.
+            </summary>
+            <param name="success">Success or not the operation.</param>
+        </member>
+        <member name="T:Aruhaz.WpfClient.MainVM">
+            <summary>
+            Main view model class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainVM.#ctor(Aruhaz.WpfClient.IMainLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClient.MainVM"/> class.
+            </summary>
+            <param name="logic">Main logic.</param>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainVM.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClient.MainVM"/> class.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.AllAruhaz">
+            <summary>
+            Gets or sets all shops.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.SelectedAruhaz">
+            <summary>
+            Gets or sets selected shop.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.EditorFunc">
+            <summary>
+            Gets or sets editor function.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.AddCmd">
+            <summary>
+            Gets add command.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.DelCmd">
+            <summary>
+            Gets delete command.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.ModCmd">
+            <summary>
+            Gets modifiy command.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MainVM.LoadCmd">
+            <summary>
+            Gets load command.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClient.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClient.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClient.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClient.MyIOC">
+            <summary>
+            This is an individual MyIOC for bugfix purposes.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClient.MyIOC.Instance">
+            <summary>
+            Gets instance.
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

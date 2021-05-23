@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AruhazWeb Project: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/Products.Logic/Logical.cs Source File</title>
+<title>Prog4_HF3: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/Products.Logic/Logical.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AruhazWeb Project
-   &#160;<span id="projectnumber">v1</span>
+   <div id="projectname">Prog4_HF3
    </div>
   </td>
  </tr>
@@ -136,9 +135,9 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> listOfShops;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#aac3e7bfeeff8fa6b86cc06ed7d9dc626">   75</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> <a class="code" href="class_products_1_1_logic_1_1_logical.html#aac3e7bfeeff8fa6b86cc06ed7d9dc626">GetOneShop</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#aac3e7bfeeff8fa6b86cc06ed7d9dc626">   75</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="namespace_aruhaz.html">Aruhaz</a> <a class="code" href="class_products_1_1_logic_1_1_logical.html#aac3e7bfeeff8fa6b86cc06ed7d9dc626">GetOneShop</a>(<span class="keywordtype">string</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> oneShop = this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == <span class="keywordtype">id</span>).FirstOrDefault();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="namespace_aruhaz.html">Aruhaz</a> oneShop = this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == <span class="keywordtype">id</span>).FirstOrDefault();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> oneShop;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -157,14 +156,14 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            this.repo.AddProduct(param);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#a000211b8217228ec28954badb657cb42">  112</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#a000211b8217228ec28954badb657cb42">AddShop</a>(<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> param)</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#a000211b8217228ec28954badb657cb42">  112</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#a000211b8217228ec28954badb657cb42">AddShop</a>(<a class="code" href="namespace_aruhaz.html">Aruhaz</a> param)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            this.repo.AddShop(param);</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#afab91ac2ee1d66ccb7d2be8b771a7884">  118</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#afab91ac2ee1d66ccb7d2be8b771a7884">AddShop</a>(<span class="keywordtype">string</span> nev, <span class="keywordtype">string</span> email, <span class="keywordtype">string</span> honlap, <span class="keywordtype">string</span> kozpont, decimal telefon, decimal adoszam)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> newAruhaz = <span class="keyword">new</span> <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a>()</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="namespace_aruhaz.html">Aruhaz</a> newAruhaz = <span class="keyword">new</span> <a class="code" href="namespace_aruhaz.html">Aruhaz</a>()</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                AruhazNeve = nev,</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                EMail = email,</div>
@@ -203,10 +202,10 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#a77b44cb4ae2df10d3a883d7b22834dc2">  175</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#a77b44cb4ae2df10d3a883d7b22834dc2">DeleteShop</a>(<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> param)</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#a77b44cb4ae2df10d3a883d7b22834dc2">  175</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#a77b44cb4ae2df10d3a883d7b22834dc2">DeleteShop</a>(<a class="code" href="namespace_aruhaz.html">Aruhaz</a> param)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            List&lt;Aruhaz&gt; listOfShops = this.repo.GetAllShops() as List&lt;Aruhaz&gt;;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> item = listOfShops.Find(x =&gt; x.AruhazNeve.Contains(param.<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html#a6258cd3041e0731d3820ec59bdde7878">AruhazNeve</a>, StringComparison.Ordinal));</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="namespace_aruhaz.html">Aruhaz</a> item = listOfShops.Find(x =&gt; x.AruhazNeve.Contains(param.<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html#a6258cd3041e0731d3820ec59bdde7878">AruhazNeve</a>, StringComparison.Ordinal));</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">if</span> (item != <span class="keyword">null</span>)</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            {</div>
@@ -216,7 +215,7 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#ad317ba8947940d8e4eebd659cb552861">  187</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#ad317ba8947940d8e4eebd659cb552861">DeleteShop</a>(<span class="keywordtype">string</span> nev)</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> shop = this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == nev).Select(x =&gt; x).FirstOrDefault();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <a class="code" href="namespace_aruhaz.html">Aruhaz</a> shop = this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == nev).Select(x =&gt; x).FirstOrDefault();</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (shop != <span class="keyword">null</span>)</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                this.repo.DeleteShop(this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == nev).FirstOrDefault());</div>
@@ -252,10 +251,10 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            }</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#a0ad80f517f1a053c1becd5b21bd494d5">  237</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#a0ad80f517f1a053c1becd5b21bd494d5">UpdateShop</a>(<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> param)</div>
+<div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#a0ad80f517f1a053c1becd5b21bd494d5">  237</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#a0ad80f517f1a053c1becd5b21bd494d5">UpdateShop</a>(<a class="code" href="namespace_aruhaz.html">Aruhaz</a> param)</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        {</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            List&lt;Aruhaz&gt; listOfShops = this.<a class="code" href="class_products_1_1_logic_1_1_logical.html#a3a944f044e990e417d5cda68e56c730f">GetAllShops</a>() as List&lt;Aruhaz&gt;;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> shopFound = listOfShops.Find(x =&gt; x.AruhazNeve == param.<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html#a6258cd3041e0731d3820ec59bdde7878">AruhazNeve</a>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="namespace_aruhaz.html">Aruhaz</a> shopFound = listOfShops.Find(x =&gt; x.AruhazNeve == param.<a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html#a6258cd3041e0731d3820ec59bdde7878">AruhazNeve</a>);</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">// If parameter is null then nothing happens.</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (shopFound != <span class="keyword">null</span>)</div>
@@ -271,7 +270,7 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
 <div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="class_products_1_1_logic_1_1_logical.html#abb99bc7e93de404354a940d776f5dfa1">  256</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_products_1_1_logic_1_1_logical.html#abb99bc7e93de404354a940d776f5dfa1">UpdateShopWeb</a>(<span class="keywordtype">string</span> regiNev, <span class="keywordtype">string</span> ujNev, <span class="keywordtype">string</span> email, <span class="keywordtype">string</span> honlap, <span class="keywordtype">string</span> kozpont, decimal telefon, decimal adoszam)</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> shop = this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == ujNev).Select(x =&gt; x).FirstOrDefault();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="namespace_aruhaz.html">Aruhaz</a> shop = this.repo.GetAllShops().Where(x =&gt; x.AruhazNeve == ujNev).Select(x =&gt; x).FirstOrDefault();</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">if</span> (shop == <span class="keyword">null</span> || regiNev != <span class="keyword">null</span> || ujNev != <span class="keyword">null</span>)</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            {</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);</div>
@@ -335,7 +334,6 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        }</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
-<div class="ttc" id="aclass_products_1_1_data_1_1_models_1_1_aruhaz_html"><div class="ttname"><a href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Products.Data.Models.Aruhaz</a></div><div class="ttdoc">Auto generated entity class for Aruhaz.</div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00015">Aruhaz.cs:16</a></div></div>
 <div class="ttc" id="aclass_products_1_1_data_1_1_models_1_1_aruhaz_html_a6258cd3041e0731d3820ec59bdde7878"><div class="ttname"><a href="class_products_1_1_data_1_1_models_1_1_aruhaz.html#a6258cd3041e0731d3820ec59bdde7878">Products.Data.Models.Aruhaz.AruhazNeve</a></div><div class="ttdeci">string AruhazNeve</div><div class="ttdoc">Gets or sets AruhazNeve.</div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00028">Aruhaz.cs:28</a></div></div>
 <div class="ttc" id="aclass_products_1_1_data_1_1_models_1_1_gyarto_html"><div class="ttname"><a href="class_products_1_1_data_1_1_models_1_1_gyarto.html">Products.Data.Models.Gyarto</a></div><div class="ttdoc">Manufacturer entity class.</div><div class="ttdef"><b>Definition:</b> <a href="_gyarto_8cs_source.html#l00015">Gyarto.cs:16</a></div></div>
 <div class="ttc" id="aclass_products_1_1_data_1_1_models_1_1_gyarto_html_a2fef6f0e997fb5bf009863c49f563827"><div class="ttname"><a href="class_products_1_1_data_1_1_models_1_1_gyarto.html#a2fef6f0e997fb5bf009863c49f563827">Products.Data.Models.Gyarto.GyartoNeve</a></div><div class="ttdeci">string GyartoNeve</div><div class="ttdoc">Gets or sets manufacturer's name.</div><div class="ttdef"><b>Definition:</b> <a href="_gyarto_8cs_source.html#l00028">Gyarto.cs:28</a></div></div>
@@ -370,6 +368,7 @@ $(document).ready(function(){initNavTree('_logical_8cs_source.html',''); initRes
 <div class="ttc" id="aclass_products_1_1_logic_1_1_logical_html_afdd166262b40e793fc35165c9af0af98"><div class="ttname"><a href="class_products_1_1_logic_1_1_logical.html#afdd166262b40e793fc35165c9af0af98">Products.Logic.Logical.DeleteManufacturer</a></div><div class="ttdeci">void DeleteManufacturer(Gyarto param)</div><div class="ttdoc">This method deletes a manufacturer entity from database.</div><div class="ttdef"><b>Definition:</b> <a href="_logical_8cs_source.html#l00145">Logical.cs:145</a></div></div>
 <div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html">Products.Logic.ILogic</a></div><div class="ttdoc">This interface describes what methods should be implemented in Logic class.</div><div class="ttdef"><b>Definition:</b> <a href="_i_logic_8cs_source.html#l00019">ILogic.cs:20</a></div></div>
 <div class="ttc" id="ainterface_products_1_1_repository_1_1_i_repository_html"><div class="ttname"><a href="interface_products_1_1_repository_1_1_i_repository.html">Products.Repository.IRepository</a></div><div class="ttdoc">This interface describes what methods should be implemented in Repository class.</div><div class="ttdef"><b>Definition:</b> <a href="_i_repository_8cs_source.html#l00018">IRepository.cs:19</a></div></div>
+<div class="ttc" id="anamespace_aruhaz_html"><div class="ttname"><a href="namespace_aruhaz.html">Aruhaz</a></div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_8_wpf_client_2_app_8xaml_8cs_source.html#l00005">App.xaml.cs:6</a></div></div>
 <div class="ttc" id="anamespace_products_1_1_data_1_1_models_html"><div class="ttname"><a href="namespace_products_1_1_data_1_1_models.html">Products.Data.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00007">Aruhaz.cs:8</a></div></div>
 <div class="ttc" id="anamespace_products_1_1_data_html"><div class="ttname"><a href="namespace_products_1_1_data.html">Products.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00007">Aruhaz.cs:8</a></div></div>
 <div class="ttc" id="anamespace_products_1_1_logic_html"><div class="ttname"><a href="namespace_products_1_1_logic.html">Products.Logic</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_logic_8cs_source.html#l00005">ILogic.cs:6</a></div></div>
