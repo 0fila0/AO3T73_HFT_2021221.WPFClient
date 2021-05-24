@@ -69,7 +69,7 @@ namespace AruhazWeb.Controllers
             {
                 if (aruhaz != null)
                 {
-                    this.logic.AddShop(aruhaz.AruhazNeve, aruhaz.Email, aruhaz.Honlap, aruhaz.Kozpont, decimal.Parse(aruhaz.Telefon), decimal.Parse(aruhaz.Adoszam));
+                    this.logic.AddShop(aruhaz.AruhazNeve, aruhaz.Email, aruhaz.Honlap, aruhaz.Kozpont, decimal.Parse(aruhaz.Telefon), decimal.Parse(aruhaz.Adoszam), aruhaz.Kijelolt);
                 }
             }
             catch (ArgumentException)
@@ -91,7 +91,7 @@ namespace AruhazWeb.Controllers
         {
             if (aruhaz != null)
             {
-                return new ApiResult() { OperationResult = this.logic.UpdateShopWeb(aruhaz.RegiNev, aruhaz.AruhazNeve, aruhaz.Email, aruhaz.Honlap, aruhaz.Kozpont, decimal.Parse(aruhaz.Telefon), decimal.Parse(aruhaz.Adoszam)) };
+                return new ApiResult() { OperationResult = this.logic.UpdateShopWeb(aruhaz.RegiNev, aruhaz.AruhazNeve, aruhaz.Email, aruhaz.Honlap, aruhaz.Kozpont, decimal.Parse(aruhaz.Telefon), decimal.Parse(aruhaz.Adoszam), aruhaz.Kijelolt) };
             }
 
             return new ApiResult() { OperationResult = false };

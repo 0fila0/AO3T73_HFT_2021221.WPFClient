@@ -104,7 +104,7 @@ namespace AruhazWeb.Controllers
                     {
                         try
                         {
-                            this.logic.AddShop(shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam));
+                            this.logic.AddShop(shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam), shop.Kijelolt);
                         }
                         catch (ArgumentException ex)
                         {
@@ -118,7 +118,7 @@ namespace AruhazWeb.Controllers
                 }
                 else
                 {
-                    if (!this.logic.UpdateShopWeb(shop.RegiNev, shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam)))
+                    if (!this.logic.UpdateShopWeb(shop.RegiNev, shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam), shop.Kijelolt))
                     {
                         this.TempData["editResult"] = "Edit failed";
                     }

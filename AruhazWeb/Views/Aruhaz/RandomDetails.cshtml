@@ -1,0 +1,38 @@
+﻿@model AruhazWeb.Models.Aruhaz
+
+@{
+	ViewData["Title"] = "RandomDetails";
+}
+
+<h2>Selected and unselected shops</h2>
+
+<table border = "1">
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.AruhazNeve)</td>
+		<td>@Html.DisplayFor(m => m.AruhazNeve)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.Honlap)</td>
+		<td>@Html.DisplayFor(m => m.Honlap)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.Email)</td>
+		<td>@Html.DisplayFor(m => m.Email)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.Telefon)</td>
+		<td>@Html.DisplayFor(m => m.Telefon)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.Kozpont)</td>
+		<td>@Html.DisplayFor(m => m.Kozpont)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.Adoszam)</td>
+		<td>@Html.DisplayFor(m => m.Adoszam)</td>
+	</tr>
+	<tr>
+		<td>@Html.DisplayNameFor(m => m.Kijelolt)</td>
+		<td>@Html.DisplayFor(m => m.Kijelolt)</td>
+	</tr>
+</table>

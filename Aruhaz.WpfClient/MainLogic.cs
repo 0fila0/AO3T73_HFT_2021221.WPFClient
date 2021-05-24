@@ -99,6 +99,7 @@ namespace Aruhaz.WpfClient
             postData.Add("adoszam", aruhaz.Adoszam.ToString());
             postData.Add("kozpont", aruhaz.Kozpont.ToString());
             postData.Add("email", aruhaz.Email.ToString());
+            postData.Add("kijelolt", aruhaz.Kijelolt.ToString());
 
             string json = this.client.PostAsync(myUrl, new FormUrlEncodedContent(postData)).Result.Content.ReadAsStringAsync().Result;
             JsonDocument doc = JsonDocument.Parse(json);

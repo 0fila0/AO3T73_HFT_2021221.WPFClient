@@ -81,7 +81,8 @@ namespace Products.Repository
         /// <param name="kozpont"> Shop's center. </param>
         /// <param name="telefon"> Shop's phone number. </param>
         /// <param name="adoszam"> Shop's tax number. </param>
-        void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+        /// <param name="kijelolt"> Shop is selected or not. </param>
+        void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt);
 
         /// <summary>
         /// This method changes an existing product entity's property/properties.

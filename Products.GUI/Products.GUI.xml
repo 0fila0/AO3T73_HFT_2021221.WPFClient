@@ -29,7 +29,7 @@
         </member>
         <member name="T:Products.GUI.BL.AruhazLogic">
             <summary>
-            /// GUI's Logic.
+            GUI's Logic.
             </summary>
         </member>
         <member name="M:Products.GUI.BL.AruhazLogic.#ctor(Products.GUI.BL.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,Products.Logic.ILogic)">

@@ -16,7 +16,7 @@ namespace Products.GUI.BL
     using Products.Logic;
 
     /// <summary>
-    /// /// GUI's Logic.
+    /// GUI's Logic.
     /// </summary>
     internal class AruhazLogic : IAruhazLogic
     {
@@ -47,7 +47,7 @@ namespace Products.GUI.BL
             if (this.editorService.EditAruhaz(newAruhaz) == true)
             {
                 list.Add(newAruhaz);
-                this.logic.AddShop(newAruhaz.AruhazNeve, newAruhaz.Email, newAruhaz.Honlap, newAruhaz.Kozpont, newAruhaz.Telefon, newAruhaz.Adoszam);
+                this.logic.AddShop(newAruhaz.AruhazNeve, newAruhaz.Email, newAruhaz.Honlap, newAruhaz.Kozpont, newAruhaz.Telefon, newAruhaz.Adoszam, false);
 
                 // Hozzáadni az adatbázishoz is (logic crud műveletét meghívni).
                 this.messengerService.Send("ADD OK", "LogicResult");
@@ -118,7 +118,7 @@ namespace Products.GUI.BL
             clone.CopyFrom(aruhazToModify);
             if (this.editorService.EditAruhaz(clone))
             {
-                this.logic.UpdateShop(aruhazToModify.AruhazNeve, clone.AruhazNeve, clone.Email, clone.Honlap, clone.Kozpont, clone.Telefon, clone.Adoszam);
+                this.logic.UpdateShop(aruhazToModify.AruhazNeve, clone.AruhazNeve, clone.Email, clone.Honlap, clone.Kozpont, clone.Telefon, clone.Adoszam, false);
                 aruhazToModify.CopyFrom(clone);
                 this.messengerService.Send("EDIT OK", "LogicResult");
             }

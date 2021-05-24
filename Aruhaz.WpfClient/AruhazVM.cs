@@ -22,6 +22,7 @@ namespace Aruhaz.WpfClient
         private decimal telefon;
         private string kozpont;
         private decimal adoszam;
+        private bool kijelolt;
 
         /// <summary>
         /// Gets or sets shop's name.
@@ -78,6 +79,15 @@ namespace Aruhaz.WpfClient
         }
 
         /// <summary>
+        /// Gets or sets a value indicating whether selected.
+        /// </summary>
+        public bool Kijelolt
+        {
+            get { return this.kijelolt; }
+            set { this.Set(ref this.kijelolt, value); }
+        }
+
+        /// <summary>
         /// Cloning a shop in order to modify.
         /// </summary>
         /// <param name="other"> Shop that will be cloned. </param>
@@ -94,6 +104,7 @@ namespace Aruhaz.WpfClient
             this.Honlap = other.Honlap;
             this.Telefon = other.Telefon;
             this.Kozpont = other.Kozpont;
+            this.Kijelolt = other.Kijelolt;
 
             // this.GetType().GetProperties().ToList().ForEach(prop => prop.SetValue(this, prop.GetValue(other)));
         }

@@ -62,6 +62,11 @@
             Gets or sets tax number.
             </summary>
         </member>
+        <member name="P:Aruhaz.WpfClient.AruhazVM.Kijelolt">
+            <summary>
+            Gets or sets a value indicating whether selected.
+            </summary>
+        </member>
         <member name="M:Aruhaz.WpfClient.AruhazVM.CopyFrom(Aruhaz.WpfClient.AruhazVM)">
             <summary>
             Cloning a shop in order to modify.

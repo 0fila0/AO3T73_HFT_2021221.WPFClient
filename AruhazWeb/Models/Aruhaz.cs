@@ -87,5 +87,15 @@ namespace AruhazWeb.Models
         {
             get; set;
         }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether selected.
+        /// </summary>
+        [Display(Name = "Kijelölt")]
+        [Required]
+        public bool Kijelolt
+        {
+            get; set;
+        }
     }
 }

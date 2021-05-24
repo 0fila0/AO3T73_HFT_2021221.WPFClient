@@ -14,6 +14,16 @@
             Gets or sets a value indicating whether operation result.
             </summary>
         </member>
+        <member name="P:AruhazWeb.Controllers.ApiResult.SelectedShops">
+            <summary>
+            Gets or sets selected shops number.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Controllers.ApiResult.UnselectedShops">
+            <summary>
+            Gets or sets unselected shops number.
+            </summary>
+        </member>
         <member name="T:AruhazWeb.Controllers.AruhazApiController">
             <summary>
             API controller.
@@ -129,6 +139,50 @@
             </summary>
             <returns> A new view. </returns>
         </member>
+        <member name="T:AruhazWeb.Controllers.RandomController">
+            <summary>
+            Random controller class.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Controllers.RandomController.#ctor(Products.Logic.ILogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AruhazWeb.Controllers.RandomController"/> class.
+            </summary>
+            <param name="logic"> Logic class. </param>
+            <param name="mapper"> Mapper class. </param>
+        </member>
+        <member name="M:AruhazWeb.Controllers.RandomController.CreateAndSaveRandomShop">
+            <summary>
+            Create a random shop and save it to the database.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Controllers.RandomController.GetAll">
+            <summary>
+            Get all shops.
+            </summary>
+            <returns> All shops. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.RandomController.SelectId(Products.Data.Models.Aruhaz)">
+            <summary>
+            Select a random shop.
+            </summary>
+            <param name="shop"> Select this shop. </param>
+            <returns> Operation completed successfully or not. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.RandomController.UnselectId(Products.Data.Models.Aruhaz)">
+            <summary>
+            Unselect a random shop.
+            </summary>
+            <param name="shop"> Unselect this shop. </param>
+            <returns> Operation completed successfully or not. </returns>
+        </member>
+        <member name="M:AruhazWeb.Controllers.RandomController.Details(System.String)">
+            <summary>
+            Show shop's details.
+            </summary>
+            <param name="id"> Shop's name. </param>
+            <returns> View with shop's details. </returns>
+        </member>
         <member name="T:AruhazWeb.Models.Aruhaz">
             <summary>
             Aruhaz web model.
@@ -167,6 +221,11 @@
         <member name="P:AruhazWeb.Models.Aruhaz.Adoszam">
             <summary>
             Gets or sets tax number.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.Aruhaz.Kijelolt">
+            <summary>
+            Gets or sets a value indicating whether selected.
             </summary>
         </member>
         <member name="T:AruhazWeb.Models.AruhazListViewModel">

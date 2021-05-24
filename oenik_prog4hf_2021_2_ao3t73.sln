@@ -18,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AruhazWeb", "AruhazWeb\AruhazWeb.csproj", "{DB4C7955-7E27-4B25-99ED-45BFDC6CD593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aruhaz.WpfClient", "Aruhaz.WpfClient\Aruhaz.WpfClient.csproj", "{794DA18B-4815-4680-902B-037B5DA6AC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aruhaz.WpfClient", "Aruhaz.WpfClient\Aruhaz.WpfClient.csproj", "{794DA18B-4815-4680-902B-037B5DA6AC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aruhaz.WpfClientRandom", "Aruhaz.WpfClientRandom\Aruhaz.WpfClientRandom.csproj", "{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{794DA18B-4815-4680-902B-037B5DA6AC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794DA18B-4815-4680-902B-037B5DA6AC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794DA18B-4815-4680-902B-037B5DA6AC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

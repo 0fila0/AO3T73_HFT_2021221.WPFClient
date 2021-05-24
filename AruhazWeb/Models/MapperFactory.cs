@@ -30,7 +30,8 @@ namespace AruhazWeb.Models
                 .ForMember(dest => dest.Honlap, map => map.MapFrom(src => src.Honlap == null ? string.Empty : src.Honlap))
                 .ForMember(dest => dest.Kozpont, map => map.MapFrom(src => src.Kozpont == null ? string.Empty : src.Kozpont))
                 .ForMember(dest => dest.Adoszam, map => map.MapFrom(src => src.Adoszam))
-                .ForMember(dest => dest.Telefon, map => map.MapFrom(src => src.Telefon == null ? 0 : src.Telefon));
+                .ForMember(dest => dest.Telefon, map => map.MapFrom(src => src.Telefon == null ? 0 : src.Telefon))
+                .ForMember(dest => dest.Kijelolt, map => map.MapFrom(src => src.Kijelolt));
             });
 
             return config.CreateMapper();

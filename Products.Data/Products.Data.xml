@@ -44,6 +44,11 @@
             Gets or sets Adoszam.
             </summary>
         </member>
+        <member name="P:Products.Data.Models.Aruhaz.Kijelolt">
+            <summary>
+            Gets or sets a value indicating whether Kijelolt.
+            </summary>
+        </member>
         <member name="P:Products.Data.Models.Aruhaz.IdKapcsolos">
             <summary>
             Gets IdKapcsolos.

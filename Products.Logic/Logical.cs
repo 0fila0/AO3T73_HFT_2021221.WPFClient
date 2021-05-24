@@ -115,7 +115,7 @@ namespace Products.Logic
         }
 
         /// <inheritdoc/>
-        public void AddShop(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        public void AddShop(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)
         {
             Aruhaz newAruhaz = new Aruhaz()
             {
@@ -247,18 +247,18 @@ namespace Products.Logic
         }
 
         /// <inheritdoc/>
-        public void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        public void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)
         {
-            this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);
+            this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam, kijelolt);
         }
 
         /// <inheritdoc/>
-        public bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        public bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)
         {
             Aruhaz shop = this.repo.GetAllShops().Where(x => x.AruhazNeve == ujNev).Select(x => x).FirstOrDefault();
             if (shop == null || regiNev != null || ujNev != null)
             {
-                this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);
+                this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam, kijelolt);
                 return true;
             }
             else

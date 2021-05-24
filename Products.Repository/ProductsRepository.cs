@@ -239,12 +239,13 @@ namespace Products.Repository
                 updateThisShop.Honlap = param.Honlap;
                 updateThisShop.Kozpont = param.Kozpont;
                 updateThisShop.Telefon = param.Telefon;
+                updateThisShop.Kijelolt = param.Kijelolt;
                 this.dataBase.SaveChanges();
             }
         }
 
         /// <inheritdoc/>
-        public void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        public void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)
         {
             Aruhaz updateThisShop = this.dataBase.Aruhaz.FirstOrDefault(x => x.AruhazNeve == regiNev);
             this.DeleteShop(updateThisShop);
@@ -254,6 +255,7 @@ namespace Products.Repository
             updateThisShop.Honlap = honlap;
             updateThisShop.Kozpont = kozpont;
             updateThisShop.Telefon = telefon;
+            updateThisShop.Kijelolt = kijelolt;
             this.AddShop(updateThisShop);
             this.dataBase.SaveChanges();
         }

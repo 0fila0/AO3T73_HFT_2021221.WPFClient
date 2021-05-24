@@ -63,7 +63,7 @@
             </summary>
             <param name="param"> Shop that user intend to modify. </param>
         </member>
-        <member name="M:Products.Repository.IRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+        <member name="M:Products.Repository.IRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
             <summary>
             Update the database.
             </summary>
@@ -74,6 +74,7 @@
             <param name="kozpont"> Shop's center. </param>
             <param name="telefon"> Shop's phone number. </param>
             <param name="adoszam"> Shop's tax number. </param>
+            <param name="kijelolt"> Shop is selected or not. </param>
         </member>
         <member name="M:Products.Repository.IRepository.UpdateProduct(Products.Data.Models.Termek)">
             <summary>
@@ -212,7 +213,7 @@
             </summary>
             <param name="param"> Shop that user intend to modify. </param>
         </member>
-        <member name="M:Products.Repository.ProductsRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+        <member name="M:Products.Repository.ProductsRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
             <inheritdoc/>
         </member>
     </members>

@@ -53,6 +53,11 @@ namespace Products.Data.Models
         public decimal Adoszam { get; set; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether Kijelolt.
+        /// </summary>
+        public bool Kijelolt { get; set; }
+
+        /// <summary>
         /// Gets IdKapcsolos.
         /// </summary>
         public virtual ICollection<IDKapcsolo> IdKapcsolos { get; }

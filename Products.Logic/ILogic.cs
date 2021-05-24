@@ -57,7 +57,8 @@ namespace Products.Logic
         /// <param name="kozpont"> Shop's center. </param>
         /// <param name="telefon"> Shop's phone number. </param>
         /// <param name="adoszam"> Shop's tax number. </param>
-        public void AddShop(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+        /// <param name="kijelolt"> Shop is selected or not. </param>
+        public void AddShop(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt);
 
         /// <summary>
         /// This method adds a new product entity to the database.
@@ -93,7 +94,8 @@ namespace Products.Logic
         /// <param name="kozpont"> Shop's center. </param>
         /// <param name="telefon"> Shop's phone number. </param>
         /// <param name="adoszam"> Shop's tax number. </param>
-        void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+        /// <param name="kijelolt"> Shop is selected or not. </param>
+        void UpdateShop(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt);
 
         /// <summary>
         /// This method changes an existing shop entity's property/properties.
@@ -105,8 +107,9 @@ namespace Products.Logic
         /// <param name="kozpont"> Shop's center. </param>
         /// <param name="telefon"> Shop's phone number. </param>
         /// <param name="adoszam"> Shop's tax number. </param>
+        /// <param name="kijelolt"> Shop is selected or not. </param>
         /// <returns> False if update failed. </returns>
-        bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+        bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt);
 
         /// <summary>
         /// This method changes an existing product entity's property/properties.
