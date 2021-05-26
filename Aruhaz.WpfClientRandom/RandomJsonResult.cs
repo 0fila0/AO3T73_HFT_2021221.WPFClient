@@ -1,32 +1,33 @@
-﻿// <copyright file="ApiResult.cs" company="PlaceholderCompany">
+﻿// <copyright file="RandomJsonResult.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace AruhazWeb.Controllers
+namespace Aruhaz.WpfClientRandom
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Text;
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Result.
+    /// What Random controller send back that will be the result.
     /// </summary>
-    public class ApiResult
+    public class RandomJsonResult
     {
         /// <summary>
-        /// Gets or sets a value indicating whether operation result.
+        /// Gets or sets the action's success.
         /// </summary>
-        public bool OperationResult { get; set; }
+        public string Success { get; set; }
 
         /// <summary>
         /// Gets or sets selected shops number.
         /// </summary>
-        public int SelectedShops { get; set; }
+        public int Selected { get; set; }
 
         /// <summary>
         /// Gets or sets unselected shops number.
         /// </summary>
-        public int UnselectedShops { get; set; }
+        public int Unselected { get; set; }
     }
 }

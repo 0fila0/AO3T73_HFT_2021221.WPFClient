@@ -7,7 +7,9 @@ namespace AruhazWeb.Controllers
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Net.Http;
     using System.Threading.Tasks;
+    using AruhazWeb.Models;
     using AutoMapper;
     using Microsoft.AspNetCore.Mvc;
     using Products.Data.Models;
@@ -20,6 +22,7 @@ namespace AruhazWeb.Controllers
     {
         private ILogic logic;
         private IMapper mapper;
+        private Random rnd;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RandomController"/> class.
@@ -30,17 +33,17 @@ namespace AruhazWeb.Controllers
         {
             this.logic = logic;
             this.mapper = mapper;
+            this.rnd = new Random();
         }
 
         /// <summary>
         /// Create a random shop and save it to the database.
         /// </summary>
-        [HttpGet]
-        [ActionName("Random/GetOne")]
-        public void CreateAndSaveRandomShop()
+        /// <returns> A new shop. </returns>
+        public Models.Aruhaz GetOne()
         {
             int randomEmailLength = new Random().Next(5, 21);
-            int randomEmailServerLength = new Random().Next(5, 12);
+            int randomEmailServerLength = new Random().Next(3, 6);
             int randomEmailLocation = new Random().Next(0, 2);
             string[] randomCenter = new string[10];
             randomCenter[0] = "Németország";
@@ -101,7 +104,7 @@ namespace AruhazWeb.Controllers
                 kozpont = randomCenter[randomCenterPick];
             }
 
-            Aruhaz randomShop = this.logic.GetAllShops().Select(x => x).Where(x => x.AruhazNeve == aruhazNeve).FirstOrDefault();
+            Products.Data.Models.Aruhaz randomShop = this.logic.GetAllShops().Select(x => x).Where(x => x.AruhazNeve == aruhazNeve).FirstOrDefault();
 
             while (randomShop != null)
             {
@@ -116,41 +119,28 @@ namespace AruhazWeb.Controllers
             }
 
             this.logic.AddShop(aruhazNeve, email, honlap, kozpont, decimal.Parse(telefon), decimal.Parse(adoszam), kijelolt);
-            this.GetAll();
+            return this.mapper.Map<Products.Data.Models.Aruhaz, Models.Aruhaz>(this.logic.GetOneShop(aruhazNeve));
         }
 
-        /// <summary>
-        /// Get all shops.
-        /// </summary>
-        /// <returns> All shops. </returns>
+        /// <summary> Select or unselect shop. </summary>
+        /// <param name="id"> Shop's name. </param>
+        /// <returns> Result (success, selected shops, unselected shops). </returns>
         [HttpGet]
-        [ActionName("all")]
-        public IEnumerable<Models.Aruhaz> GetAll()
+        [ActionName("Select")]
+        public ApiResult SelectId(string id)
         {
-            var aruhaz = this.logic.GetAllShops();
-            return this.mapper.Map<IEnumerable<Products.Data.Models.Aruhaz>, List<Models.Aruhaz>>(aruhaz);
-        }
-
-        /// <summary>
-        /// Select a random shop.
-        /// </summary>
-        /// <param name="shop"> Select this shop. </param>
-        /// <returns> Operation completed successfully or not. </returns>
-        [HttpPost]
-        [ActionName("Random/Select/ID")]
-        public ApiResult SelectId(Aruhaz shop)
-        {
-            bool success = true;
+            Products.Data.Models.Aruhaz shop = this.logic.GetOneShop(id);
+            bool success = false;
             try
             {
-                if (shop != null)
+                if (shop != null && shop.Kijelolt == false)
                 {
                     this.logic.UpdateShopWeb(shop.AruhazNeve, shop.AruhazNeve, shop.EMail, shop.Honlap, shop.Kozpont, shop.Telefon ?? 0, shop.Adoszam, true);
+                    success = true;
                 }
             }
             catch (ArgumentException)
             {
-                success = false;
             }
 
             int selected = this.logic.GetAllShops().Select(x => x).Where(x => x.Kijelolt == true).Count();
@@ -159,26 +149,25 @@ namespace AruhazWeb.Controllers
             return new ApiResult() { OperationResult = success, SelectedShops = selected, UnselectedShops = unselected };
         }
 
-        /// <summary>
-        /// Unselect a random shop.
-        /// </summary>
-        /// <param name="shop"> Unselect this shop. </param>
-        /// <returns> Operation completed successfully or not. </returns>
-        [HttpPost]
-        [ActionName("Random/Unselect/ID")]
-        public ApiResult UnselectId(Aruhaz shop)
+        /// <summary> Unselect shop. </summary>
+        /// <param name="id"> Shop's name. </param>
+        /// <returns> Result (success, selected shops, unselected shops). </returns>
+        [HttpGet]
+        [ActionName("Unselect")]
+        public ApiResult UnselectId(string id)
         {
-            bool success = true;
+            Products.Data.Models.Aruhaz shop = this.logic.GetOneShop(id);
+            bool success = false;
             try
             {
-                if (shop != null)
+                if (shop != null && shop.Kijelolt == true)
                 {
                     this.logic.UpdateShopWeb(shop.AruhazNeve, shop.AruhazNeve, shop.EMail, shop.Honlap, shop.Kozpont, shop.Telefon ?? 0, shop.Adoszam, false);
+                    success = true;
                 }
             }
             catch (ArgumentException)
             {
-                success = false;
             }
 
             int selected = this.logic.GetAllShops().Select(x => x).Where(x => x.Kijelolt == true).Count();
@@ -190,19 +179,36 @@ namespace AruhazWeb.Controllers
         /// <summary>
         /// Show shop's details.
         /// </summary>
-        /// <param name="id"> Shop's name. </param>
         /// <returns> View with shop's details. </returns>
-        [HttpGet]
-        [ActionName("Random/Selections")]
-        public IActionResult Details(string id)
+        public IActionResult Selections()
         {
-            return this.View("RandomDetails", this.GetAruhazModel(id));
-        }
+            List<Models.Aruhaz> selected = new List<Models.Aruhaz>();
+            List<Models.Aruhaz> unselected = new List<Models.Aruhaz>();
 
-        private Models.Aruhaz GetAruhazModel(string id)
-        {
-            Products.Data.Models.Aruhaz oneShop = this.logic.GetOneShop(id);
-            return this.mapper.Map<Products.Data.Models.Aruhaz, Models.Aruhaz>(oneShop);
+            foreach (var shop in this.logic.GetAllShops())
+            {
+                Models.Aruhaz randomShop = new Models.Aruhaz();
+                randomShop.AruhazNeve = shop.AruhazNeve;
+                randomShop.Email = shop.EMail;
+                randomShop.Honlap = shop.Honlap;
+                randomShop.Kozpont = shop.Kozpont;
+                randomShop.Telefon = shop.Telefon.ToString();
+                randomShop.Adoszam = shop.Adoszam.ToString();
+                randomShop.Kijelolt = shop.Kijelolt;
+                randomShop.RegiNev = shop.AruhazNeve;
+
+                if (shop.Kijelolt == true)
+                {
+                    selected.Add(randomShop);
+                }
+                else
+                {
+                    unselected.Add(randomShop);
+                }
+            }
+
+            RandomAruhazListViewModel vm = new RandomAruhazListViewModel(selected, unselected);
+            return this.View("RandomView", vm);
         }
     }
 }

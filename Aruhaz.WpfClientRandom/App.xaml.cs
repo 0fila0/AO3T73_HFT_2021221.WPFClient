@@ -27,6 +27,8 @@ namespace Aruhaz.WpfClientRandom
         {
             ServiceLocator.SetLocatorProvider(() => MyIOCRandom.Instance);
             MyIOCRandom.Instance.Register<IMainLogicRandom, MainLogicRandom>();
+            MyIOCRandom.Instance.Register<IMainVMRandom, MainVMRandom>();
+            MyIOCRandom.Instance.Register<IMessenger>(() => Messenger.Default);
         }
     }
 }

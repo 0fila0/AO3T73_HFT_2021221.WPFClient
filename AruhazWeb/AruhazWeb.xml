@@ -6,7 +6,7 @@
     <members>
         <member name="T:AruhazWeb.Controllers.ApiResult">
             <summary>
-            asdasd.
+            Result.
             </summary>
         </member>
         <member name="P:AruhazWeb.Controllers.ApiResult.OperationResult">
@@ -151,36 +151,26 @@
             <param name="logic"> Logic class. </param>
             <param name="mapper"> Mapper class. </param>
         </member>
-        <member name="M:AruhazWeb.Controllers.RandomController.CreateAndSaveRandomShop">
+        <member name="M:AruhazWeb.Controllers.RandomController.GetOne">
             <summary>
             Create a random shop and save it to the database.
             </summary>
+            <returns> A new shop. </returns>
         </member>
-        <member name="M:AruhazWeb.Controllers.RandomController.GetAll">
-            <summary>
-            Get all shops.
-            </summary>
-            <returns> All shops. </returns>
+        <member name="M:AruhazWeb.Controllers.RandomController.SelectId(System.String)">
+            <summary> Select or unselect shop. </summary>
+            <param name="id"> Shop's name. </param>
+            <returns> Result (success, selected shops, unselected shops). </returns>
         </member>
-        <member name="M:AruhazWeb.Controllers.RandomController.SelectId(Products.Data.Models.Aruhaz)">
-            <summary>
-            Select a random shop.
-            </summary>
-            <param name="shop"> Select this shop. </param>
-            <returns> Operation completed successfully or not. </returns>
+        <member name="M:AruhazWeb.Controllers.RandomController.UnselectId(System.String)">
+            <summary> Unselect shop. </summary>
+            <param name="id"> Shop's name. </param>
+            <returns> Result (success, selected shops, unselected shops). </returns>
         </member>
-        <member name="M:AruhazWeb.Controllers.RandomController.UnselectId(Products.Data.Models.Aruhaz)">
-            <summary>
-            Unselect a random shop.
-            </summary>
-            <param name="shop"> Unselect this shop. </param>
-            <returns> Operation completed successfully or not. </returns>
-        </member>
-        <member name="M:AruhazWeb.Controllers.RandomController.Details(System.String)">
+        <member name="M:AruhazWeb.Controllers.RandomController.Selections">
             <summary>
             Show shop's details.
             </summary>
-            <param name="id"> Shop's name. </param>
             <returns> View with shop's details. </returns>
         </member>
         <member name="T:AruhazWeb.Models.Aruhaz">
@@ -268,6 +258,28 @@
             Create Mapper method.
             </summary>
             <returns> A config. </returns>
+        </member>
+        <member name="T:AruhazWeb.Models.RandomAruhazListViewModel">
+            <summary>
+            Shop list view model.
+            </summary>
+        </member>
+        <member name="M:AruhazWeb.Models.RandomAruhazListViewModel.#ctor(System.Collections.Generic.ICollection{AruhazWeb.Models.Aruhaz},System.Collections.Generic.ICollection{AruhazWeb.Models.Aruhaz})">
+            <summary>
+            Initializes a new instance of the <see cref="T:AruhazWeb.Models.RandomAruhazListViewModel"/> class.
+            </summary>
+            <param name="selectedShops"> Selected shops list. </param>
+            <param name="unselectedShops"> Unselected shops list. </param>
+        </member>
+        <member name="P:AruhazWeb.Models.RandomAruhazListViewModel.SelectedShops">
+            <summary>
+            Gets SelectedShops.
+            </summary>
+        </member>
+        <member name="P:AruhazWeb.Models.RandomAruhazListViewModel.UnselectedShops">
+            <summary>
+            Gets UnselectedShops.
+            </summary>
         </member>
         <member name="T:AruhazWeb.Program">
             <summary>

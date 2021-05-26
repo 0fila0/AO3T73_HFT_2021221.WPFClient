@@ -4,6 +4,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+	  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+	  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+	  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Aruhaz.WpfClientRandom.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +20,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AruhazWeb\AruhazWeb.csproj" />
+    <ProjectReference Include="..\Products.Logic\Products.Logic.csproj" />
   </ItemGroup>
 
 </Project>

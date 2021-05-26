@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aruhaz.WpfClientRandom"
         mc:Ignorable="d"
-        Title="SelectedWindow" Height="450" Width="800">
+        Title="SelectedWindow" Height="600" Width="800"
+        d:DataContext="{d:DesignInstance Type={x:Type local:MainVMRandom}}">
+    <Window.Resources>
+        <DataTemplate x:Key="selected" DataType="{x:Type local:AruhazVMRandom}">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding Path=AruhazNeve}"/>
+                <Label Content="{Binding Path=Email}"/>
+                <Label Content="{Binding Path=Honlap}"/>
+                <Label Content="{Binding Path=Kozpont}"/>
+                <Label Content="{Binding Path=Adoszam}"/>
+                <Label Content="{Binding Path=Telefon}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="log" DataType="{x:Type local:ConsoleLogVM}">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding Path=Log}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <Label Content="Selected shops" HorizontalAlignment="Left" Height="28" Margin="100,10,0,0" VerticalAlignment="Top" Width="133"/>
+        <Label Content="{Binding Path=Selected}" FontSize="17" Height="30" Width="80" Margin="220,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label Content="Unselected shops" HorizontalAlignment="Left" Height="28" Margin="100,50,0,0" VerticalAlignment="Top" Width="133"/>
+        <Label Content="{Binding Path=Unselected}" FontSize="17" Height="30" Width="80" Margin="220,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label Content="Events:" FontSize="15" Height="27" Width="80" Margin="310,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
+        <ListBox Name="consoleLog" FontSize="10" ItemTemplate="{StaticResource log}" HorizontalAlignment="Center" Height="75" Margin="300,10,0,0" VerticalAlignment="Top" Width="300"/>
+        <ListBox Name="listBoxSelected" ItemTemplate="{StaticResource selected}" HorizontalAlignment="Center" Height="217" Margin="0,100,0,0" VerticalAlignment="Top" Width="596"/>
+        <ListBox Name="listBoxUnselected" ItemTemplate="{StaticResource selected}" HorizontalAlignment="Center" Height="209" Margin="0,350,0,0" VerticalAlignment="Top" Width="596"/>
     </Grid>
 </Window>

@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:Aruhaz.WpfClientRandom"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainVMRandom />
+    </Window.DataContext>
     <Grid>
-
+        <Button Command="{Binding Path=LoadCmd}" Content="Send" HorizontalAlignment="Center" Height="25" Margin="0,303,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox Text="{Binding Path=RandomShopsNumber}" HorizontalAlignment="Center" Height="51" Margin="0,204,0,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="30"/>
     </Grid>
 </Window>

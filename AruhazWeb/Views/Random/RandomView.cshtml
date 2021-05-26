@@ -1,0 +1,51 @@
+﻿@model AruhazWeb.Models.RandomAruhazListViewModel
+
+<h2>Selected shops</h2>
+<table border="1">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().AruhazNeve)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Honlap)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Email)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Telefon)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Kozpont)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Adoszam)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Kijelolt)</th>
+    </tr>
+    @foreach (var selected in Model.SelectedShops)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => selected.AruhazNeve)</td>
+            <td>@Html.DisplayFor(m => selected.Honlap)</td>
+            <td>@Html.DisplayFor(m => selected.Email)</td>
+            <td>@Html.DisplayFor(m => selected.Telefon)</td>
+            <td>@Html.DisplayFor(m => selected.Kozpont)</td>
+            <td>@Html.DisplayFor(m => selected.Adoszam)</td>
+            <td>@Html.DisplayFor(m => selected.Kijelolt)</td>
+        </tr>
+    }
+</table>
+
+<h2>Unselected shops</h2>
+<table border="1">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().AruhazNeve)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Honlap)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Email)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Telefon)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Kozpont)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Adoszam)</th>
+        <th>@Html.DisplayNameFor(m => m.SelectedShops.First().Kijelolt)</th>
+    </tr>
+    @foreach (var unselected in Model.UnselectedShops)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => unselected.AruhazNeve)</td>
+            <td>@Html.DisplayFor(m => unselected.Honlap)</td>
+            <td>@Html.DisplayFor(m => unselected.Email)</td>
+            <td>@Html.DisplayFor(m => unselected.Telefon)</td>
+            <td>@Html.DisplayFor(m => unselected.Kozpont)</td>
+            <td>@Html.DisplayFor(m => unselected.Adoszam)</td>
+            <td>@Html.DisplayFor(m => unselected.Kijelolt)</td>
+        </tr>
+    }
+</table>
