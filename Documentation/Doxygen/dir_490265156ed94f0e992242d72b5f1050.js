@@ -1,6 +1,7 @@
 var dir_490265156ed94f0e992242d72b5f1050 =
 [
     [ "Aruhaz.WpfClient", "dir_04bc79f4765e7b47b3687f155e4354d4.html", "dir_04bc79f4765e7b47b3687f155e4354d4" ],
+    [ "Aruhaz.WpfClientRandom", "dir_ec4939799e3084d76ee774b11f456a13.html", "dir_ec4939799e3084d76ee774b11f456a13" ],
     [ "AruhazWeb", "dir_745d3c14b2d5a916213e6dc0b275ef51.html", "dir_745d3c14b2d5a916213e6dc0b275ef51" ],
     [ "Products.Data", "dir_028aa61b66856c6ca7b9b3fa25734e0b.html", "dir_028aa61b66856c6ca7b9b3fa25734e0b" ],
     [ "Products.GUI", "dir_5b7d338d205f5c325e2b5dd32450c558.html", "dir_5b7d338d205f5c325e2b5dd32450c558" ],

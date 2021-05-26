@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Prog4_HF3: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/AruhazWeb/Models/MapperFactory.cs Source File</title>
+<title>Prog4_HF4: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/AruhazWeb/Models/MapperFactory.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Prog4_HF3
+   <div id="projectname">Prog4_HF4
    </div>
   </td>
  </tr>
@@ -110,13 +110,14 @@ $(document).ready(function(){initNavTree('_mapper_factory_8cs_source.html',''); 
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                .ForMember(dest =&gt; dest.Honlap, map =&gt; map.MapFrom(src =&gt; src.Honlap == <span class="keyword">null</span> ? <span class="keywordtype">string</span>.Empty : src.Honlap))</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                .ForMember(dest =&gt; dest.Kozpont, map =&gt; map.MapFrom(src =&gt; src.Kozpont == <span class="keyword">null</span> ? <span class="keywordtype">string</span>.Empty : src.Kozpont))</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                .ForMember(dest =&gt; dest.Adoszam, map =&gt; map.MapFrom(src =&gt; src.Adoszam))</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                .ForMember(dest =&gt; dest.Telefon, map =&gt; map.MapFrom(src =&gt; src.Telefon == <span class="keyword">null</span> ? 0 : src.Telefon));</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            });</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> config.CreateMapper();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                .ForMember(dest =&gt; dest.Telefon, map =&gt; map.MapFrom(src =&gt; src.Telefon == <span class="keyword">null</span> ? 0 : src.Telefon))</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                .ForMember(dest =&gt; dest.Kijelolt, map =&gt; map.MapFrom(src =&gt; src.Kijelolt));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            });</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> config.CreateMapper();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="ttc" id="aclass_aruhaz_web_1_1_models_1_1_aruhaz_html"><div class="ttname"><a href="class_aruhaz_web_1_1_models_1_1_aruhaz.html">AruhazWeb.Models.Aruhaz</a></div><div class="ttdoc">Aruhaz web model.</div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_web_2_models_2_aruhaz_8cs_source.html#l00018">Aruhaz.cs:19</a></div></div>
 <div class="ttc" id="aclass_aruhaz_web_1_1_models_1_1_mapper_factory_html"><div class="ttname"><a href="class_aruhaz_web_1_1_models_1_1_mapper_factory.html">AruhazWeb.Models.MapperFactory</a></div><div class="ttdoc">Mapper factory.</div><div class="ttdef"><b>Definition:</b> <a href="_mapper_factory_8cs_source.html#l00016">MapperFactory.cs:17</a></div></div>
 <div class="ttc" id="aclass_aruhaz_web_1_1_models_1_1_mapper_factory_html_a0da14e70aef30b4ad5955ec7f08e90d2"><div class="ttname"><a href="class_aruhaz_web_1_1_models_1_1_mapper_factory.html#a0da14e70aef30b4ad5955ec7f08e90d2">AruhazWeb.Models.MapperFactory.CreateMapper</a></div><div class="ttdeci">static IMapper CreateMapper()</div><div class="ttdoc">Create Mapper method.</div><div class="ttdef"><b>Definition:</b> <a href="_mapper_factory_8cs_source.html#l00022">MapperFactory.cs:22</a></div></div>

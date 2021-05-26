@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Prog4_HF3: Products.Repository.IRepository Interface Reference</title>
+<title>Prog4_HF4: Products.Repository.IRepository Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Prog4_HF3
+   <div id="projectname">Prog4_HF4
    </div>
   </td>
  </tr>
@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca6fa537d017d75750460f9226b058e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_products_1_1_repository_1_1_i_repository.html#aca6fa537d017d75750460f9226b058e8">UpdateShop</a> (<a class="el" href="class_products_1_1_data_1_1_models_1_1_aruhaz.html">Aruhaz</a> param)</td></tr>
 <tr class="memdesc:aca6fa537d017d75750460f9226b058e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method changes an existing shop entity's property/properties.  <a href="interface_products_1_1_repository_1_1_i_repository.html#aca6fa537d017d75750460f9226b058e8">More...</a><br /></td></tr>
 <tr class="separator:aca6fa537d017d75750460f9226b058e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27045bd883fbfd934ca486006e5f11d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_products_1_1_repository_1_1_i_repository.html#a27045bd883fbfd934ca486006e5f11d0">UpdateShop</a> (string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)</td></tr>
-<tr class="memdesc:a27045bd883fbfd934ca486006e5f11d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the database.  <a href="interface_products_1_1_repository_1_1_i_repository.html#a27045bd883fbfd934ca486006e5f11d0">More...</a><br /></td></tr>
-<tr class="separator:a27045bd883fbfd934ca486006e5f11d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c45bd104ed7a71dca563d919b6951bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_products_1_1_repository_1_1_i_repository.html#a9c45bd104ed7a71dca563d919b6951bc">UpdateShop</a> (string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)</td></tr>
+<tr class="memdesc:a9c45bd104ed7a71dca563d919b6951bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the database.  <a href="interface_products_1_1_repository_1_1_i_repository.html#a9c45bd104ed7a71dca563d919b6951bc">More...</a><br /></td></tr>
+<tr class="separator:a9c45bd104ed7a71dca563d919b6951bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a637f592eb2375f032af2d7aa822b70df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_products_1_1_repository_1_1_i_repository.html#a637f592eb2375f032af2d7aa822b70df">UpdateProduct</a> (<a class="el" href="class_products_1_1_data_1_1_models_1_1_termek.html">Termek</a> param)</td></tr>
 <tr class="memdesc:a637f592eb2375f032af2d7aa822b70df"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method changes an existing product entity's property/properties.  <a href="interface_products_1_1_repository_1_1_i_repository.html#a637f592eb2375f032af2d7aa822b70df">More...</a><br /></td></tr>
 <tr class="separator:a637f592eb2375f032af2d7aa822b70df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -553,8 +553,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a27045bd883fbfd934ca486006e5f11d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27045bd883fbfd934ca486006e5f11d0">&#9670;&nbsp;</a></span>UpdateShop() <span class="overload">[2/2]</span></h2>
+<a id="a9c45bd104ed7a71dca563d919b6951bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c45bd104ed7a71dca563d919b6951bc">&#9670;&nbsp;</a></span>UpdateShop() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -599,7 +599,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">decimal&#160;</td>
-          <td class="paramname"><em>adoszam</em>&#160;</td>
+          <td class="paramname"><em>adoszam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>kijelolt</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -619,11 +625,12 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">kozpont</td><td>Shop's center. </td></tr>
     <tr><td class="paramname">telefon</td><td>Shop's phone number. </td></tr>
     <tr><td class="paramname">adoszam</td><td>Shop's tax number. </td></tr>
+    <tr><td class="paramname">kijelolt</td><td>Shop is selected or not. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_products_1_1_repository_1_1_products_repository.html#a42f5dd20b5975c3ddedbc03247b576fe">Products.Repository.ProductsRepository</a>.</p>
+<p>Implemented in <a class="el" href="class_products_1_1_repository_1_1_products_repository.html#a463b3c5cf1298ef1cc553998158a97bf">Products.Repository.ProductsRepository</a>.</p>
 
 </div>
 </div>

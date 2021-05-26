@@ -15,5 +15,5 @@ var interface_products_1_1_repository_1_1_i_repository =
     [ "UpdateManufacturer", "interface_products_1_1_repository_1_1_i_repository.html#a96263027784ddf8ba03fb40dbebdf6ab", null ],
     [ "UpdateProduct", "interface_products_1_1_repository_1_1_i_repository.html#a637f592eb2375f032af2d7aa822b70df", null ],
     [ "UpdateShop", "interface_products_1_1_repository_1_1_i_repository.html#aca6fa537d017d75750460f9226b058e8", null ],
-    [ "UpdateShop", "interface_products_1_1_repository_1_1_i_repository.html#a27045bd883fbfd934ca486006e5f11d0", null ]
+    [ "UpdateShop", "interface_products_1_1_repository_1_1_i_repository.html#a9c45bd104ed7a71dca563d919b6951bc", null ]
 ];

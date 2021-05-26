@@ -8,6 +8,7 @@ var namespace_asp_net_core =
     [ "Views_Aruhaz_AruhazList", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list.html", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list" ],
     [ "Views_Home_Index", "class_asp_net_core_1_1_views___home___index.html", "class_asp_net_core_1_1_views___home___index" ],
     [ "Views_Home_Privacy", "class_asp_net_core_1_1_views___home___privacy.html", "class_asp_net_core_1_1_views___home___privacy" ],
+    [ "Views_Random_RandomView", "class_asp_net_core_1_1_views___random___random_view.html", "class_asp_net_core_1_1_views___random___random_view" ],
     [ "Views_Shared__Layout", "class_asp_net_core_1_1_views___shared_____layout.html", "class_asp_net_core_1_1_views___shared_____layout" ],
     [ "Views_Shared__ValidationScriptsPartial", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial.html", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial" ],
     [ "Views_Shared_Error", "class_asp_net_core_1_1_views___shared___error.html", "class_asp_net_core_1_1_views___shared___error" ]

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Prog4_HF3: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/Aruhaz.WpfClient/MainLogic.cs Source File</title>
+<title>Prog4_HF4: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/Aruhaz.WpfClient/MainLogic.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Prog4_HF3
+   <div id="projectname">Prog4_HF4
    </div>
   </td>
  </tr>
@@ -178,16 +178,17 @@ $(document).ready(function(){initNavTree('_main_logic_8cs_source.html',''); init
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            postData.Add(<span class="stringliteral">&quot;adoszam&quot;</span>, aruhaz.Adoszam.ToString());</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            postData.Add(<span class="stringliteral">&quot;kozpont&quot;</span>, aruhaz.Kozpont.ToString());</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            postData.Add(<span class="stringliteral">&quot;email&quot;</span>, aruhaz.Email.ToString());</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">string</span> json = this.client.PostAsync(myUrl, <span class="keyword">new</span> FormUrlEncodedContent(postData)).Result.Content.ReadAsStringAsync().Result;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            JsonDocument doc = JsonDocument.Parse(json);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> doc.RootElement.EnumerateObject().First().Value.GetRawText() == <span class="stringliteral">&quot;true&quot;</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            postData.Add(<span class="stringliteral">&quot;kijelolt&quot;</span>, aruhaz.Kijelolt.ToString());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">string</span> json = this.client.PostAsync(myUrl, <span class="keyword">new</span> FormUrlEncodedContent(postData)).Result.Content.ReadAsStringAsync().Result;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            JsonDocument doc = JsonDocument.Parse(json);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> doc.RootElement.EnumerateObject().First().Value.GetRawText() == <span class="stringliteral">&quot;true&quot;</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m_html"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html">Aruhaz.WpfClient.AruhazVM</a></div><div class="ttdoc">View model class.</div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_v_m_8cs_source.html#l00017">AruhazVM.cs:18</a></div></div>
-<div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m_html_a839bd4ba4c3c6f917ea1bd4e8945d748"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html#a839bd4ba4c3c6f917ea1bd4e8945d748">Aruhaz.WpfClient.AruhazVM.CopyFrom</a></div><div class="ttdeci">void CopyFrom(AruhazVM other)</div><div class="ttdoc">Cloning a shop in order to modify.</div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_v_m_8cs_source.html#l00084">AruhazVM.cs:84</a></div></div>
-<div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m_html_aaf4e029de489e8b8bd8381e96c7e368b"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html#aaf4e029de489e8b8bd8381e96c7e368b">Aruhaz.WpfClient.AruhazVM.AruhazNeve</a></div><div class="ttdeci">string AruhazNeve</div><div class="ttdoc">Gets or sets shop's name.</div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_v_m_8cs_source.html#l00029">AruhazVM.cs:30</a></div></div>
+<div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m_html_a839bd4ba4c3c6f917ea1bd4e8945d748"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html#a839bd4ba4c3c6f917ea1bd4e8945d748">Aruhaz.WpfClient.AruhazVM.CopyFrom</a></div><div class="ttdeci">void CopyFrom(AruhazVM other)</div><div class="ttdoc">Cloning a shop in order to modify.</div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_v_m_8cs_source.html#l00094">AruhazVM.cs:94</a></div></div>
+<div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m_html_aaf4e029de489e8b8bd8381e96c7e368b"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html#aaf4e029de489e8b8bd8381e96c7e368b">Aruhaz.WpfClient.AruhazVM.AruhazNeve</a></div><div class="ttdeci">string AruhazNeve</div><div class="ttdoc">Gets or sets shop's name.</div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_v_m_8cs_source.html#l00030">AruhazVM.cs:31</a></div></div>
 <div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_main_logic_html"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_main_logic.html">Aruhaz.WpfClient.MainLogic</a></div><div class="ttdef"><b>Definition:</b> <a href="_main_logic_8cs_source.html#l00017">MainLogic.cs:18</a></div></div>
 <div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_main_logic_html_a11d978f4559085f2591772441a79b075"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_main_logic.html#a11d978f4559085f2591772441a79b075">Aruhaz.WpfClient.MainLogic.ApiDelAruhaz</a></div><div class="ttdeci">void ApiDelAruhaz(AruhazVM aruhaz)</div><div class="ttdoc">Delete a shop.</div><div class="ttdef"><b>Definition:</b> <a href="_main_logic_8cs_source.html#l00032">MainLogic.cs:32</a></div></div>
 <div class="ttc" id="aclass_aruhaz_1_1_wpf_client_1_1_main_logic_html_aaad253b19817c28c56840178ac4ba9dc"><div class="ttname"><a href="class_aruhaz_1_1_wpf_client_1_1_main_logic.html#aaad253b19817c28c56840178ac4ba9dc">Aruhaz.WpfClient.MainLogic.ApiGetAruhaz</a></div><div class="ttdeci">List&lt; AruhazVM &gt; ApiGetAruhaz()</div><div class="ttdoc">Get a shop.</div><div class="ttdef"><b>Definition:</b> <a href="_main_logic_8cs_source.html#l00024">MainLogic.cs:24</a></div></div>

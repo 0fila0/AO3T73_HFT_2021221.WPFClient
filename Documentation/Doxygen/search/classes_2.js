@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['generatedinternaltypehelper_161',['GeneratedInternalTypeHelper',['../class_xaml_generated_namespace_1_1_generated_internal_type_helper.html',1,'XamlGeneratedNamespace']]],
-  ['gyarto_162',['Gyarto',['../class_products_1_1_data_1_1_models_1_1_gyarto.html',1,'Products::Data::Models']]]
+  ['editorserviceviawindow_189',['EditorServiceViaWindow',['../class_products_1_1_g_u_i_1_1_u_i_1_1_editor_service_via_window.html',1,'Products::GUI::UI']]],
+  ['editorviewmodel_190',['EditorViewModel',['../class_products_1_1_g_u_i_1_1_v_m_1_1_editor_view_model.html',1,'Products::GUI::VM']]],
+  ['editorwindow_191',['EditorWindow',['../class_aruhaz_1_1_wpf_client_1_1_editor_window.html',1,'Aruhaz.WpfClient.EditorWindow'],['../class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html',1,'Products.GUI.UI.EditorWindow']]],
+  ['errorviewmodel_192',['ErrorViewModel',['../class_aruhaz_web_1_1_models_1_1_error_view_model.html',1,'AruhazWeb::Models']]]
 ];

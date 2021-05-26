@@ -4,7 +4,7 @@ var interface_products_1_1_logic_1_1_i_logic =
     [ "AddManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#af3f89d8f20cfcb6414eccc19b45d51b6", null ],
     [ "AddProduct", "interface_products_1_1_logic_1_1_i_logic.html#a8bbe0f54f3cfceb6fd0b8562e0648a71", null ],
     [ "AddShop", "interface_products_1_1_logic_1_1_i_logic.html#aa48d82b732684d88a3bce783ab49f385", null ],
-    [ "AddShop", "interface_products_1_1_logic_1_1_i_logic.html#acc67a1232b05dc2ccd8be40ab39504cd", null ],
+    [ "AddShop", "interface_products_1_1_logic_1_1_i_logic.html#a1f7b9ac799625077de04eecf7c22390f", null ],
     [ "CheapestShop", "interface_products_1_1_logic_1_1_i_logic.html#a432e6a31bd8215aad19f4443b036f130", null ],
     [ "DeleteLink", "interface_products_1_1_logic_1_1_i_logic.html#a46ae31d3f5dc49f5363ac468f5261afc", null ],
     [ "DeleteManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#a46d9a5d4062e0ab9588c6e3e49d8531d", null ],
@@ -22,6 +22,6 @@ var interface_products_1_1_logic_1_1_i_logic =
     [ "UpdateManufacturer", "interface_products_1_1_logic_1_1_i_logic.html#affd58620a52b4f8711d80f42114d32a0", null ],
     [ "UpdateProduct", "interface_products_1_1_logic_1_1_i_logic.html#a8472647ea40a2a5e66d28fb2b373c271", null ],
     [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#ac499ee5b27d2297d02fb2c906a85a6c6", null ],
-    [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#a06679580ea94cc58b51136f1a73bb064", null ],
-    [ "UpdateShopWeb", "interface_products_1_1_logic_1_1_i_logic.html#a17573de0f8b92534214a99e9b0fc25c4", null ]
+    [ "UpdateShop", "interface_products_1_1_logic_1_1_i_logic.html#a4eabd93c15fab86e56fbd186fcc62ac3", null ],
+    [ "UpdateShopWeb", "interface_products_1_1_logic_1_1_i_logic.html#afc5c2249e3a121a854842f53c733c7d4", null ]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Prog4_HF3: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/AruhazWeb/Controllers/AruhazController.cs Source File</title>
+<title>Prog4_HF4: D:/Dokumentumok/oenik_prog4hf_2021_1_ao3t73/AruhazWeb/Controllers/AruhazController.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Prog4_HF3
+   <div id="projectname">Prog4_HF4
    </div>
   </td>
  </tr>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('_aruhaz_controller_8cs_source.html',''
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    {</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                            this.logic.<a class="code" href="interface_products_1_1_logic_1_1_i_logic.html#aa48d82b732684d88a3bce783ab49f385">AddShop</a>(shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                            this.logic.<a class="code" href="interface_products_1_1_logic_1_1_i_logic.html#aa48d82b732684d88a3bce783ab49f385">AddShop</a>(shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam), shop.Kijelolt);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        <span class="keywordflow">catch</span> (ArgumentException ex)</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                        {</div>
@@ -172,7 +172,7 @@ $(document).ready(function(){initNavTree('_aruhaz_controller_8cs_source.html',''
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="keywordflow">if</span> (!this.logic.<a class="code" href="interface_products_1_1_logic_1_1_i_logic.html#a17573de0f8b92534214a99e9b0fc25c4">UpdateShopWeb</a>(shop.RegiNev, shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam)))</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    <span class="keywordflow">if</span> (!this.logic.<a class="code" href="interface_products_1_1_logic_1_1_i_logic.html#afc5c2249e3a121a854842f53c733c7d4">UpdateShopWeb</a>(shop.RegiNev, shop.AruhazNeve, shop.Email, shop.Honlap, shop.Kozpont, decimal.Parse(shop.Telefon), decimal.Parse(shop.Adoszam), shop.Kijelolt))</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    {</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        this.TempData[<span class="stringliteral">&quot;editResult&quot;</span>] = <span class="stringliteral">&quot;Edit failed&quot;</span>;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    }</div>
@@ -209,10 +209,10 @@ $(document).ready(function(){initNavTree('_aruhaz_controller_8cs_source.html',''
 <div class="ttc" id="aclass_products_1_1_data_1_1_models_1_1_aruhaz_html_a582b618d071af1eb6d286058c1738ecf"><div class="ttname"><a href="class_products_1_1_data_1_1_models_1_1_aruhaz.html#a582b618d071af1eb6d286058c1738ecf">Products.Data.Models.Aruhaz.Aruhaz</a></div><div class="ttdeci">Aruhaz()</div><div class="ttdoc">Initializes a new instance of the Aruhaz class.</div><div class="ttdef"><b>Definition:</b> <a href="_products_8_data_2_models_2_aruhaz_8cs_source.html#l00020">Aruhaz.cs:20</a></div></div>
 <div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html">Products.Logic.ILogic</a></div><div class="ttdoc">This interface describes what methods should be implemented in Logic class.</div><div class="ttdef"><b>Definition:</b> <a href="_i_logic_8cs_source.html#l00019">ILogic.cs:20</a></div></div>
 <div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html_a0655f83c1f4de089d68faf03e75d2f8f"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html#a0655f83c1f4de089d68faf03e75d2f8f">Products.Logic.ILogic.GetAllShops</a></div><div class="ttdeci">IEnumerable&lt; Aruhaz &gt; GetAllShops()</div><div class="ttdoc">This method returns all shop entities.</div></div>
-<div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html_a17573de0f8b92534214a99e9b0fc25c4"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html#a17573de0f8b92534214a99e9b0fc25c4">Products.Logic.ILogic.UpdateShopWeb</a></div><div class="ttdeci">bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)</div><div class="ttdoc">This method changes an existing shop entity's property/properties.</div></div>
 <div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html_a23623014d09f810666b29c93a3b4d76a"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html#a23623014d09f810666b29c93a3b4d76a">Products.Logic.ILogic.DeleteShop</a></div><div class="ttdeci">void DeleteShop(Aruhaz param)</div><div class="ttdoc">This method deletes a shop entity from database.</div></div>
 <div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html_a8a29191e36f73800bff40e4146f3c657"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html#a8a29191e36f73800bff40e4146f3c657">Products.Logic.ILogic.GetOneShop</a></div><div class="ttdeci">Aruhaz GetOneShop(string id)</div><div class="ttdoc">This method returns one shop entity.</div></div>
 <div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html_aa48d82b732684d88a3bce783ab49f385"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html#aa48d82b732684d88a3bce783ab49f385">Products.Logic.ILogic.AddShop</a></div><div class="ttdeci">void AddShop(Aruhaz param)</div><div class="ttdoc">This method adds a new shop entity to the database.</div></div>
+<div class="ttc" id="ainterface_products_1_1_logic_1_1_i_logic_html_afc5c2249e3a121a854842f53c733c7d4"><div class="ttname"><a href="interface_products_1_1_logic_1_1_i_logic.html#afc5c2249e3a121a854842f53c733c7d4">Products.Logic.ILogic.UpdateShopWeb</a></div><div class="ttdeci">bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)</div><div class="ttdoc">This method changes an existing shop entity's property/properties.</div></div>
 <div class="ttc" id="anamespace_aruhaz_web_1_1_controllers_html"><div class="ttname"><a href="namespace_aruhaz_web_1_1_controllers.html">AruhazWeb.Controllers</a></div><div class="ttdef"><b>Definition:</b> <a href="_api_result_8cs_source.html#l00005">ApiResult.cs:6</a></div></div>
 <div class="ttc" id="anamespace_aruhaz_web_1_1_models_html"><div class="ttname"><a href="namespace_aruhaz_web_1_1_models.html">AruhazWeb.Models</a></div><div class="ttdef"><b>Definition:</b> <a href="_aruhaz_web_2_models_2_aruhaz_8cs_source.html#l00005">Aruhaz.cs:6</a></div></div>
 <div class="ttc" id="anamespace_aruhaz_web_html"><div class="ttname"><a href="namespace_aruhaz_web.html">AruhazWeb</a></div><div class="ttdef"><b>Definition:</b> <a href="_api_result_8cs_source.html#l00005">ApiResult.cs:6</a></div></div>

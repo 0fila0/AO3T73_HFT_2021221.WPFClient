@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aruhaz.WpfClientRandom</name>
+    </assembly>
+    <members>
+        <member name="T:Aruhaz.WpfClientRandom.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClientRandom.App"/> class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.AruhazVMRandom">
+            <summary>
+            View model class.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.AruhazNeve">
+            <summary>
+            Gets or sets shop's name.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.Honlap">
+            <summary>
+            Gets or sets website.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.Email">
+            <summary>
+            Gets or sets email address.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.Telefon">
+            <summary>
+            Gets or sets phone number.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.Kozpont">
+            <summary>
+            Gets or sets center.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.Adoszam">
+            <summary>
+            Gets or sets tax number.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.AruhazVMRandom.Kijelolt">
+            <summary>
+            Gets or sets a value indicating whether selected.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.AruhazVMRandom.CopyFrom(Aruhaz.WpfClientRandom.AruhazVMRandom)">
+            <summary>
+            Cloning a shop in order to modify.
+            </summary>
+            <param name="other"> Shop that will be cloned. </param>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.ConsoleLogVM">
+            <summary>
+            Events' text.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.ConsoleLogVM.Log">
+            <summary>
+            Gets or sets email address.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.IMainLogicRandom">
+            <summary>
+            Interface for MainLogicRandom (IoC).
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.IMainLogicRandom.NewSecondWindow(System.Int32)">
+            <summary>
+            Open selected window with shops.
+            </summary>
+            <param name="getOneCalls"> Call GetOne method getOneCalls times. </param>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.IMainLogicRandom.Delete(System.Collections.Generic.List{System.String})">
+            <summary>
+            Delete all random shops.
+            </summary>
+            <param name="aruhazNeve"> Shops' names. </param>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.IMainLogicRandom.GetAll">
+            <summary>
+            Refresh the shop list.
+            </summary>
+            <returns> Updated shop list. </returns>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.IMainVMRandom">
+            <summary>
+            Interface for MainVMRandom.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.Selected">
+            <summary>
+            Gets or sets selected shops.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.Unselected">
+            <summary>
+            Gets or sets unselected shops.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.RandomShopsNumber">
+            <summary>
+            Gets or sets RandomShopsNumber.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.Shops">
+            <summary>
+            Gets or sets shops list.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.Result">
+            <summary>
+            Gets or sets what result of random controller.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.Console">
+            <summary>
+            Gets or sets console text.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.IMainVMRandom.LoadCmd">
+            <summary>
+            Gets or sets getOne command.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.MainLogicRandom">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainLogicRandom.NewSecondWindow(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainLogicRandom.Delete(System.Collections.Generic.List{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainLogicRandom.GetAll">
+            <inheritdoc/>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.MainVMRandom">
+            <summary>
+            Main view model class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainVMRandom.#ctor(Aruhaz.WpfClientRandom.IMainLogicRandom)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClientRandom.MainVMRandom"/> class.
+            </summary>
+            <param name="logic"> Logic.</param>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainVMRandom.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClientRandom.MainVMRandom"/> class.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.Selected">
+            <inheritdoc/>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.Unselected">
+            <inheritdoc/>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.RandomShopsNumber">
+            <inheritdoc/>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.Shops">
+            <inheritdoc/>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.Result">
+            <inheritdoc/>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.Console">
+            <inheritdoc/>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MainVMRandom.LoadCmd">
+            <inheritdoc/>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClientRandom.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.MyIOCRandom">
+            <summary>
+            This is an individual MyIOCRandom for bugfix purposes.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.MyIOCRandom.Instance">
+            <summary>
+            Gets instance.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.RandomJsonResult">
+            <summary>
+            What Random controller send back that will be the result.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.RandomJsonResult.Success">
+            <summary>
+            Gets or sets the action's success.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.RandomJsonResult.Selected">
+            <summary>
+            Gets or sets selected shops number.
+            </summary>
+        </member>
+        <member name="P:Aruhaz.WpfClientRandom.RandomJsonResult.Unselected">
+            <summary>
+            Gets or sets unselected shops number.
+            </summary>
+        </member>
+        <member name="T:Aruhaz.WpfClientRandom.SelectedWindow">
+            <summary>
+            Interaction logic for SelectedWindow.xaml.
+            </summary>
+            <summary>
+            SelectedWindow
+            </summary>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.SelectedWindow.#ctor(Aruhaz.WpfClientRandom.IMainVMRandom,Aruhaz.WpfClientRandom.IMainLogicRandom)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClientRandom.SelectedWindow"/> class.
+            </summary>
+            <param name="vm"> MainVMRandom class. </param>
+            <param name="logic"> Logic class. </param>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.SelectedWindow.#ctor(System.Collections.ObjectModel.Collection{Aruhaz.WpfClientRandom.AruhazVMRandom})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Aruhaz.WpfClientRandom.SelectedWindow"/> class.
+            </summary>
+            <param name="randomShops"> Random shops list. </param>
+        </member>
+        <member name="M:Aruhaz.WpfClientRandom.SelectedWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['startup_180',['Startup',['../class_aruhaz_web_1_1_startup.html',1,'AruhazWeb']]]
+  ['productscontext_214',['ProductsContext',['../class_products_1_1_data_1_1_models_1_1_products_context.html',1,'Products::Data::Models']]],
+  ['productsrepository_215',['ProductsRepository',['../class_products_1_1_repository_1_1_products_repository.html',1,'Products::Repository']]],
+  ['program_216',['Program',['../class_aruhaz_web_1_1_program.html',1,'AruhazWeb']]]
 ];

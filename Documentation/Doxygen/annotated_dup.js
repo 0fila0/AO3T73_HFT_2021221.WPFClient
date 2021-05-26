@@ -10,6 +10,19 @@ var annotated_dup =
         [ "MainVM", "class_aruhaz_1_1_wpf_client_1_1_main_v_m.html", "class_aruhaz_1_1_wpf_client_1_1_main_v_m" ],
         [ "MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", "class_aruhaz_1_1_wpf_client_1_1_main_window" ],
         [ "MyIOC", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c.html", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c" ]
+      ] ],
+      [ "WpfClientRandom", "namespace_aruhaz_1_1_wpf_client_random.html", [
+        [ "App", "class_aruhaz_1_1_wpf_client_random_1_1_app.html", "class_aruhaz_1_1_wpf_client_random_1_1_app" ],
+        [ "AruhazVMRandom", "class_aruhaz_1_1_wpf_client_random_1_1_aruhaz_v_m_random.html", "class_aruhaz_1_1_wpf_client_random_1_1_aruhaz_v_m_random" ],
+        [ "ConsoleLogVM", "class_aruhaz_1_1_wpf_client_random_1_1_console_log_v_m.html", "class_aruhaz_1_1_wpf_client_random_1_1_console_log_v_m" ],
+        [ "IMainLogicRandom", "interface_aruhaz_1_1_wpf_client_random_1_1_i_main_logic_random.html", "interface_aruhaz_1_1_wpf_client_random_1_1_i_main_logic_random" ],
+        [ "IMainVMRandom", "interface_aruhaz_1_1_wpf_client_random_1_1_i_main_v_m_random.html", "interface_aruhaz_1_1_wpf_client_random_1_1_i_main_v_m_random" ],
+        [ "MainLogicRandom", "class_aruhaz_1_1_wpf_client_random_1_1_main_logic_random.html", "class_aruhaz_1_1_wpf_client_random_1_1_main_logic_random" ],
+        [ "MainVMRandom", "class_aruhaz_1_1_wpf_client_random_1_1_main_v_m_random.html", "class_aruhaz_1_1_wpf_client_random_1_1_main_v_m_random" ],
+        [ "MainWindow", "class_aruhaz_1_1_wpf_client_random_1_1_main_window.html", "class_aruhaz_1_1_wpf_client_random_1_1_main_window" ],
+        [ "MyIOCRandom", "class_aruhaz_1_1_wpf_client_random_1_1_my_i_o_c_random.html", "class_aruhaz_1_1_wpf_client_random_1_1_my_i_o_c_random" ],
+        [ "SelectedWindow", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window.html", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window" ],
+        [ "RandomJsonResult", "class_aruhaz_1_1_wpf_client_random_1_1_random_json_result.html", "class_aruhaz_1_1_wpf_client_random_1_1_random_json_result" ]
       ] ]
     ] ],
     [ "AruhazWeb", "namespace_aruhaz_web.html", [
@@ -17,13 +30,15 @@ var annotated_dup =
         [ "ApiResult", "class_aruhaz_web_1_1_controllers_1_1_api_result.html", "class_aruhaz_web_1_1_controllers_1_1_api_result" ],
         [ "AruhazApiController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_api_controller.html", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_api_controller" ],
         [ "AruhazController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller.html", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller" ],
-        [ "HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", "class_aruhaz_web_1_1_controllers_1_1_home_controller" ]
+        [ "HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", "class_aruhaz_web_1_1_controllers_1_1_home_controller" ],
+        [ "RandomController", "class_aruhaz_web_1_1_controllers_1_1_random_controller.html", "class_aruhaz_web_1_1_controllers_1_1_random_controller" ]
       ] ],
       [ "Models", "namespace_aruhaz_web_1_1_models.html", [
         [ "Aruhaz", "class_aruhaz_web_1_1_models_1_1_aruhaz.html", "class_aruhaz_web_1_1_models_1_1_aruhaz" ],
         [ "AruhazListViewModel", "class_aruhaz_web_1_1_models_1_1_aruhaz_list_view_model.html", "class_aruhaz_web_1_1_models_1_1_aruhaz_list_view_model" ],
         [ "ErrorViewModel", "class_aruhaz_web_1_1_models_1_1_error_view_model.html", "class_aruhaz_web_1_1_models_1_1_error_view_model" ],
-        [ "MapperFactory", "class_aruhaz_web_1_1_models_1_1_mapper_factory.html", "class_aruhaz_web_1_1_models_1_1_mapper_factory" ]
+        [ "MapperFactory", "class_aruhaz_web_1_1_models_1_1_mapper_factory.html", "class_aruhaz_web_1_1_models_1_1_mapper_factory" ],
+        [ "RandomAruhazListViewModel", "class_aruhaz_web_1_1_models_1_1_random_aruhaz_list_view_model.html", "class_aruhaz_web_1_1_models_1_1_random_aruhaz_list_view_model" ]
       ] ],
       [ "Program", "class_aruhaz_web_1_1_program.html", "class_aruhaz_web_1_1_program" ],
       [ "Startup", "class_aruhaz_web_1_1_startup.html", "class_aruhaz_web_1_1_startup" ]
@@ -37,6 +52,7 @@ var annotated_dup =
       [ "Views_Aruhaz_AruhazList", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list.html", "class_asp_net_core_1_1_views___aruhaz___aruhaz_list" ],
       [ "Views_Home_Index", "class_asp_net_core_1_1_views___home___index.html", "class_asp_net_core_1_1_views___home___index" ],
       [ "Views_Home_Privacy", "class_asp_net_core_1_1_views___home___privacy.html", "class_asp_net_core_1_1_views___home___privacy" ],
+      [ "Views_Random_RandomView", "class_asp_net_core_1_1_views___random___random_view.html", "class_asp_net_core_1_1_views___random___random_view" ],
       [ "Views_Shared__Layout", "class_asp_net_core_1_1_views___shared_____layout.html", "class_asp_net_core_1_1_views___shared_____layout" ],
       [ "Views_Shared__ValidationScriptsPartial", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial.html", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial" ],
       [ "Views_Shared_Error", "class_asp_net_core_1_1_views___shared___error.html", "class_asp_net_core_1_1_views___shared___error" ]

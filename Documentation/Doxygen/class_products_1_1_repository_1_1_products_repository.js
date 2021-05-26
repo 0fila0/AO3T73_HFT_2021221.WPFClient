@@ -16,5 +16,5 @@ var class_products_1_1_repository_1_1_products_repository =
     [ "UpdateManufacturer", "class_products_1_1_repository_1_1_products_repository.html#a15c75b4f199f3ceab4d1f14c26bd2d3c", null ],
     [ "UpdateProduct", "class_products_1_1_repository_1_1_products_repository.html#a35b304a2172dfd5f122d798ca58c6d4c", null ],
     [ "UpdateShop", "class_products_1_1_repository_1_1_products_repository.html#a12d07df551c85b2f48e0413a85450f12", null ],
-    [ "UpdateShop", "class_products_1_1_repository_1_1_products_repository.html#a42f5dd20b5975c3ddedbc03247b576fe", null ]
+    [ "UpdateShop", "class_products_1_1_repository_1_1_products_repository.html#a463b3c5cf1298ef1cc553998158a97bf", null ]
 ];

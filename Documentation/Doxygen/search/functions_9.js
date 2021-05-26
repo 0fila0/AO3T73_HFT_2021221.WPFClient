@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['onconfiguring_262',['OnConfiguring',['../class_products_1_1_data_1_1_models_1_1_products_context.html#ab87acd7539741462a0067427e3199de1',1,'Products::Data::Models::ProductsContext']]],
-  ['onmodelcreating_263',['OnModelCreating',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a75bb022bdaca9fe636496dd48f173beb',1,'Products::Data::Models::ProductsContext']]],
-  ['osanproducts_264',['OsanProducts',['../interface_products_1_1_logic_1_1_i_logic.html#a41164f3c08935ce12fbbd7258086fa55',1,'Products.Logic.ILogic.OsanProducts()'],['../class_products_1_1_logic_1_1_logical.html#a9e08a22d0c7c379812423d81853b68b1',1,'Products.Logic.Logical.OsanProducts()']]]
+  ['newsecondwindow_308',['NewSecondWindow',['../interface_aruhaz_1_1_wpf_client_random_1_1_i_main_logic_random.html#a280fb67ab89f54b85344d00e182e273c',1,'Aruhaz.WpfClientRandom.IMainLogicRandom.NewSecondWindow()'],['../class_aruhaz_1_1_wpf_client_random_1_1_main_logic_random.html#a6739fd7cbe309e0a7c9c17cbe886d771',1,'Aruhaz.WpfClientRandom.MainLogicRandom.NewSecondWindow()']]]
 ];

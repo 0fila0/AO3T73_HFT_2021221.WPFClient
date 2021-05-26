@@ -7,6 +7,9 @@ var hierarchy =
     [ "System.Windows.Application", null, [
       [ "Aruhaz.WpfClient.App", "class_aruhaz_1_1_wpf_client_1_1_app.html", null ],
       [ "Aruhaz.WpfClient.App", "class_aruhaz_1_1_wpf_client_1_1_app.html", null ],
+      [ "Aruhaz.WpfClientRandom.App", "class_aruhaz_1_1_wpf_client_random_1_1_app.html", null ],
+      [ "Aruhaz.WpfClientRandom.App", "class_aruhaz_1_1_wpf_client_random_1_1_app.html", null ],
+      [ "Aruhaz.WpfClientRandom.App", "class_aruhaz_1_1_wpf_client_random_1_1_app.html", null ],
       [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ],
       [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ],
       [ "Products.GUI.App", "class_products_1_1_g_u_i_1_1_app.html", null ]
@@ -17,7 +20,8 @@ var hierarchy =
     [ "Controller", null, [
       [ "AruhazWeb.Controllers.AruhazApiController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_api_controller.html", null ],
       [ "AruhazWeb.Controllers.AruhazController", "class_aruhaz_web_1_1_controllers_1_1_aruhaz_controller.html", null ],
-      [ "AruhazWeb.Controllers.HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", null ]
+      [ "AruhazWeb.Controllers.HomeController", "class_aruhaz_web_1_1_controllers_1_1_home_controller.html", null ],
+      [ "AruhazWeb.Controllers.RandomController", "class_aruhaz_web_1_1_controllers_1_1_random_controller.html", null ]
     ] ],
     [ "DbContext", null, [
       [ "Products.Data.Models.ProductsContext", "class_products_1_1_data_1_1_models_1_1_products_context.html", null ]
@@ -32,6 +36,10 @@ var hierarchy =
       [ "Aruhaz.WpfClient.EditorWindow", "class_aruhaz_1_1_wpf_client_1_1_editor_window.html", null ],
       [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
       [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.MainWindow", "class_aruhaz_1_1_wpf_client_random_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.MainWindow", "class_aruhaz_1_1_wpf_client_random_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.SelectedWindow", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.SelectedWindow", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.UI.EditorWindow", "class_products_1_1_g_u_i_1_1_u_i_1_1_editor_window.html", null ],
@@ -47,8 +55,13 @@ var hierarchy =
     [ "Aruhaz.WpfClient.IMainLogic", "interface_aruhaz_1_1_wpf_client_1_1_i_main_logic.html", [
       [ "Aruhaz.WpfClient.MainLogic", "class_aruhaz_1_1_wpf_client_1_1_main_logic.html", null ]
     ] ],
+    [ "Aruhaz.WpfClientRandom.IMainLogicRandom", "interface_aruhaz_1_1_wpf_client_random_1_1_i_main_logic_random.html", [
+      [ "Aruhaz.WpfClientRandom.MainLogicRandom", "class_aruhaz_1_1_wpf_client_random_1_1_main_logic_random.html", null ]
+    ] ],
+    [ "Aruhaz.WpfClientRandom.IMainVMRandom", "interface_aruhaz_1_1_wpf_client_random_1_1_i_main_v_m_random.html", [
+      [ "Aruhaz.WpfClientRandom.MainVMRandom", "class_aruhaz_1_1_wpf_client_random_1_1_main_v_m_random.html", null ]
+    ] ],
     [ "System.Windows.Markup.InternalTypeHelper", null, [
-      [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ],
       [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ],
       [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ],
       [ "XamlGeneratedNamespace.GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", null ]
@@ -58,20 +71,26 @@ var hierarchy =
     ] ],
     [ "IServiceLocator", null, [
       [ "Aruhaz.WpfClient.MyIOC", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c.html", null ],
+      [ "Aruhaz.WpfClientRandom.MyIOCRandom", "class_aruhaz_1_1_wpf_client_random_1_1_my_i_o_c_random.html", null ],
       [ "Products.GUI.MyIOC", "class_products_1_1_g_u_i_1_1_my_i_o_c.html", null ]
     ] ],
     [ "AruhazWeb.Models.MapperFactory", "class_aruhaz_web_1_1_models_1_1_mapper_factory.html", null ],
     [ "ObservableObject", null, [
       [ "Aruhaz.WpfClient.AruhazVM", "class_aruhaz_1_1_wpf_client_1_1_aruhaz_v_m.html", null ],
+      [ "Aruhaz.WpfClientRandom.AruhazVMRandom", "class_aruhaz_1_1_wpf_client_random_1_1_aruhaz_v_m_random.html", null ],
+      [ "Aruhaz.WpfClientRandom.ConsoleLogVM", "class_aruhaz_1_1_wpf_client_random_1_1_console_log_v_m.html", null ],
       [ "Products.GUI.Data.Aruhaz", "class_products_1_1_g_u_i_1_1_data_1_1_aruhaz.html", null ]
     ] ],
     [ "AruhazWeb.Program", "class_aruhaz_web_1_1_program.html", null ],
+    [ "AruhazWeb.Models.RandomAruhazListViewModel", "class_aruhaz_web_1_1_models_1_1_random_aruhaz_list_view_model.html", null ],
+    [ "Aruhaz.WpfClientRandom.RandomJsonResult", "class_aruhaz_1_1_wpf_client_random_1_1_random_json_result.html", null ],
     [ "global.MicrosoftAspNetCore.Mvc.Razor.RazorPage", null, [
       [ "AspNetCore.Views_Aruhaz_AruhazDetails", "class_asp_net_core_1_1_views___aruhaz___aruhaz_details.html", null ],
       [ "AspNetCore.Views_Aruhaz_AruhazEdit", "class_asp_net_core_1_1_views___aruhaz___aruhaz_edit.html", null ],
       [ "AspNetCore.Views_Aruhaz_AruhazIndex", "class_asp_net_core_1_1_views___aruhaz___aruhaz_index.html", null ],
       [ "AspNetCore.Views_Home_Index", "class_asp_net_core_1_1_views___home___index.html", null ],
       [ "AspNetCore.Views_Home_Privacy", "class_asp_net_core_1_1_views___home___privacy.html", null ],
+      [ "AspNetCore.Views_Random_RandomView", "class_asp_net_core_1_1_views___random___random_view.html", null ],
       [ "AspNetCore.Views_Shared_Error", "class_asp_net_core_1_1_views___shared___error.html", null ],
       [ "AspNetCore.Views_Shared__Layout", "class_asp_net_core_1_1_views___shared_____layout.html", null ],
       [ "AspNetCore.Views_Shared__ValidationScriptsPartial", "class_asp_net_core_1_1_views___shared_____validation_scripts_partial.html", null ],
@@ -83,12 +102,14 @@ var hierarchy =
     ] ],
     [ "SimpleIoc", null, [
       [ "Aruhaz.WpfClient.MyIOC", "class_aruhaz_1_1_wpf_client_1_1_my_i_o_c.html", null ],
+      [ "Aruhaz.WpfClientRandom.MyIOCRandom", "class_aruhaz_1_1_wpf_client_random_1_1_my_i_o_c_random.html", null ],
       [ "Products.GUI.MyIOC", "class_products_1_1_g_u_i_1_1_my_i_o_c.html", null ]
     ] ],
     [ "AruhazWeb.Startup", "class_aruhaz_web_1_1_startup.html", null ],
     [ "Products.Data.Models.Termek", "class_products_1_1_data_1_1_models_1_1_termek.html", null ],
     [ "ViewModelBase", null, [
       [ "Aruhaz.WpfClient.MainVM", "class_aruhaz_1_1_wpf_client_1_1_main_v_m.html", null ],
+      [ "Aruhaz.WpfClientRandom.MainVMRandom", "class_aruhaz_1_1_wpf_client_random_1_1_main_v_m_random.html", null ],
       [ "Products.GUI.VM.EditorViewModel", "class_products_1_1_g_u_i_1_1_v_m_1_1_editor_view_model.html", null ],
       [ "Products.GUI.VM.MainViewModel", "class_products_1_1_g_u_i_1_1_v_m_1_1_main_view_model.html", null ]
     ] ],
@@ -98,6 +119,12 @@ var hierarchy =
       [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
       [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
       [ "Aruhaz.WpfClient.MainWindow", "class_aruhaz_1_1_wpf_client_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.MainWindow", "class_aruhaz_1_1_wpf_client_random_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.MainWindow", "class_aruhaz_1_1_wpf_client_random_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.MainWindow", "class_aruhaz_1_1_wpf_client_random_1_1_main_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.SelectedWindow", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.SelectedWindow", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window.html", null ],
+      [ "Aruhaz.WpfClientRandom.SelectedWindow", "class_aruhaz_1_1_wpf_client_random_1_1_selected_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],
       [ "Products.GUI.MainWindow", "class_products_1_1_g_u_i_1_1_main_window.html", null ],

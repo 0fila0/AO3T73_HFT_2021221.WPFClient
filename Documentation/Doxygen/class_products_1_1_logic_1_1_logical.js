@@ -5,7 +5,7 @@ var class_products_1_1_logic_1_1_logical =
     [ "AddManufacturer", "class_products_1_1_logic_1_1_logical.html#ac89f823f9a2a410e35b502675f4e2e66", null ],
     [ "AddProduct", "class_products_1_1_logic_1_1_logical.html#a27c75611e8a4c550cb2df41c84553c99", null ],
     [ "AddShop", "class_products_1_1_logic_1_1_logical.html#a000211b8217228ec28954badb657cb42", null ],
-    [ "AddShop", "class_products_1_1_logic_1_1_logical.html#afab91ac2ee1d66ccb7d2be8b771a7884", null ],
+    [ "AddShop", "class_products_1_1_logic_1_1_logical.html#a2c8e029cd35404f7e0829666b607a8c3", null ],
     [ "CheapestShop", "class_products_1_1_logic_1_1_logical.html#a373eec6046c52f6b17db048194fcef1a", null ],
     [ "DeleteLink", "class_products_1_1_logic_1_1_logical.html#acaa260b667d55b3935ab27a743ab2b50", null ],
     [ "DeleteManufacturer", "class_products_1_1_logic_1_1_logical.html#afdd166262b40e793fc35165c9af0af98", null ],
@@ -23,6 +23,6 @@ var class_products_1_1_logic_1_1_logical =
     [ "UpdateManufacturer", "class_products_1_1_logic_1_1_logical.html#a49954942ccee7ad3794a77594822b03e", null ],
     [ "UpdateProduct", "class_products_1_1_logic_1_1_logical.html#a79f68d0a79e60be92080addf0c9d820f", null ],
     [ "UpdateShop", "class_products_1_1_logic_1_1_logical.html#a0ad80f517f1a053c1becd5b21bd494d5", null ],
-    [ "UpdateShop", "class_products_1_1_logic_1_1_logical.html#a315de1ae0531474fdf4670c205cb5d19", null ],
-    [ "UpdateShopWeb", "class_products_1_1_logic_1_1_logical.html#abb99bc7e93de404354a940d776f5dfa1", null ]
+    [ "UpdateShop", "class_products_1_1_logic_1_1_logical.html#a0cecc77cc0c5e2fcb3efdd179419c887", null ],
+    [ "UpdateShopWeb", "class_products_1_1_logic_1_1_logical.html#a5259a9145a45def68ed053e28ffb6036", null ]
 ];

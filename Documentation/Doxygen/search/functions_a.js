@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['placeofmostexpensiveproduct_265',['PlaceOfMostExpensiveProduct',['../interface_products_1_1_logic_1_1_i_logic.html#ab6b590167e5e038e40fcaf894fb701cf',1,'Products.Logic.ILogic.PlaceOfMostExpensiveProduct()'],['../class_products_1_1_logic_1_1_logical.html#a56856ef70a7c4af89fa5432ec6672213',1,'Products.Logic.Logical.PlaceOfMostExpensiveProduct()']]],
-  ['privacy_266',['Privacy',['../class_aruhaz_web_1_1_controllers_1_1_home_controller.html#a0f3555461e4e737ee014a80641107c40',1,'AruhazWeb::Controllers::HomeController']]],
-  ['productscontext_267',['ProductsContext',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a873afdd676b8c05b54cb439956d2abee',1,'Products.Data.Models.ProductsContext.ProductsContext()'],['../class_products_1_1_data_1_1_models_1_1_products_context.html#a8a65921ec2eca1ba85a709e0f454e521',1,'Products.Data.Models.ProductsContext.ProductsContext(DbContextOptions&lt; ProductsContext &gt; options)']]],
-  ['productsrepository_268',['ProductsRepository',['../class_products_1_1_repository_1_1_products_repository.html#a181920e9d439367664b6fedff610523f',1,'Products::Repository::ProductsRepository']]]
+  ['onconfiguring_309',['OnConfiguring',['../class_products_1_1_data_1_1_models_1_1_products_context.html#ab87acd7539741462a0067427e3199de1',1,'Products::Data::Models::ProductsContext']]],
+  ['onmodelcreating_310',['OnModelCreating',['../class_products_1_1_data_1_1_models_1_1_products_context.html#a75bb022bdaca9fe636496dd48f173beb',1,'Products::Data::Models::ProductsContext']]],
+  ['osanproducts_311',['OsanProducts',['../interface_products_1_1_logic_1_1_i_logic.html#a41164f3c08935ce12fbbd7258086fa55',1,'Products.Logic.ILogic.OsanProducts()'],['../class_products_1_1_logic_1_1_logical.html#a9e08a22d0c7c379812423d81853b68b1',1,'Products.Logic.Logical.OsanProducts()']]]
 ];
