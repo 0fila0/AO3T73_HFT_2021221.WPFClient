@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>AO3T73_HFT_2021221.WpfClient</name>
+        <name>AO3T73_HFT_2021221.WPFClient</name>
     </assembly>
     <members>
         <member name="T:Aruhaz.WpfClient.App">
