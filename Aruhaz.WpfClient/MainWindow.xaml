@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aruhaz.WpfClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Loaded="Window_Loaded" Closing="Window_Closing">
-    <Window.DataContext>
-        <local:MainVM />
-    </Window.DataContext>
+        Title="Menu" Height="250" Width="800" Background="Beige">
     <Grid>
-        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedAruhaz}" ItemsSource="{Binding Path=AllAruhaz}" HorizontalAlignment="Left" Height="362" Margin="10,10,0,0" VerticalAlignment="Top" Width="311" />
-        <Button Command="{Binding Path=LoadCmd}" Content="Load" HorizontalAlignment="Left" Margin="10,377,0,0" VerticalAlignment="Top" Width="74" />
-        <Button Command="{Binding Path=AddCmd}" Content="Add" HorizontalAlignment="Left" Margin="89,377,0,0" VerticalAlignment="Top" Width="74" />
-        <Button Command="{Binding Path=ModCmd}" Content="Mod" HorizontalAlignment="Left" Margin="168,377,0,0" VerticalAlignment="Top" Width="74" />
-        <Button Command="{Binding Path=DelCmd}" Content="Del" HorizontalAlignment="Left" Margin="247,377,0,0" VerticalAlignment="Top" Width="74" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Click="Shops_Clicked" FontSize="22" Content="Áruházak" Width="150" Height="50" Background="LightBlue"/>
+        <Button Grid.Column="1" Click="Manufacturers_Clicked" FontSize="22" Content="Gyártók" Width="150" Height="50" Background="LightBlue"/>
+        <Button Grid.Column="2" Click="Products_Clicked" FontSize="22" Content="Termékek" Width="150" Height="50" Background="LightBlue"/>
     </Grid>
 </Window>

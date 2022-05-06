@@ -1,8 +1,4 @@
-﻿// <copyright file="MainWindow.xaml.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace Aruhaz.WpfClient
+﻿namespace Aruhaz.WpfClient
 {
     using System;
     using System.Collections.Generic;
@@ -16,12 +12,10 @@ namespace Aruhaz.WpfClient
     using System.Windows.Input;
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
-    using System.Windows.Navigation;
     using System.Windows.Shapes;
-    using GalaSoft.MvvmLight.Messaging;
 
     /// <summary>
-    /// Interaction logic for MainWindow.xaml.
+    /// Interaction logic for Menu.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -33,24 +27,22 @@ namespace Aruhaz.WpfClient
             this.InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Shops_Clicked(object sender, RoutedEventArgs e)
         {
-            Messenger.Default.Register<string>(this, "AruhazResult", msg =>
-            {
-                (this.DataContext as MainVM).LoadCmd.Execute(null);
-                MessageBox.Show(msg);
-            });
-
-            (this.DataContext as MainVM).EditorFunc = (aruhaz) =>
-            {
-                EditorWindow window = new EditorWindow(aruhaz);
-                return window.ShowDialog() == true;
-            };
+            ShopsWindow sw = new ShopsWindow();
+            sw.Show();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Manufacturers_Clicked(object sender, RoutedEventArgs e)
         {
-            Messenger.Default.Unregister(this);
+            ManufacturersWindow mw = new ManufacturersWindow();
+            mw.Show();
+        }
+
+        private void Products_Clicked(object sender, RoutedEventArgs e)
+        {
+            ProductsWindow pw = new ProductsWindow();
+            pw.Show();
         }
     }
 }

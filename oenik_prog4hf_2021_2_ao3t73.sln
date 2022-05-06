@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31025.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Data", "Products.Data\Products.Data.csproj", "{A3D639C0-F8A1-4034-9DB5-F3E92E8D036D}"
 EndProject
@@ -18,9 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AruhazWeb", "AruhazWeb\AruhazWeb.csproj", "{DB4C7955-7E27-4B25-99ED-45BFDC6CD593}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aruhaz.WpfClient", "Aruhaz.WpfClient\Aruhaz.WpfClient.csproj", "{794DA18B-4815-4680-902B-037B5DA6AC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AO3T73_HFT_2021221.WpfClient", "Aruhaz.WpfClient\AO3T73_HFT_2021221.WpfClient.csproj", "{794DA18B-4815-4680-902B-037B5DA6AC92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aruhaz.WpfClientRandom", "Aruhaz.WpfClientRandom\Aruhaz.WpfClientRandom.csproj", "{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aruhaz.WpfClientRandom", "Aruhaz.WpfClientRandom\Aruhaz.WpfClientRandom.csproj", "{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products.Endpoint", "Products.Endpoint\Products.Endpoint.csproj", "{67855A32-7149-4F17-9153-79B454B69423}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AO3T73_HFT_2021221.JSClient", "AO3T73_HFT_2021221.JSClient\AO3T73_HFT_2021221.JSClient.csproj", "{2472C8CD-3DD8-481C-B4B5-F86DB207B2B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +60,14 @@ Global
 		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5ADEF8E-4B1B-46D2-BB41-BE39F9045C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67855A32-7149-4F17-9153-79B454B69423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67855A32-7149-4F17-9153-79B454B69423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67855A32-7149-4F17-9153-79B454B69423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67855A32-7149-4F17-9153-79B454B69423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2472C8CD-3DD8-481C-B4B5-F86DB207B2B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2472C8CD-3DD8-481C-B4B5-F86DB207B2B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2472C8CD-3DD8-481C-B4B5-F86DB207B2B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2472C8CD-3DD8-481C-B4B5-F86DB207B2B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

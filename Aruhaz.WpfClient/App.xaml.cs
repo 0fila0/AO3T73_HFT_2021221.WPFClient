@@ -25,9 +25,11 @@ namespace Aruhaz.WpfClient
         /// </summary>
         public App()
         {
-            ServiceLocator.SetLocatorProvider(() => MyIOC.Instance);
+            //ServiceLocator.SetLocatorProvider(() => MyIOC.Instance);
 
-            MyIOC.Instance.Register<IMainLogic, MainLogic>();
+            //MyIOC.Instance.Register<IMainShopLogic, MainShopLogic>();
+            //MyIOC.Instance.Register<IMainManufacturerLogic, MainManufacturerLogic>();
+            //MyIOC.Instance.Register<IMainProductLogic, MainProductLogic>();
         }
     }
 }

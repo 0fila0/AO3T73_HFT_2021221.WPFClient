@@ -1,0 +1,41 @@
+﻿<Window x:Class="Aruhaz.WpfClient.ProductsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aruhaz.WpfClient"
+        mc:Ignorable="d"
+        Title="Termékek" Height="450" Width="800"
+        Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.DataContext>
+        <local:MainProductVM />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1.25*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Column="0" IsReadOnly="True" SelectedItem="{Binding Path=SelectedTermek}" ItemsSource="{Binding Path=Products}" HorizontalAlignment="Center" Height="362" VerticalAlignment="Center" Width="300"/>
+        <StackPanel Grid.Column="1">
+            <Label Content="Termék azonosítója"/>
+            <TextBox Text="{Binding Path=SelectedTermek.TermekID}" Grid.Column="1" Width="250" Height="30" VerticalAlignment="Center" Margin="0,0,0,10"></TextBox>
+            <Label Content="Típus"/>
+            <TextBox Text="{Binding Path=SelectedTermek.Tipus}" Grid.Column="1" Width="250" Height="30" VerticalAlignment="Center" Margin="0,0,0,10"></TextBox>
+            <Label Content="Megnevezés"/>
+            <TextBox Text="{Binding Path=SelectedTermek.Megnevezes}" Grid.Column="1" Width="250" Height="30" VerticalAlignment="Center" Margin="0,0,0,10"></TextBox>
+            <Label Content="Leírás"/>
+            <TextBox Text="{Binding Path=SelectedTermek.Leiras}" Grid.Column="1" Width="250" Height="30" VerticalAlignment="Center" Margin="0,0,0,10"></TextBox>
+            <Label Content="Kiszerelés"/>
+            <TextBox Text="{Binding Path=SelectedTermek.Kiszereles}" Grid.Column="1" Width="250" Height="30" VerticalAlignment="Center" Margin="0,0,0,10"></TextBox>
+            <Label Content="Ár"/>
+            <TextBox Text="{Binding Path=SelectedTermek.Ar}" Grid.Column="1" Width="250" Height="30" VerticalAlignment="Center" Margin="0,0,0,10"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <Button Grid.Column="2" Command="{Binding Path=AddCmd}" Margin="0, 50, 0, 0" Content="Add" HorizontalAlignment="Center" VerticalAlignment="Center" Width="74" />
+            <Button Grid.Column="2" Command="{Binding Path=ModCmd}" Margin="0, 50, 0, 0" Content="Mod" HorizontalAlignment="Center" VerticalAlignment="Center" Width="74" />
+            <Button Grid.Column="2" Command="{Binding Path=DelCmd}" Margin="0, 50, 0, 0" Content="Del" HorizontalAlignment="Center" VerticalAlignment="Center" Width="74" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -232,7 +232,7 @@ namespace Products.Repository
         {
             if (param != null)
             {
-                Aruhaz updateThisShop = this.dataBase.Aruhaz.Where(x => x.AruhazNeve == param.AruhazNeve) as Aruhaz;
+                Aruhaz updateThisShop = this.dataBase.Aruhaz.Where(x => x.AruhazNeve == param.AruhazNeve).FirstOrDefault();
                 updateThisShop.AruhazNeve = param.AruhazNeve;
                 updateThisShop.EMail = param.EMail;
                 updateThisShop.Adoszam = param.Adoszam;
@@ -257,6 +257,36 @@ namespace Products.Repository
             updateThisShop.Telefon = telefon;
             updateThisShop.Kijelolt = kijelolt;
             this.AddShop(updateThisShop);
+            this.dataBase.SaveChanges();
+        }
+
+        /// <inheritdoc/>
+        public void UpdateManufacturer(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        {
+            Gyarto updateThisManufacturer = this.dataBase.Gyarto.FirstOrDefault(x => x.GyartoNeve == regiNev);
+            this.DeleteManufacturer(updateThisManufacturer);
+            updateThisManufacturer.GyartoNeve = ujNev;
+            updateThisManufacturer.EMail = email;
+            updateThisManufacturer.Adoszam = adoszam;
+            updateThisManufacturer.Honlap = honlap;
+            updateThisManufacturer.Kozpont = kozpont;
+            updateThisManufacturer.Telefon = telefon;
+            this.AddManufacturer(updateThisManufacturer);
+            this.dataBase.SaveChanges();
+        }
+
+        /// <inheritdoc/>
+        public void UpdateProduct(decimal regiId, decimal ujId, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras)
+        {
+            Termek updateThisProduct = this.dataBase.Termek.FirstOrDefault(x => x.TermekID == regiId);
+            this.DeleteProduct(updateThisProduct);
+            updateThisProduct.TermekID = ujId;
+            updateThisProduct.Tipus = tipus;
+            updateThisProduct.Megnevezes = megnevezes;
+            updateThisProduct.Kiszereles = kiszereles;
+            updateThisProduct.Ar = ar;
+            updateThisProduct.Leiras = leiras;
+            this.AddProduct(updateThisProduct);
             this.dataBase.SaveChanges();
         }
     }

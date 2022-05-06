@@ -8,6 +8,7 @@ namespace Products.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// Auto generated entity class for Aruhaz.
@@ -60,6 +61,7 @@ namespace Products.Data.Models
         /// <summary>
         /// Gets IdKapcsolos.
         /// </summary>
+        [JsonIgnore]
         public virtual ICollection<IDKapcsolo> IdKapcsolos { get; }
     }
 }

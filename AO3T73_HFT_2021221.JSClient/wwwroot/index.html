@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Áruház</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Áruházak</h1>
+
+    <div id="formdiv">
+        <label>Áruház neve</label>
+        <input type="text" id="shopname" />
+        <label>Áruház e-mail címe</label>
+        <input type="text" id="shopemail" />
+        <label>Áruház honlapja</label>
+        <input type="text" id="shoppage" />
+        <label>Áruház központja</label>
+        <input type="text" id="shopcenter" />
+        <label>Áruház telefonszáma</label>
+        <input type="number" id="shopnumber" />
+        <label>Áruház adószáma</label>
+        <input type="number" id="shoptax" />
+        <button type="button" onclick="createShop()">Hozzáadás</button>
+    </div>
+
+    <div id="updateformdiv" style="display:none">
+        <label>Áruház e-mail címe</label>
+        <input type="text" id="shopEmailUpdate" />
+        <label>Áruház honlapja</label>
+        <input type="text" id="shopPageUpdate" />
+        <label>Áruház központja</label>
+        <input type="text" id="shopCenterUpdate" />
+        <label>Áruház telefonszáma</label>
+        <input type="number" id="shopNumberUpdate" />
+        <label>Áruház adószáma</label>
+        <input type="number" id="shopTaxUpdate" />
+        <button type="button" onclick="updateShop()">Módosítás</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>E-mail cím</th>
+                <th>Honlap</th>
+                <th>Központ</th>
+                <th>Telefonszám</th>
+                <th>Adószám</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

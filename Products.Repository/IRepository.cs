@@ -91,10 +91,34 @@ namespace Products.Repository
         void UpdateProduct(Termek param);
 
         /// <summary>
+        /// Update the database.
+        /// </summary>
+        /// <param name="regiId"> Shop's older name. </param>
+        /// <param name="ujId"> Shop's new name. </param>
+        /// <param name="tipus"> Shop's email address. </param>
+        /// <param name="megnevezes"> Shop's website. </param>
+        /// <param name="kiszereles"> Shop's center. </param>
+        /// <param name="ar"> Shop's phone number. </param>
+        /// <param name="leiras"> Shop's tax number. </param>
+        void UpdateProduct(decimal regiId, decimal ujId, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras);
+
+        /// <summary>
         /// This method changes an existing manufacturer entity's property/properties.
         /// </summary>
         /// <param name="param"> Manufacturer that user intend to modify. </param>
         void UpdateManufacturer(Gyarto param);
+
+        /// <summary>
+        /// Update the database.
+        /// </summary>
+        /// <param name="regiNev"> Shop's older name. </param>
+        /// <param name="ujNev"> Shop's new name. </param>
+        /// <param name="email"> Shop's email address. </param>
+        /// <param name="honlap"> Shop's website. </param>
+        /// <param name="kozpont"> Shop's center. </param>
+        /// <param name="telefon"> Shop's phone number. </param>
+        /// <param name="adoszam"> Shop's tax number. </param>
+        void UpdateManufacturer(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
 
         /// <summary>
         /// This method deletes a shop entity from database.

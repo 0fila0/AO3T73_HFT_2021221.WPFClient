@@ -61,6 +61,28 @@ namespace Products.Logic
         public void AddShop(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt);
 
         /// <summary>
+        /// This method adds a new manufacturer entity to the database.
+        /// </summary>
+        /// <param name="nev"> Shop's name. </param>
+        /// <param name="email"> Shop's email address. </param>
+        /// <param name="honlap"> Shop's website. </param>
+        /// <param name="kozpont"> Shop's center. </param>
+        /// <param name="telefon"> Shop's phone number. </param>
+        /// <param name="adoszam"> Shop's tax number. </param>
+        public void AddManufacturer(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+
+        /// <summary>
+        /// This method adds a new product entity to the database.
+        /// </summary>
+        /// <param name="id"> Shop's new name. </param>
+        /// <param name="tipus"> Shop's email address. </param>
+        /// <param name="megnevezes"> Shop's website. </param>
+        /// <param name="kiszereles"> Shop's center. </param>
+        /// <param name="ar"> Shop's phone number. </param>
+        /// <param name="leiras"> Shop's tax number. </param>
+        public void AddProduct(decimal id, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras);
+
+        /// <summary>
         /// This method adds a new product entity to the database.
         /// </summary>
         /// <param name="param"> Product that user intend to add. </param>
@@ -107,9 +129,59 @@ namespace Products.Logic
         /// <param name="kozpont"> Shop's center. </param>
         /// <param name="telefon"> Shop's phone number. </param>
         /// <param name="adoszam"> Shop's tax number. </param>
+        void UpdateManufacturer(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+
+        /// <summary>
+        /// Update the database.
+        /// </summary>
+        /// <param name="regiId"> Shop's older name. </param>
+        /// <param name="ujId"> Shop's new name. </param>
+        /// <param name="tipus"> Shop's email address. </param>
+        /// <param name="megnevezes"> Shop's website. </param>
+        /// <param name="kiszereles"> Shop's center. </param>
+        /// <param name="ar"> Shop's phone number. </param>
+        /// <param name="leiras"> Shop's tax number. </param>
+        void UpdateProduct(decimal regiId, decimal ujId, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras);
+
+        /// <summary>
+        /// This method changes an existing shop entity's property/properties.
+        /// </summary>
+        /// <param name="regiNev"> Shop's old name. </param>
+        /// <param name="ujNev"> Shop's new name. </param>
+        /// <param name="email"> Shop's email address. </param>
+        /// <param name="honlap"> Shop's website. </param>
+        /// <param name="kozpont"> Shop's center. </param>
+        /// <param name="telefon"> Shop's phone number. </param>
+        /// <param name="adoszam"> Shop's tax number. </param>
         /// <param name="kijelolt"> Shop is selected or not. </param>
         /// <returns> False if update failed. </returns>
         bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt);
+
+        /// <summary>
+        /// This method changes an existing shop entity's property/properties.
+        /// </summary>
+        /// <param name="regiNev"> Shop's old name. </param>
+        /// <param name="ujNev"> Shop's new name. </param>
+        /// <param name="email"> Shop's email address. </param>
+        /// <param name="honlap"> Shop's website. </param>
+        /// <param name="kozpont"> Shop's center. </param>
+        /// <param name="telefon"> Shop's phone number. </param>
+        /// <param name="adoszam"> Shop's tax number. </param>
+        /// <returns> False if update failed. </returns>
+        bool UpdateManufacturerWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam);
+
+        /// <summary>
+        /// Update the database.
+        /// </summary>
+        /// <param name="regiId"> Shop's older name. </param>
+        /// <param name="ujId"> Shop's new name. </param>
+        /// <param name="tipus"> Shop's email address. </param>
+        /// <param name="megnevezes"> Shop's website. </param>
+        /// <param name="kiszereles"> Shop's center. </param>
+        /// <param name="ar"> Shop's phone number. </param>
+        /// <param name="leiras"> Shop's tax number. </param>
+        /// <returns> False if update failed. </returns>
+        bool UpdateProductWeb(decimal regiId, decimal ujId, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras);
 
         /// <summary>
         /// This method changes an existing product entity's property/properties.
@@ -135,6 +207,20 @@ namespace Products.Logic
         /// <param name="nev"> Shop's name user intend to delete. </param>
         /// <returns> True if deleted happened. </returns>
         bool DeleteShop(string nev);
+
+        /// <summary>
+        /// This method deletes a shop entity from database.
+        /// </summary>
+        /// <param name="nev"> Shop's name user intend to delete. </param>
+        /// <returns> True if deleted happened. </returns>
+        bool DeleteManufacturer(string nev);
+
+        /// <summary>
+        /// This method deletes a shop entity from database.
+        /// </summary>
+        /// <param name="id"> Shop's name user intend to delete. </param>
+        /// <returns> True if deleted happened. </returns>
+        bool DeleteProduct(int id);
 
         /// <summary>
         /// This method deletes a product entity from database.
@@ -191,5 +277,19 @@ namespace Products.Logic
         /// <returns> A list with all shop entities. </returns>
         /// <param name="id"> Shop's id. </param>
         public Aruhaz GetOneShop(string id);
+
+        /// <summary>
+        /// This method returns one shop entity.
+        /// </summary>
+        /// <returns> A list with all shop entities. </returns>
+        /// <param name="id"> Shop's id. </param>
+        public Gyarto GetOneManufacturer(string id);
+
+        /// <summary>
+        /// This method returns one shop entity.
+        /// </summary>
+        /// <returns> A list with all shop entities. </returns>
+        /// <param name="id"> Shop's id. </param>
+        public Termek GetOneProduct(string id);
     }
 }

@@ -8,6 +8,7 @@ namespace Products.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// Manufacturer entity class.
@@ -55,6 +56,7 @@ namespace Products.Data.Models
         /// <summary>
         /// Gets manufacturer's products.
         /// </summary>
+        [JsonIgnore]
         public virtual ICollection<Termek> Termek { get; }
     }
 }

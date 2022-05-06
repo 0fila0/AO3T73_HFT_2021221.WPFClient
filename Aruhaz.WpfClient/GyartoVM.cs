@@ -1,8 +1,4 @@
-﻿// <copyright file="AruhazVM.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace Aruhaz.WpfClient
+﻿namespace Aruhaz.WpfClient
 {
     using System;
     using System.Collections.Generic;
@@ -12,11 +8,11 @@ namespace Aruhaz.WpfClient
     using GalaSoft.MvvmLight;
 
     /// <summary>
-    /// View model class.
+    /// Gyaro viewmodel.
     /// </summary>
-    public class AruhazVM : ObservableObject
+    public class GyartoVM : ObservableObject
     {
-        private string aruhazNeve;
+        private string gyartoNeve;
         private string honlap;
         private string email;
         private decimal telefon;
@@ -26,10 +22,10 @@ namespace Aruhaz.WpfClient
         /// <summary>
         /// Gets or sets shop's name.
         /// </summary>
-        public string AruhazNeve
+        public string GyartoNeve
         {
-            get { return this.aruhazNeve; }
-            set { this.Set(ref this.aruhazNeve, value); }
+            get { return this.gyartoNeve; }
+            set { this.Set(ref this.gyartoNeve, value); }
         }
 
         /// <summary>
@@ -81,14 +77,14 @@ namespace Aruhaz.WpfClient
         /// Cloning a shop in order to modify.
         /// </summary>
         /// <param name="other"> Shop that will be cloned. </param>
-        public void CopyFrom(AruhazVM other)
+        public void CopyFrom(GyartoVM other)
         {
             if (other == null)
             {
                 return;
             }
 
-            this.AruhazNeve = other.AruhazNeve;
+            this.GyartoNeve = other.GyartoNeve;
             this.Email = other.Email;
             this.Adoszam = other.Adoszam;
             this.Honlap = other.Honlap;

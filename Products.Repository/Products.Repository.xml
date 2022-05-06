@@ -82,11 +82,35 @@
             </summary>
             <param name="param"> Product that user intend to modify. </param>
         </member>
+        <member name="M:Products.Repository.IRepository.UpdateProduct(System.Decimal,System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            Update the database.
+            </summary>
+            <param name="regiId"> Shop's older name. </param>
+            <param name="ujId"> Shop's new name. </param>
+            <param name="tipus"> Shop's email address. </param>
+            <param name="megnevezes"> Shop's website. </param>
+            <param name="kiszereles"> Shop's center. </param>
+            <param name="ar"> Shop's phone number. </param>
+            <param name="leiras"> Shop's tax number. </param>
+        </member>
         <member name="M:Products.Repository.IRepository.UpdateManufacturer(Products.Data.Models.Gyarto)">
             <summary>
             This method changes an existing manufacturer entity's property/properties.
             </summary>
             <param name="param"> Manufacturer that user intend to modify. </param>
+        </member>
+        <member name="M:Products.Repository.IRepository.UpdateManufacturer(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            Update the database.
+            </summary>
+            <param name="regiNev"> Shop's older name. </param>
+            <param name="ujNev"> Shop's new name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
         </member>
         <member name="M:Products.Repository.IRepository.DeleteShop(Products.Data.Models.Aruhaz)">
             <summary>
@@ -214,6 +238,12 @@
             <param name="param"> Shop that user intend to modify. </param>
         </member>
         <member name="M:Products.Repository.ProductsRepository.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.UpdateManufacturer(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Repository.ProductsRepository.UpdateProduct(System.Decimal,System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
             <inheritdoc/>
         </member>
     </members>

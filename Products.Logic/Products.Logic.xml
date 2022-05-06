@@ -51,6 +51,28 @@
             <param name="adoszam"> Shop's tax number. </param>
             <param name="kijelolt"> Shop is selected or not. </param>
         </member>
+        <member name="M:Products.Logic.ILogic.AddManufacturer(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            This method adds a new manufacturer entity to the database.
+            </summary>
+            <param name="nev"> Shop's name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.AddProduct(System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            This method adds a new product entity to the database.
+            </summary>
+            <param name="id"> Shop's new name. </param>
+            <param name="tipus"> Shop's email address. </param>
+            <param name="megnevezes"> Shop's website. </param>
+            <param name="kiszereles"> Shop's center. </param>
+            <param name="ar"> Shop's phone number. </param>
+            <param name="leiras"> Shop's tax number. </param>
+        </member>
         <member name="M:Products.Logic.ILogic.AddProduct(Products.Data.Models.Termek)">
             <summary>
             This method adds a new product entity to the database.
@@ -88,6 +110,30 @@
             <param name="adoszam"> Shop's tax number. </param>
             <param name="kijelolt"> Shop is selected or not. </param>
         </member>
+        <member name="M:Products.Logic.ILogic.UpdateManufacturer(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="regiNev"> Shop's old name. </param>
+            <param name="ujNev"> Shop's new name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateProduct(System.Decimal,System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            Update the database.
+            </summary>
+            <param name="regiId"> Shop's older name. </param>
+            <param name="ujId"> Shop's new name. </param>
+            <param name="tipus"> Shop's email address. </param>
+            <param name="megnevezes"> Shop's website. </param>
+            <param name="kiszereles"> Shop's center. </param>
+            <param name="ar"> Shop's phone number. </param>
+            <param name="leiras"> Shop's tax number. </param>
+        </member>
         <member name="M:Products.Logic.ILogic.UpdateShopWeb(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
             <summary>
             This method changes an existing shop entity's property/properties.
@@ -100,6 +146,32 @@
             <param name="telefon"> Shop's phone number. </param>
             <param name="adoszam"> Shop's tax number. </param>
             <param name="kijelolt"> Shop is selected or not. </param>
+            <returns> False if update failed. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateManufacturerWeb(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            This method changes an existing shop entity's property/properties.
+            </summary>
+            <param name="regiNev"> Shop's old name. </param>
+            <param name="ujNev"> Shop's new name. </param>
+            <param name="email"> Shop's email address. </param>
+            <param name="honlap"> Shop's website. </param>
+            <param name="kozpont"> Shop's center. </param>
+            <param name="telefon"> Shop's phone number. </param>
+            <param name="adoszam"> Shop's tax number. </param>
+            <returns> False if update failed. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.UpdateProductWeb(System.Decimal,System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
+            <summary>
+            Update the database.
+            </summary>
+            <param name="regiId"> Shop's older name. </param>
+            <param name="ujId"> Shop's new name. </param>
+            <param name="tipus"> Shop's email address. </param>
+            <param name="megnevezes"> Shop's website. </param>
+            <param name="kiszereles"> Shop's center. </param>
+            <param name="ar"> Shop's phone number. </param>
+            <param name="leiras"> Shop's tax number. </param>
             <returns> False if update failed. </returns>
         </member>
         <member name="M:Products.Logic.ILogic.UpdateProduct(Products.Data.Models.Termek)">
@@ -125,6 +197,20 @@
             This method deletes a shop entity from database.
             </summary>
             <param name="nev"> Shop's name user intend to delete. </param>
+            <returns> True if deleted happened. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteManufacturer(System.String)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="nev"> Shop's name user intend to delete. </param>
+            <returns> True if deleted happened. </returns>
+        </member>
+        <member name="M:Products.Logic.ILogic.DeleteProduct(System.Int32)">
+            <summary>
+            This method deletes a shop entity from database.
+            </summary>
+            <param name="id"> Shop's name user intend to delete. </param>
             <returns> True if deleted happened. </returns>
         </member>
         <member name="M:Products.Logic.ILogic.DeleteProduct(Products.Data.Models.Termek)">
@@ -176,6 +262,20 @@
             <returns> A list with all shop entities. </returns>
             <param name="id"> Shop's id. </param>
         </member>
+        <member name="M:Products.Logic.ILogic.GetOneManufacturer(System.String)">
+            <summary>
+            This method returns one shop entity.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+            <param name="id"> Shop's id. </param>
+        </member>
+        <member name="M:Products.Logic.ILogic.GetOneProduct(System.String)">
+            <summary>
+            This method returns one shop entity.
+            </summary>
+            <returns> A list with all shop entities. </returns>
+            <param name="id"> Shop's id. </param>
+        </member>
         <member name="T:Products.Logic.Logical">
             <summary>
             This interface describes what methods should be implemented in Logic class.
@@ -214,6 +314,12 @@
         <member name="M:Products.Logic.Logical.GetOneShop(System.String)">
             <inheritdoc/>
         </member>
+        <member name="M:Products.Logic.Logical.GetOneManufacturer(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.GetOneProduct(System.String)">
+            <inheritdoc/>
+        </member>
         <member name="M:Products.Logic.Logical.AddLink(Products.Data.Models.IDKapcsolo)">
             <summary>
             This method adds a new link entity to the database.
@@ -239,6 +345,12 @@
             <param name="param"> Shop that user intend to add. </param>
         </member>
         <member name="M:Products.Logic.Logical.AddShop(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.AddManufacturer(System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.AddProduct(System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
             <inheritdoc/>
         </member>
         <member name="M:Products.Logic.Logical.DeleteLink(Products.Data.Models.IDKapcsolo)">
@@ -268,6 +380,12 @@
         <member name="M:Products.Logic.Logical.DeleteShop(System.String)">
             <inheritdoc/>
         </member>
+        <member name="M:Products.Logic.Logical.DeleteManufacturer(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.DeleteProduct(System.Int32)">
+            <inheritdoc/>
+        </member>
         <member name="M:Products.Logic.Logical.UpdateManufacturer(Products.Data.Models.Gyarto)">
             <summary>
             This method changes an existing manufacturer entity's property/properties.
@@ -289,7 +407,19 @@
         <member name="M:Products.Logic.Logical.UpdateShop(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
             <inheritdoc/>
         </member>
+        <member name="M:Products.Logic.Logical.UpdateManufacturer(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateProduct(System.Decimal,System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
+            <inheritdoc/>
+        </member>
         <member name="M:Products.Logic.Logical.UpdateShopWeb(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateManufacturerWeb(System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Products.Logic.Logical.UpdateProductWeb(System.Decimal,System.Decimal,System.String,System.String,System.String,System.Decimal,System.String)">
             <inheritdoc/>
         </member>
         <member name="M:Products.Logic.Logical.OsanProducts">

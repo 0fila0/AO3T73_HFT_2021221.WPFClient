@@ -8,6 +8,7 @@ namespace Products.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// Product entity class.
@@ -65,6 +66,7 @@ namespace Products.Data.Models
         /// <summary>
         /// Gets product's ID connection.
         /// </summary>
+        [JsonIgnore]
         public virtual ICollection<IDKapcsolo> IDKapcsolo { get; }
     }
 }

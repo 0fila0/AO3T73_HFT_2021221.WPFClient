@@ -78,6 +78,20 @@ namespace Products.Logic
             return oneShop;
         }
 
+        /// <inheritdoc/>
+        public Gyarto GetOneManufacturer(string id)
+        {
+            Gyarto oneManufacturer = this.repo.GetAllManufacturers().Where(x => x.GyartoNeve == id).FirstOrDefault();
+            return oneManufacturer;
+        }
+
+        /// <inheritdoc/>
+        public Termek GetOneProduct(string id)
+        {
+            Termek oneProduct = this.repo.GetAllProducts().Where(x => x.TermekID == int.Parse(id)).FirstOrDefault();
+            return oneProduct;
+        }
+
         /// <summary>
         /// This method adds a new link entity to the database.
         /// </summary>
@@ -127,6 +141,36 @@ namespace Products.Logic
                 Adoszam = adoszam,
             };
             this.repo.AddShop(newAruhaz);
+        }
+
+        /// <inheritdoc/>
+        public void AddManufacturer(string nev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        {
+            Gyarto newManufacturer = new Gyarto()
+            {
+                GyartoNeve = nev,
+                EMail = email,
+                Kozpont = kozpont,
+                Honlap = honlap,
+                Telefon = telefon,
+                Adoszam = adoszam,
+            };
+            this.repo.AddManufacturer(newManufacturer);
+        }
+
+        /// <inheritdoc/>
+        public void AddProduct(decimal id, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras)
+        {
+            Termek newProduct = new Termek()
+            {
+                TermekID = id,
+                Tipus = tipus,
+                Megnevezes = megnevezes,
+                Kiszereles= kiszereles,
+                Ar = ar,
+                Leiras = leiras,
+            };
+            this.repo.AddProduct(newProduct);
         }
 
         /// <summary>
@@ -198,6 +242,36 @@ namespace Products.Logic
             }
         }
 
+        /// <inheritdoc/>
+        public bool DeleteManufacturer(string nev)
+        {
+            Gyarto manufacturer = this.repo.GetAllManufacturers().Where(x => x.GyartoNeve == nev).Select(x => x).FirstOrDefault();
+            if (manufacturer != null)
+            {
+                this.repo.DeleteManufacturer(this.repo.GetAllManufacturers().Where(x => x.GyartoNeve == nev).FirstOrDefault());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <inheritdoc/>
+        public bool DeleteProduct(int id)
+        {
+            Termek product = this.repo.GetAllProducts().Where(x => x.TermekID == id).Select(x => x).FirstOrDefault();
+            if (product != null)
+            {
+                this.repo.DeleteProduct(this.repo.GetAllProducts().Where(x => x.TermekID == id).FirstOrDefault());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         /// <summary>
         /// This method changes an existing manufacturer entity's property/properties.
         /// </summary>
@@ -253,12 +327,54 @@ namespace Products.Logic
         }
 
         /// <inheritdoc/>
+        public void UpdateManufacturer(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        {
+            this.repo.UpdateManufacturer(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);
+        }
+
+        /// <inheritdoc/>
+        public void UpdateProduct(decimal regiId, decimal ujId, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras)
+        {
+            this.repo.UpdateProduct(regiId, ujId, tipus, megnevezes, kiszereles, ar, leiras);
+        }
+
+        /// <inheritdoc/>
         public bool UpdateShopWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam, bool kijelolt)
         {
             Aruhaz shop = this.repo.GetAllShops().Where(x => x.AruhazNeve == ujNev).Select(x => x).FirstOrDefault();
             if (shop == null || regiNev != null || ujNev != null)
             {
                 this.repo.UpdateShop(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam, kijelolt);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <inheritdoc/>
+        public bool UpdateManufacturerWeb(string regiNev, string ujNev, string email, string honlap, string kozpont, decimal telefon, decimal adoszam)
+        {
+            Gyarto manufacturer = this.repo.GetAllManufacturers().Where(x => x.GyartoNeve == ujNev).Select(x => x).FirstOrDefault();
+            if (manufacturer == null || regiNev != null || ujNev != null)
+            {
+                this.repo.UpdateManufacturer(regiNev, ujNev, email, honlap, kozpont, telefon, adoszam);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <inheritdoc/>
+        public bool UpdateProductWeb(decimal regiId, decimal ujId, string tipus, string megnevezes, string kiszereles, decimal ar, string leiras)
+        {
+            Termek product = this.repo.GetAllProducts().Where(x => x.TermekID == ujId).Select(x => x).FirstOrDefault();
+            if (product == null || regiId != -1 || ujId != -1)
+            {
+                this.repo.UpdateProduct(regiId, ujId, tipus, megnevezes, kiszereles, ar, leiras);
                 return true;
             }
             else
